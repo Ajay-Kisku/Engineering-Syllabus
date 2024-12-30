@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE Syllabus 7th Semester</title>
+
+        <!-- GSAP CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <!-- ScrollTrigger CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <!-- ScrollToPlugin CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
+
+    <style>
+        html,body{
+            margin: 0px;
+            padding: 0px;
+
+            scroll-behavior: smooth;
+        }
+
+        body{
+            padding: 5px;
+        }
+
+        .page{
+            /* border: 1px dashed rgba(0, 0, 0, 0.39); */
+            border-radius: 8px;
+            padding: 10px;
+            margin-block: 20px;
+            margin-top: 0px;
+        }
+
+        .subject-name{
+
+            z-index: 99;
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: 'Times New Roman', Times, serif;
+            padding-block: 10px;
+            padding-top: 20px;
+
+            position: sticky;
+            top: 0;
+
+            background-color: white;
+
+            /* background-color: transparent; */
+            /* backdrop-filter: blur(10px); */
+
+        }
+        
+        .module{
+            margin-block: 20px;
+            margin-top: 0px;
+            color: rgb(53, 53, 53);
+
+        }
+        .module-name{
+            font-size: 22px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-block: 10px;
+
+        }
+
+
+        header{
+            padding-inline: 15px;
+            padding-left: 45px;
+
+            /* padding-block: 10px; */
+
+        }
+
+
+
+        /* applying colors to .subject-name and .module-name */
+
+        .page-title{
+            font-size: 50px;
+            font-weight: bold; 
+            color: rgb(32, 32, 32);
+            font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+            padding-block: 10px;
+        }
+
+
+        .page-ai{
+
+            --checked-color : rgb(52, 114, 250);
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color: #2f2ff8;
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+
+        }
+
+        .page-ml{
+
+
+            --checked-color : rgb(172, 3, 172);
+
+            accent-color: var(--checked-color);
+
+
+            .subject-name{
+                color: purple;
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+                        /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+            }
+        }
+
+        .page-se{
+
+            --checked-color : rgb(198 133 15);
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color: rgb(173, 118, 14);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+            }
+
+            
+        }        
+        
+        .page-cry{
+
+            --checked-color : rgb(248, 82, 82);
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color: red;
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+            }
+        }
+        
+        .page-dmdw{
+
+            --checked-color : rgb(4, 153, 4);
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color: green;
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+            }
+        }
+
+
+        /* footer */
+
+        footer{
+            position: sticky;
+            bottom: 0px;
+
+            padding-block: 5px;
+
+            background-color: white;
+
+            overflow: scroll;
+            /* overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap; */
+
+            
+        }
+
+        .links{
+
+            display: flex;
+            flex-direction: row;
+            gap : 15px;
+
+            position: static;
+            
+
+            a{
+                /* border: 1px dashed black; */
+                border-right: 1px dashed rgb(56, 56, 56);
+                text-decoration: none;
+
+                padding-inline: 10px;
+                padding-block: 5px;
+
+            }
+
+            a:hover{
+                background-color: rgb(247, 247, 247);
+                border-radius: 4px;
+                border: 1px dashed rgb(56, 56, 56);
+                
+            }
+        }
+
+
+        main{
+            display: flex;
+            gap: 10px;
+            
+            /* flex-direction: row-reverse; */
+
+            .content{
+                padding-left: 35px;
+
+            }
+
+            nav{
+
+                height: 90vh;
+                padding-top: 20px;
+                position: fixed;
+                z-index: 200;
+                /* top: 20px; */
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                gap: 10px;
+
+                /* padding-block: 5px; */
+                /* margin-inline: 50px; */
+
+                writing-mode: vertical-lr;
+                /* overflow: scroll; */
+
+                /* transform: rotate(90deg); */
+
+                .links{
+
+                    max-height: 500px;
+                    overflow: auto;
+
+                    margin-inline: 40px;
+
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+        }
+
+        .youtube-video{
+
+            font-size: 30px;
+            color: rgba(209, 61, 61, 0.377);
+            text-decoration: none;
+            
+            /* border: 1px solid rgb(209, 61, 61);
+            border-radius: 8px; */
+            padding-inline: 6px;
+        }
+
+        /* Labels for checked inputs */
+        input:checked + label {
+            text-decoration: line-through;
+            color: grey;
+        }
+
+        #dev{
+
+            z-index: 99999999;
+            
+            position: fixed;
+            top: 160px;
+            right: -130px;
+
+            rotate: 270deg;
+            color: rgb(41, 41, 41);
+            /* color: black; */
+            font-size: 9px;
+
+            font-family: monospace;
+        }
+
+
+        .full-screen{
+            z-index: 999999;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+
+            font-size: 25px;
+            cursor: pointer;
+            user-select: none;
+
+            color: rgb(26, 26, 26);
+        }
+
+
+
+                /* this is for desktop only */
+
+        @media only screen and (min-width: 600px) {
+
+
+            .full-screen{
+                right: 25px;
+            }
+            #dev{
+                font-size: 10px;
+                right: -130px;
+                color: black;
+            }
+
+
+            .content{
+                .page-title{
+                    font-size: 120px;
+                    font-weight: 500;
+                    padding-left: 20px;
+
+                    /* background-color: brown; */
+                    color: rgb(31, 31, 31);
+                    padding-block: 100px;
+
+                    text-align: center;
+                    /* text-shadow: 2px 2px rgb(116, 116, 116); */
+                    /* color: red; */
+                }
+            }
+
+
+            .page{
+                display : flex;
+                gap : 20px;
+
+                flex-wrap: wrap;
+                /* justify-content: space-between; */
+                justify-content: flex-start;
+
+                padding-inline: 30px;
+
+                .subject-name{
+                    /* display: none; */
+                    height: fit-content;
+                    width: 100%;
+                    text-align: left;
+
+                    font-size: 50px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+
+                
+
+                .module{
+                    max-width: 300px;
+                    /* height: 100vh; */
+                }
+            }
+
+            
+        }
+
+
+    </style>
+
+    <style>
+        
+    </style>
+
+</head>
+
+
+<body>
+    
+
+    <div id="dev">
+       ///////// let Developer = {"Ajay Kisku"}; ||||||||||
+    </div>
+
+    <div class="full-screen" title="Go Fullscreen" id="fullscreenToggle">
+        ⤢
+    </div>
+
+
+    <main>
+
+        <!-- Side navigation  -->
+        <nav>
+            <div hidden class="menu"
+            style="border-right: 1px solid rgb(56, 56, 56);
+            
+            color: white;
+            background-color: rgb(31, 31, 31);
+            
+            padding-inline: 10px;
+            padding-block: 2px;
+            "
+
+            > <b>//Menu::</b></div>
+
+            <select id="menu" name="food" style="border-right: 1px solid rgb(56, 56, 56);
+            
+            color: white;
+            background-color: rgb(31, 31, 31);
+            border: none;
+            font-weight: bold;
+            
+            padding-inline: 10px;
+            padding-block: 2px;
+
+            field-sizing: content;
+
+            /* for Firefox */
+            -moz-appearance: none;
+            /* for Safari, Chrome, Opera */
+            -webkit-appearance: none;
+
+            ">
+              <option value="menu" selected>//Menu::</option>
+              <optgroup value="menu" label="Whatever you wish !!!!"></optgroup>
+
+              <optgroup label="Appetizers">
+                <option value="bruschetta">Bruschetta with Heirloom Tomatoes - $18</option>
+                <option value="stuffed_mushrooms">Stuffed Mushrooms with Herbs - $20</option>
+                <option value="spring_rolls">Vegetable Spring Rolls - $15</option>
+              </optgroup>
+              <optgroup label="Main Courses">
+                <option value="wild_mushroom_risotto">Wild Mushroom Risotto - $40</option>
+                <option value="eggplant_parmigiana">Eggplant Parmigiana - $35</option>
+                <option value="grilled_vegetable_pasta">Grilled Vegetable Pasta - $38</option>
+              </optgroup>
+              <optgroup label="Desserts">
+                <option value="molten_chocolate_cake">Molten Chocolate Cake - $18</option>
+                <option value="classic_creme_brulee">Classic Crème Brûlée - $15</option>
+                <option value="fruit_tart">Seasonal Fruit Tart - $14</option>
+              </optgroup>
+              <optgroup label="Ice Creams">
+                <option value="vanilla_bean">Vanilla Bean Ice Cream - $10</option>
+                <option value="chocolate_truffle">Chocolate Truffle Ice Cream - $12</option>
+                <option value="mango_sorbet">Mango Sorbet - $10</option>
+              </optgroup>
+              <optgroup label="Beverages">
+                <option value="signature_mocktail">Signature Mocktail - $20</option>
+                <option value="iced_tea">Herbal Iced Tea - $10</option>
+                <option value="sparkling_water">Sparkling Water - $8</option>
+              </optgroup>
+              
+              
+            </select>
+
+
+            <div class="links">
+                <a href="#ai">AI</a>
+                <a href="#ml">ML</a>
+                <a href="#se">SE</a>
+                <a href="#cry">Cryptography</a>
+                <a href="#DMDW">Data_Warehousing
+                </a>
+            </div>
+
+
+            <div class="settings" 
+            style="
+            border-right: 1px solid rgb(56, 56, 56);
+            cursor: pointer;
+            user-select: none;
+            "
+            onclick="alert('कोडिंग के फील्ड में आ के सेटिंग खोजना....ये तो अच्छी बात नहीं है!!!')"
+            > Settings
+            </div>
+
+          
+        </nav>
+
+        <!-- Main Content Area  -->
+        <div class="content">
+
+            <div class="page-title">
+                7<sup>th</sup> Semester CSE Syllabus 
+            </div>
+
+            <!-- Artificial Intelligence -->
+            <div class="page page-ai" id="ai">
+
+                <div class="subject-name">Artificial Intelligence 
+
+                    <a hidden class="youtube-video" title="YouTube Video of almost 6 hours" href="https://www.youtube.com/watch?v=yiXAmkimZRQ">↗</a>
+                </div>
+
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Overview-of-AI" name="Overview-of-AI" value="0">
+                        <label for="Overview-of-AI">Overview of AI</label><br>
+                
+                        <input type="checkbox" id="Problems-of-AI" name="Problems-of-AI" value="0">
+                        <label for="Problems-of-AI">Problems of AI</label><br>
+                
+                        <input type="checkbox" id="AI-techniques" name="AI-techniques" value="0">
+                        <label for="AI-techniques">AI techniques</label><br>
+                
+                        <input type="checkbox" id="Problem-Solving" name="Problem-Solving" value="0">
+                        <label for="Problem-Solving">Problem Solving</label><br>
+                
+                        <input type="checkbox" id="Problem-Space-and-Search" name="Problem-Space-and-Search" value="0">
+                        <label for="Problem-Space-and-Search">Problem Space and Search</label><br>
+                
+                        <input type="checkbox" id="State-Space-Search" name="State-Space-Search" value="0">
+                        <label for="State-Space-Search">Defining the problem as state space search</label><br>
+                
+                        <input type="checkbox" id="Problem-Characteristics" name="Problem-Characteristics" value="0">
+                        <label for="Problem-Characteristics">Problem characteristics</label><br>
+                
+                        <input type="checkbox" id="Tic-Tac-Toe-Problem" name="Tic-Tac-Toe-Problem" value="0">
+                        <label for="Tic-Tac-Toe-Problem">Tic-Tac-Toe Problem</label><br>
+                
+                        <input type="checkbox" id="AI-Programming-Languages" name="AI-Programming-Languages" value="0">
+                        <label for="AI-Programming-Languages">AI languages: Basic knowledge of AI programming languages like Prolog and Lisp</label><br>
+                    </div>
+                </div>
+                
+
+                <!-- Module 2 Checklist -->
+                <div class="module">
+                    <div class="module-name">Module 2 : Basic Search Techniques</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Solving-problems-by-searching" name="Solving-problems-by-searching" value="0">
+                        <label for="Solving-problems-by-searching">Solving problems by searching</label><br>
+
+                        <input type="checkbox" id="Uniform-search-strategies" name="Uniform-search-strategies" value="0">
+                        <label for="Uniform-search-strategies">Uniform search strategies</label><br>
+
+                        <input type="checkbox" id="Breadth-First-Search" name="Breadth-First-Search" value="0">
+                        <label for="Breadth-First-Search">Breadth First Search (BFS)</label><br>
+
+                        <input type="checkbox" id="Depth-First-Search" name="Depth-First-Search" value="0">
+                        <label for="Depth-First-Search">Depth First Search (DFS)</label><br>
+
+                        <input type="checkbox" id="Depth-Limited-Search" name="Depth-Limited-Search" value="0">
+                        <label for="Depth-Limited-Search">Depth Limited Search</label><br>
+
+                        <input type="checkbox" id="Bidirectional-Search" name="Bidirectional-Search" value="0">
+                        <label for="Bidirectional-Search">Bidirectional Search</label><br>
+
+                        <input type="checkbox" id="Best-First-Search" name="Best-First-Search" value="0">
+                        <label for="Best-First-Search">Best First Search</label><br>
+
+                        <input type="checkbox" id="Comparing-search-strategies" name="Comparing-search-strategies" value="0">
+                        <label for="Comparing-search-strategies">Comparing search strategies in terms of complexity</label><br>
+                    </div>
+                </div>
+            
+                <!-- Module 3: Special Search Techniques -->
+                <div class="module">
+                    <div class="module-name">Module 3: Special Search Techniques</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Heuristic-Search" name="Heuristic-Search" value="0">
+                        <label for="Heuristic-Search">Heuristic Search</label><br>
+
+                        <input type="checkbox" id="Greedy-Best-First-Search" name="Greedy-Best-First-Search" value="0">
+                        <label for="Greedy-Best-First-Search">Greedy Best First Search</label><br>
+
+                        <input type="checkbox" id="A-Star-Search" name="A-Star-Search" value="0">
+                        <label for="A-Star-Search">A* search</label><br>
+
+                        <input type="checkbox" id="Hill-Climbing-Search" name="Hill-Climbing-Search" value="0">
+                        <label for="Hill-Climbing-Search">Hill Climbing Search</label><br>
+
+                        <input type="checkbox" id="Simulated-Annealing-Search" name="Simulated-Annealing-Search" value="0">
+                        <label for="Simulated-Annealing-Search">Simulated Annealing search</label><br>
+
+                        <input type="checkbox" id="Genetic-Algorithm" name="Genetic-Algorithm" value="0">
+                        <label for="Genetic-Algorithm">Genetic Algorithm</label><br>
+
+                        <input type="checkbox" id="CSP" name="CSP" value="0">
+                        <label for="CSP">Constraint Satisfaction Problems</label><br>
+
+                        <input type="checkbox" id="Adversarial-Search" name="Adversarial-Search" value="0">
+                        <label for="Adversarial-Search">Adversarial Search</label><br>
+
+                        <input type="checkbox" id="Games" name="Games" value="0">
+                        <label for="Games">Games</label><br>
+
+                        <input type="checkbox" id="Optimal-Decisions" name="Optimal-Decisions" value="0">
+                        <label for="Optimal-Decisions">Optimal decisions and strategies in games</label><br>
+
+                        <input type="checkbox" id="Minimax-Search" name="Minimax-Search" value="0">
+                        <label for="Minimax-Search">Minimax search</label><br>
+
+                        <input type="checkbox" id="Alpha-Beta-Pruning" name="Alpha-Beta-Pruning" value="0">
+                        <label for="Alpha-Beta-Pruning">Alpha, beta pruning</label><br>
+
+                        <input type="checkbox" id="Symbolic-Logic" name="Symbolic-Logic" value="0">
+                        <label for="Symbolic-Logic">Symbolic Logic</label><br>
+
+                        <input type="checkbox" id="Propositional-Logic" name="Propositional-Logic" value="0">
+                        <label for="Propositional-Logic">Syntax and semantics for propositional logic</label><br>
+
+                        <input type="checkbox" id="FOPL" name="FOPL" value="0">
+                        <label for="FOPL">Syntax and semantics of FOPL</label><br>
+
+                        <input type="checkbox" id="WFF-Properties" name="WFF-Properties" value="0">
+                        <label for="WFF-Properties">Properties of WFF</label><br>
+
+                        <input type="checkbox" id="Clausal-Form" name="Clausal-Form" value="0">
+                        <label for="Clausal-Form">Clausal form</label><br>
+
+                        <input type="checkbox" id="Unification" name="Unification" value="0">
+                        <label for="Unification">Unification</label><br>
+
+                        <input type="checkbox" id="Resolution" name="Resolution" value="0">
+                        <label for="Resolution">Resolution</label><br>
+                    </div>
+                </div>
+
+                <!-- Module 4: Reasoning Under Inconsistencies and Uncertainties -->
+                <div class="module">
+                    <div class="module-name">Module 4: Reasoning Under Inconsistencies and Uncertainties</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Non-Monotonic-Reasoning" name="Non-Monotonic-Reasoning" value="0">
+                        <label for="Non-Monotonic-Reasoning">Non-monotonic reasoning</label><br>
+
+                        <input type="checkbox" id="Truth-Maintenance-System" name="Truth-Maintenance-System" value="0">
+                        <label for="Truth-Maintenance-System">Truth Maintenance System</label><br>
+
+                        <input type="checkbox" id="Default-Reasoning" name="Default-Reasoning" value="0">
+                        <label for="Default-Reasoning">Default reasoning & closed world assumption</label><br>
+
+                        <input type="checkbox" id="Predicate-Completion" name="Predicate-Completion" value="0">
+                        <label for="Predicate-Completion">Predicate completion and circumscription</label><br>
+
+                        <input type="checkbox" id="Fuzzy-Logic" name="Fuzzy-Logic" value="0">
+                        <label for="Fuzzy-Logic">Fuzzy Logic</label><br>
+
+                        <input type="checkbox" id="Bayesian-Probabilistic-Inference" name="Bayesian-Probabilistic-Inference" value="0">
+                        <label for="Bayesian-Probabilistic-Inference">Bayesian probabilistic inference</label><br>
+
+                        <input type="checkbox" id="Representation-of-Knowledge" name="Representation-of-Knowledge" value="0">
+                        <label for="Representation-of-Knowledge">Representation of knowledge in uncertain domain</label><br>
+
+                        <input type="checkbox" id="Bayesian-Networks" name="Bayesian-Networks" value="0">
+                        <label for="Bayesian-Networks">Semantics of Bayesian networks</label><br>
+
+                        <input type="checkbox" id="Dempster-Shafer" name="Dempster-Shafer" value="0">
+                        <label for="Dempster-Shafer">Dempster, Shafer theory</label><br>
+                    </div>
+                </div>
+
+                <!-- Module 5: Structured Knowledge -->
+                <div class="module">
+                    <div class="module-name">Module 5: Structured Knowledge</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Associative-Networks" name="Associative-Networks" value="0">
+                        <label for="Associative-Networks">Associative networks</label><br>
+
+                        <input type="checkbox" id="Conceptual-Graphs" name="Conceptual-Graphs" value="0">
+                        <label for="Conceptual-Graphs">Conceptual graphs</label><br>
+
+                        <input type="checkbox" id="Frames-Structures" name="Frames-Structures" value="0">
+                        <label for="Frames-Structures">Frames structures</label><br>
+
+                        <input type="checkbox" id="Rule-Based-Systems" name="Rule-Based-Systems" value="0">
+                        <label for="Rule-Based-Systems">Rule based systems</label><br>
+
+                        <input type="checkbox" id="Non-Production-Systems" name="Non-Production-Systems" value="0">
+                        <label for="Non-Production-Systems">Non production systems: decision tree architectures</label><br>
+
+                        <input type="checkbox" id="Black-Board-System" name="Black-Board-System" value="0">
+                        <label for="Black-Board-System">Black board system architecture</label><br>
+
+                        <input type="checkbox" id="Neural-Network-Architecture" name="Neural-Network-Architecture" value="0">
+                        <label for="Neural-Network-Architecture">Neural network architecture</label><br>
+
+                        <input type="checkbox" id="Types-of-Learning" name="Types-of-Learning" value="0">
+                        <label for="Types-of-Learning">Types of learning</label><br>
+
+                        <input type="checkbox" id="General-Learning-Model" name="General-Learning-Model" value="0">
+                        <label for="General-Learning-Model">General learning model</label><br>
+
+                        <input type="checkbox" id="Learning-by-Induction" name="Learning-by-Induction" value="0">
+                        <label for="Learning-by-Induction">Learning by induction</label><br>
+
+                        <input type="checkbox" id="Generalization" name="Generalization" value="0">
+                        <label for="Generalization">Generalization</label><br>
+
+                        <input type="checkbox" id="Specialization" name="Specialization" value="0">
+                        <label for="Specialization">Specialization</label><br>
+
+                        <input type="checkbox" id="Inductive-Learner" name="Inductive-Learner" value="0">
+                        <label for="Inductive-Learner">Example of inductive learner</label><br>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Machine Leaning  -->
+            <div class="page page-ml" id="ml">
+
+                <div class="subject-name" >Machine Learning</div>
+                
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="What-is-Machine-Learning" name="What-is-Machine-Learning" value="0">
+                        <label for="What-is-Machine-Learning">What is Machine Learning</label><br>
+                
+                        <input type="checkbox" id="Basic-Principals" name="Basic-Principals" value="0">
+                        <label for="Basic-Principals">Basic Principals</label><br>
+                
+                        <input type="checkbox" id="Utility-of-ML" name="Utility-of-ML" value="0">
+                        <label for="Utility-of-ML">Utility of ML</label><br>
+                
+                        <input type="checkbox" id="Well-Defined-Learning-System" name="Well-Defined-Learning-System" value="0">
+                        <label for="Well-Defined-Learning-System">Well Defined Learning System</label><br>
+                
+                        <input type="checkbox" id="Designing-Learning-System" name="Designing-Learning-System" value="0">
+                        <label for="Designing-Learning-System">Designing Learning System</label><br>
+                
+                        <input type="checkbox" id="Challenges-in-ML" name="Challenges-in-ML" value="0">
+                        <label for="Challenges-in-ML">Challenges in ML</label><br>
+                
+                        <input type="checkbox" id="Applications-of-ML" name="Applications-of-ML" value="0">
+                        <label for="Applications-of-ML">Applications of ML</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 2</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Linear-Regression" name="Linear-Regression" value="0">
+                        <label for="Linear-Regression">Linear Regression (with one variable and multiple variables)</label><br>
+                
+                        <input type="checkbox" id="Gradient-Descents" name="Gradient-Descents" value="0">
+                        <label for="Gradient-Descents">Gradient Descents</label><br>
+                
+                        <input type="checkbox" id="Logistic-Regression" name="Logistic-Regression" value="0">
+                        <label for="Logistic-Regression">Classification (Logistic Regression)</label><br>
+                
+                        <input type="checkbox" id="Overfitting" name="Overfitting" value="0">
+                        <label for="Overfitting">Overfitting</label><br>
+                
+                        <input type="checkbox" id="Regularization" name="Regularization" value="0">
+                        <label for="Regularization">Regularization</label><br>
+                
+                        <input type="checkbox" id="Support-Vector-Machines" name="Support-Vector-Machines" value="0">
+                        <label for="Support-Vector-Machines">Support Vector Machines</label><br>
+                
+                        <input type="checkbox" id="Decision-Trees" name="Decision-Trees" value="0">
+                        <label for="Decision-Trees">Decision Trees and Issues in Decision Trees</label><br>
+                
+                        <input type="checkbox" id="Bayesian-Learning" name="Bayesian-Learning" value="0">
+                        <label for="Bayesian-Learning">Bayesian Learning - Bayes Theorem</label><br>
+                
+                        <input type="checkbox" id="Concept-Learning" name="Concept-Learning" value="0">
+                        <label for="Concept-Learning">Concept Learning</label><br>
+                
+                        <input type="checkbox" id="Bayes-Optimal-Classifier" name="Bayes-Optimal-Classifier" value="0">
+                        <label for="Bayes-Optimal-Classifier">Bayes Optimal Classifier</label><br>
+                
+                        <input type="checkbox" id="Naive-Bayes-Classifier" name="Naive-Bayes-Classifier" value="0">
+                        <label for="Naive-Bayes-Classifier">Naive Bayes Classifier</label><br>
+                
+                        <input type="checkbox" id="Belief-Networks" name="Belief-Networks" value="0">
+                        <label for="Belief-Networks">Belief Networks</label><br>
+                
+                        <input type="checkbox" id="EM-Algorithm" name="EM-Algorithm" value="0">
+                        <label for="EM-Algorithm">EM Algorithm</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 3</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Clustering" name="Clustering" value="0">
+                        <label for="Clustering">Clustering (K-means, Hierarchical, etc.)</label><br>
+                
+                        <input type="checkbox" id="Dimensionality-Reduction" name="Dimensionality-Reduction" value="0">
+                        <label for="Dimensionality-Reduction">Dimensionality Reduction</label><br>
+                
+                        <input type="checkbox" id="PCA" name="PCA" value="0">
+                        <label for="PCA">Principal Component Analysis</label><br>
+                
+                        <input type="checkbox" id="Anomaly-Detection" name="Anomaly-Detection" value="0">
+                        <label for="Anomaly-Detection">Anomaly Detection</label><br>
+                
+                        <input type="checkbox" id="Feasibility-of-Learning" name="Feasibility-of-Learning" value="0">
+                        <label for="Feasibility-of-Learning">Feasibility of Learning</label><br>
+                
+                        <input type="checkbox" id="Reinforcement-Learning" name="Reinforcement-Learning" value="0">
+                        <label for="Reinforcement-Learning">Reinforcement Learning</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 4</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Artificial-Neural-Network" name="Artificial-Neural-Network" value="0">
+                        <label for="Artificial-Neural-Network">Artificial Neural Network</label><br>
+                
+                        <input type="checkbox" id="Artificial-Perceptron" name="Artificial-Perceptron" value="0">
+                        <label for="Artificial-Perceptron">Artificial Perceptron</label><br>
+                
+                        <input type="checkbox" id="Gradient-Descent" name="Gradient-Descent" value="0">
+                        <label for="Gradient-Descent">Gradient Descent and The Delta Rule</label><br>
+                
+                        <input type="checkbox" id="Adaline" name="Adaline" value="0">
+                        <label for="Adaline">Adaline</label><br>
+                
+                        <input type="checkbox" id="Multilayer-Networks" name="Multilayer-Networks" value="0">
+                        <label for="Multilayer-Networks">Multilayer Networks</label><br>
+                
+                        <input type="checkbox" id="Backpropagation" name="Backpropagation" value="0">
+                        <label for="Backpropagation">Backpropagation Rule and Algorithm-Convergence</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 5</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Evolutionary-Algorithm" name="Evolutionary-Algorithm" value="0">
+                        <label for="Evolutionary-Algorithm">Evolutionary Algorithm</label><br>
+                
+                        <input type="checkbox" id="Genetic-Algorithms" name="Genetic-Algorithms" value="0">
+                        <label for="Genetic-Algorithms">Genetic Algorithms - An Illustrative Example</label><br>
+                
+                        <input type="checkbox" id="Hypothesis-Space-Search" name="Hypothesis-Space-Search" value="0">
+                        <label for="Hypothesis-Space-Search">Hypothesis Space Search</label><br>
+                
+                        <input type="checkbox" id="Genetic-Programming" name="Genetic-Programming" value="0">
+                        <label for="Genetic-Programming">Genetic Programming</label><br>
+                
+                        <input type="checkbox" id="Swarm-Intelligence" name="Swarm-Intelligence" value="0">
+                        <label for="Swarm-Intelligence">Swarm Intelligence Algorithm</label><br>
+                    </div>
+                </div>
+                
+
+
+            </div>
+
+            <!-- Software Engineering  -->
+            <div class="page page-se" id="se">
+
+                <div class="subject-name" id="se">Software Engineering</div>
+                
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction to Software Engineering</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Evolving-Role-of-Software" name="Evolving-Role-of-Software" value="0">
+                        <label for="Evolving-Role-of-Software">The evolving role of software</label><br>
+                
+                        <input type="checkbox" id="Changing-Nature-of-Software" name="Changing-Nature-of-Software" value="0">
+                        <label for="Changing-Nature-of-Software">Changing Nature of Software</label><br>
+                
+                        <input type="checkbox" id="Legacy-Software" name="Legacy-Software" value="0">
+                        <label for="Legacy-Software">Legacy software</label><br>
+                
+                        <input type="checkbox" id="Software-Myths" name="Software-Myths" value="0">
+                        <label for="Software-Myths">Software myths</label><br>
+                
+                        <input type="checkbox" id="Layered-Technology" name="Layered-Technology" value="0">
+                        <label for="Layered-Technology">Software Engineering - A layered technology</label><br>
+                
+                        <input type="checkbox" id="Process-Framework" name="Process-Framework" value="0">
+                        <label for="Process-Framework">A process framework</label><br>
+                
+                        <input type="checkbox" id="CMMI" name="CMMI" value="0">
+                        <label for="CMMI">The Capability Maturity Model Integration (CMMI)</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 2: Process</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Process-Pattern" name="Process-Pattern" value="0">
+                        <label for="Process-Pattern">Process pattern</label><br>
+                
+                        <input type="checkbox" id="Process-Assessment" name="Process-Assessment" value="0">
+                        <label for="Process-Assessment">Process assessment</label><br>
+                
+                        <input type="checkbox" id="Personal-and-Team-Models" name="Personal-and-Team-Models" value="0">
+                        <label for="Personal-and-Team-Models">Personal and team process models</label><br>
+                
+                        <input type="checkbox" id="Waterfall-Model" name="Waterfall-Model" value="0">
+                        <label for="Waterfall-Model">The waterfall model</label><br>
+                
+                        <input type="checkbox" id="Incremental-Models" name="Incremental-Models" value="0">
+                        <label for="Incremental-Models">Incremental process models</label><br>
+                
+                        <input type="checkbox" id="Evolutionary-Models" name="Evolutionary-Models" value="0">
+                        <label for="Evolutionary-Models">Evolutionary process models</label><br>
+                
+                        <input type="checkbox" id="Specialized-Models" name="Specialized-Models" value="0">
+                        <label for="Specialized-Models">Specialized process models</label><br>
+                
+                        <input type="checkbox" id="Unified-Process" name="Unified-Process" value="0">
+                        <label for="Unified-Process">The Unified process</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 3: Software Requirements</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Functional-Requirements" name="Functional-Requirements" value="0">
+                        <label for="Functional-Requirements">Functional and non-functional requirements</label><br>
+                
+                        <input type="checkbox" id="User-Requirements" name="User-Requirements" value="0">
+                        <label for="User-Requirements">User requirements</label><br>
+                
+                        <input type="checkbox" id="System-Requirements" name="System-Requirements" value="0">
+                        <label for="System-Requirements">System requirements</label><br>
+                
+                        <input type="checkbox" id="Interface-Specification" name="Interface-Specification" value="0">
+                        <label for="Interface-Specification">Interface specification</label><br>
+                
+                        <input type="checkbox" id="Requirements-Document" name="Requirements-Document" value="0">
+                        <label for="Requirements-Document">The software requirements document</label><br>
+                
+                        <input type="checkbox" id="Feasibility-Studies" name="Feasibility-Studies" value="0">
+                        <label for="Feasibility-Studies">Feasibility studies</label><br>
+                
+                        <input type="checkbox" id="Elicitation-and-Analysis" name="Elicitation-and-Analysis" value="0">
+                        <label for="Elicitation-and-Analysis">Requirements elicitation and analysis</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 4</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Requirements-Validation" name="Requirements-Validation" value="0">
+                        <label for="Requirements-Validation">Requirements validation</label><br>
+                
+                        <input type="checkbox" id="Requirements-Management" name="Requirements-Management" value="0">
+                        <label for="Requirements-Management">Requirements management</label><br>
+                
+                        <input type="checkbox" id="Context-Models" name="Context-Models" value="0">
+                        <label for="Context-Models">Context Models</label><br>
+                
+                        <input type="checkbox" id="Behavioral-Models" name="Behavioral-Models" value="0">
+                        <label for="Behavioral-Models">Behavioral Models</label><br>
+                
+                        <input type="checkbox" id="Data-Models" name="Data-Models" value="0">
+                        <label for="Data-Models">Data Models</label><br>
+                
+                        <input type="checkbox" id="Object-Models" name="Object-Models" value="0">
+                        <label for="Object-Models">Object Models</label><br>
+                
+                        <input type="checkbox" id="Structured-Methods" name="Structured-Methods" value="0">
+                        <label for="Structured-Methods">Structured Methods</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 5: Design Engineering</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Design-Process" name="Design-Process" value="0">
+                        <label for="Design-Process">Design process and Design quality</label><br>
+                
+                        <input type="checkbox" id="Design-Concepts" name="Design-Concepts" value="0">
+                        <label for="Design-Concepts">Design concepts</label><br>
+                
+                        <input type="checkbox" id="Design-Model" name="Design-Model" value="0">
+                        <label for="Design-Model">Design model</label><br>
+                
+                        <input type="checkbox" id="Pattern-Based-Design" name="Pattern-Based-Design" value="0">
+                        <label for="Pattern-Based-Design">Pattern based software design</label><br>
+                
+                        <input type="checkbox" id="Architectural-Design" name="Architectural-Design" value="0">
+                        <label for="Architectural-Design">Creating an architectural design</label><br>
+                
+                        <input type="checkbox" id="Component-Level-Design" name="Component-Level-Design" value="0">
+                        <label for="Component-Level-Design">Modeling component-level design</label><br>
+                
+                        <input type="checkbox" id="UI-Design" name="UI-Design" value="0">
+                        <label for="UI-Design">Performing user interface design</label><br>
+                
+                        <input type="checkbox" id="Design-Evaluation" name="Design-Evaluation" value="0">
+                        <label for="Design-Evaluation">Design Evaluation</label><br>
+                    </div>
+                </div>
+                
+
+
+            </div>
+
+            <!-- Cryptography  -->
+            <div class="page page-cry" id="cry">
+
+                <div class="subject-name" id="se">Cryptography</div>
+                
+                <div class="module">
+                    <div class="module-name">Module 1: Conventional Encryption and Message Confidentiality</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Conventional-Encryption-Principles" name="Conventional-Encryption-Principles" value="0">
+                        <label for="Conventional-Encryption-Principles">Conventional Encryption Principles</label><br>
+                
+                        <input type="checkbox" id="Conventional-Encryption-Algorithms" name="Conventional-Encryption-Algorithms" value="0">
+                        <label for="Conventional-Encryption-Algorithms">Conventional Encryption Algorithms</label><br>
+                
+                        <input type="checkbox" id="Location-of-Encryption-Devices" name="Location-of-Encryption-Devices" value="0">
+                        <label for="Location-of-Encryption-Devices">Location of Encryption Devices</label><br>
+                
+                        <input type="checkbox" id="Key-Distribution" name="Key-Distribution" value="0">
+                        <label for="Key-Distribution">Key Distribution</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 2: Public Key Cryptography and Message Authentication</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Message-Authentication" name="Message-Authentication" value="0">
+                        <label for="Message-Authentication">Approaches to Message Authentication</label><br>
+                
+                        <input type="checkbox" id="SHA-1" name="SHA-1" value="0">
+                        <label for="SHA-1">SHA-1</label><br>
+                
+                        <input type="checkbox" id="MD5" name="MD5" value="0">
+                        <label for="MD5">MD5</label><br>
+                
+                        <input type="checkbox" id="Public-Key-Principles" name="Public-Key-Principles" value="0">
+                        <label for="Public-Key-Principles">Public key cryptography principles</label><br>
+                
+                        <input type="checkbox" id="RSA" name="RSA" value="0">
+                        <label for="RSA">RSA</label><br>
+                
+                        <input type="checkbox" id="Digital-Signatures" name="Digital-Signatures" value="0">
+                        <label for="Digital-Signatures">Digital signatures</label><br>
+                
+                        <input type="checkbox" id="Key-Management" name="Key-Management" value="0">
+                        <label for="Key-Management">Key Management</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 3: Network Security Applications</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Kerberos-Motivation" name="Kerberos-Motivation" value="0">
+                        <label for="Kerberos-Motivation">Kerberos Motivation</label><br>
+                
+                        <input type="checkbox" id="Kerberos-Version-4" name="Kerberos-Version-4" value="0">
+                        <label for="Kerberos-Version-4">Kerberos version 4</label><br>
+                
+                        <input type="checkbox" id="PGP-Notation" name="PGP-Notation" value="0">
+                        <label for="PGP-Notation">PGP Notation</label><br>
+                
+                        <input type="checkbox" id="PGP-Operational-Description" name="PGP-Operational-Description" value="0">
+                        <label for="PGP-Operational-Description">PGP Operational Description</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 4: IP Security & Web Security</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="IP-Security-Overview" name="IP-Security-Overview" value="0">
+                        <label for="IP-Security-Overview">IP Security Overview</label><br>
+                
+                        <input type="checkbox" id="IP-Security-Architecture" name="IP-Security-Architecture" value="0">
+                        <label for="IP-Security-Architecture">IP Security Architecture</label><br>
+                
+                        <input type="checkbox" id="Authentication-Header" name="Authentication-Header" value="0">
+                        <label for="Authentication-Header">Authentication Header</label><br>
+                
+                        <input type="checkbox" id="Web-Security-Threats" name="Web-Security-Threats" value="0">
+                        <label for="Web-Security-Threats">Web Security Threats</label><br>
+                
+                        <input type="checkbox" id="Web-Traffic-Approaches" name="Web-Traffic-Approaches" value="0">
+                        <label for="Web-Traffic-Approaches">Web Traffic Security Approaches</label><br>
+                
+                        <input type="checkbox" id="SSL-and-TLS" name="SSL-and-TLS" value="0">
+                        <label for="SSL-and-TLS">Overview of Secure Socket Layer and Transport Layer Security</label><br>
+                
+                        <input type="checkbox" id="Secure-Electronic-Transaction" name="Secure-Electronic-Transaction" value="0">
+                        <label for="Secure-Electronic-Transaction">Overview of Secure Electronic Transaction</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 5: Intruders and Viruses & Firewalls</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Intruders" name="Intruders" value="0">
+                        <label for="Intruders">Intruders</label><br>
+                
+                        <input type="checkbox" id="Intrusion-Techniques" name="Intrusion-Techniques" value="0">
+                        <label for="Intrusion-Techniques">Intrusion Techniques</label><br>
+                
+                        <input type="checkbox" id="Password-Protection" name="Password-Protection" value="0">
+                        <label for="Password-Protection">Password Protection</label><br>
+                
+                        <input type="checkbox" id="Password-Strategies" name="Password-Strategies" value="0">
+                        <label for="Password-Strategies">Password Selection Strategies</label><br>
+                
+                        <input type="checkbox" id="Intrusion-Detection" name="Intrusion-Detection" value="0">
+                        <label for="Intrusion-Detection">Intrusion Detection</label><br>
+                
+                        <input type="checkbox" id="Malicious-Programs" name="Malicious-Programs" value="0">
+                        <label for="Malicious-Programs">Malicious Programs</label><br>
+                
+                        <input type="checkbox" id="Nature-of-Viruses" name="Nature-of-Viruses" value="0">
+                        <label for="Nature-of-Viruses">Nature of viruses</label><br>
+                
+                        <input type="checkbox" id="Types-of-Viruses" name="Types-of-Viruses" value="0">
+                        <label for="Types-of-Viruses">Types of Viruses</label><br>
+                
+                        <input type="checkbox" id="Macro-Viruses" name="Macro-Viruses" value="0">
+                        <label for="Macro-Viruses">Macro viruses</label><br>
+                
+                        <input type="checkbox" id="Antivirus-Approaches" name="Antivirus-Approaches" value="0">
+                        <label for="Antivirus-Approaches">Antivirus Approaches</label><br>
+                
+                        <input type="checkbox" id="Firewall-Characteristics" name="Firewall-Characteristics" value="0">
+                        <label for="Firewall-Characteristics">Firewall characteristics</label><br>
+                
+                        <input type="checkbox" id="Types-of-Firewall" name="Types-of-Firewall" value="0">
+                        <label for="Types-of-Firewall">Types of Firewall</label><br>
+                
+                        <input type="checkbox" id="Firewall-Configuration" name="Firewall-Configuration" value="0">
+                        <label for="Firewall-Configuration">Firewall configuration</label><br>
+                    </div>
+                </div>
+                
+
+
+
+            </div>
+
+            <!-- Data  Mining and Data Warehousing -->
+            <div class="page page-dmdw" id="DMDW">
+
+                <div class="subject-name">Data  Mining and Data Warehousing</div>
+                
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Definitions-Characteristics" name="Definitions-Characteristics" value="0">
+                        <label for="Definitions-Characteristics">Definitions and characteristics</label><br>
+                
+                        <input type="checkbox" id="Multidimensional-Data-Model" name="Multidimensional-Data-Model" value="0">
+                        <label for="Multidimensional-Data-Model">Multidimensional data model</label><br>
+                
+                        <input type="checkbox" id="Warehouse-Schema" name="Warehouse-Schema" value="0">
+                        <label for="Warehouse-Schema">Warehouse schema</label><br>
+                
+                        <input type="checkbox" id="Data-Marts" name="Data-Marts" value="0">
+                        <label for="Data-Marts">Data marts</label><br>
+                
+                        <input type="checkbox" id="Types-Data-Marts" name="Types-Data-Marts" value="0">
+                        <label for="Types-Data-Marts">Types of data marts</label><br>
+                
+                        <input type="checkbox" id="Loading-Data-Mart" name="Loading-Data-Mart" value="0">
+                        <label for="Loading-Data-Mart">Loading a data mart</label><br>
+                
+                        <input type="checkbox" id="Metadata" name="Metadata" value="0">
+                        <label for="Metadata">Metadata</label><br>
+                
+                        <input type="checkbox" id="Data-Model" name="Data-Model" value="0">
+                        <label for="Data-Model">Data model</label><br>
+                
+                        <input type="checkbox" id="Maintenance" name="Maintenance" value="0">
+                        <label for="Maintenance">Maintenance</label><br>
+                
+                        <input type="checkbox" id="Security-Data-Mart" name="Security-Data-Mart" value="0">
+                        <label for="Security-Data-Mart">Security in a data mart</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 2: Online Analytical Processing</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="OLTP-OLAP" name="OLTP-OLAP" value="0">
+                        <label for="OLTP-OLAP">OLTP and OLAP system</label><br>
+                
+                        <input type="checkbox" id="Data-Modeling" name="Data-Modeling" value="0">
+                        <label for="Data-Modeling">Data Modeling</label><br>
+                
+                        <input type="checkbox" id="LAP-Tools" name="LAP-Tools" value="0">
+                        <label for="LAP-Tools">LAP tools</label><br>
+                
+                        <input type="checkbox" id="Arbor-Essbase" name="Arbor-Essbase" value="0">
+                        <label for="Arbor-Essbase">Arbor Essbase web</label><br>
+                
+                        <input type="checkbox" id="Microstrategy-DSS-Web" name="Microstrategy-DSS-Web" value="0">
+                        <label for="Microstrategy-DSS-Web">Microstrategy DSS web</label><br>
+                
+                        <input type="checkbox" id="Brio-Technology" name="Brio-Technology" value="0">
+                        <label for="Brio-Technology">Brio Technology</label><br>
+                
+                        <input type="checkbox" id="Star-Schema" name="Star-Schema" value="0">
+                        <label for="Star-Schema">Star schema</label><br>
+                
+                        <input type="checkbox" id="Snowflake-Schema" name="Snowflake-Schema" value="0">
+                        <label for="Snowflake-Schema">Snowflake schema</label><br>
+                
+                        <input type="checkbox" id="OLAP-Tools" name="OLAP-Tools" value="0">
+                        <label for="OLAP-Tools">OLAP tools</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 3: Developing a Data Warehousing</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Building-Data-Warehouse" name="Building-Data-Warehouse" value="0">
+                        <label for="Building-Data-Warehouse">Building a Data Warehouse</label><br>
+                
+                        <input type="checkbox" id="Architectural-Strategies" name="Architectural-Strategies" value="0">
+                        <label for="Architectural-Strategies">Architectural strategies & organizational issues</label><br>
+                
+                        <input type="checkbox" id="Design-Considerations" name="Design-Considerations" value="0">
+                        <label for="Design-Considerations">Design considerations</label><br>
+                
+                        <input type="checkbox" id="Data-Content" name="Data-Content" value="0">
+                        <label for="Data-Content">Data content</label><br>
+                
+                        <input type="checkbox" id="Distribution-Data" name="Distribution-Data" value="0">
+                        <label for="Distribution-Data">Distribution of data</label><br>
+                
+                        <input type="checkbox" id="Tools-Data-Warehousing" name="Tools-Data-Warehousing" value="0">
+                        <label for="Tools-Data-Warehousing">Tools for Data Warehousing</label><br>
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-name">Module 4: Data Mining</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Definitions" name="Definitions" value="0">
+                        <label for="Definitions">Definitions</label><br>
+                
+                        <input type="checkbox" id="KDD-vs-Data-Mining" name="KDD-vs-Data-Mining" value="0">
+                        <label for="KDD-vs-Data-Mining">Knowledge Discovery Database (KDD) versus Data Mining</label><br>
+                
+                        <input type="checkbox" id="DBMS-vs-Data-Mining" name="DBMS-vs-Data-Mining" value="0">
+                        <label for="DBMS-vs-Data-Mining">DBMS vs Data Mining</label><br>
+                
+                        <input type="checkbox" id="Data-Mining-Techniques" name="Data-Mining-Techniques" value="0">
+                        <label for="Data-Mining-Techniques">Data Mining Techniques</label><br>
+                
+                        <input type="checkbox" id="Issues-and-Challenges" name="Issues-and-Challenges" value="0">
+                        <label for="Issues-and-Challenges">Issues and challenges</label><br>
+                
+                        <input type="checkbox" id="Applications" name="Applications" value="0">
+                        <label for="Applications">Applications of Data Warehousing & Data Mining in Government</label><br>
+                
+                        <input type="checkbox" id="Apriori-Algorithm" name="Apriori-Algorithm" value="0">
+                        <label for="Apriori-Algorithm">Apriori algorithms</label><br>
+                
+                        <input type="checkbox" id="Partition-Algorithm" name="Partition-Algorithm" value="0">
+                        <label for="Partition-Algorithm">Partition algorithm</label><br>
+                
+                        <input type="checkbox" id="FP-Tree-Growth" name="FP-Tree-Growth" value="0">
+                        <label for="FP-Tree-Growth">FP - tree growth algorithm</label><br>
+                
+                        <input type="checkbox" id="Generalized-Association-Rule" name="Generalized-Association-Rule" value="0">
+                        <label for="Generalized-Association-Rule">Generalized association rule</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 5: Clustering</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Clustering-Techniques" name="Clustering-Techniques" value="0">
+                        <label for="Clustering-Techniques">Clustering Techniques</label><br>
+                
+                        <input type="checkbox" id="Partition-Algorithms" name="Partition-Algorithms" value="0">
+                        <label for="Partition-Algorithms">Partition algorithms</label><br>
+                
+                        <input type="checkbox" id="CLARA" name="CLARA" value="0">
+                        <label for="CLARA">CLARA</label><br>
+                
+                        <input type="checkbox" id="CLARANS" name="CLARANS" value="0">
+                        <label for="CLARANS">CLARANS</label><br>
+                
+                        <input type="checkbox" id="Hierarchical-Clustering" name="Hierarchical-Clustering" value="0">
+                        <label for="Hierarchical-Clustering">Hierarchical clustering</label><br>
+                
+                        <input type="checkbox" id="DBSCAN" name="DBSCAN" value="0">
+                        <label for="DBSCAN">DBSCAN</label><br>
+                
+                        <input type="checkbox" id="BIRCH" name="BIRCH" value="0">
+                        <label for="BIRCH">BIRCH</label><br>
+                
+                        <input type="checkbox" id="CURE" name="CURE" value="0">
+                        <label for="CURE">CURE</label><br>
+                
+                        <input type="checkbox" id="Decision-Trees" name="Decision-Trees" value="0">
+                        <label for="Decision-Trees">Decision Trees</label><br>
+                
+                        <input type="checkbox" id="Tree-Construction-Principle" name="Tree-Construction-Principle" value="0">
+                        <label for="Tree-Construction-Principle">Tree construction principle</label><br>
+                
+                        <input type="checkbox" id="Best-Split" name="Best-Split" value="0">
+                        <label for="Best-Split">Best split</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 6: Web Mining</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Web-Content-Mining" name="Web-Content-Mining" value="0">
+                        <label for="Web-Content-Mining">Web Content Mining</label><br>
+                
+                        <input type="checkbox" id="Web-Structure-Mining" name="Web-Structure-Mining" value="0">
+                        <label for="Web-Structure-Mining">Web Structure Mining</label><br>
+                
+                        <input type="checkbox" id="Web-Usage-Mining" name="Web-Usage-Mining" value="0">
+                        <label for="Web-Usage-Mining">Web Usage Mining</label><br>
+                
+                        <input type="checkbox" id="Text-Mining" name="Text-Mining" value="0">
+                        <label for="Text-Mining">Text Mining</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 7: Temporal and Spatial Data Mining</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Temporal-Data-Mining" name="Temporal-Data-Mining" value="0">
+                        <label for="Temporal-Data-Mining">Basic concepts of temporal data mining</label><br>
+                
+                        <input type="checkbox" id="GSP-Algorithm" name="GSP-Algorithm" value="0">
+                        <label for="GSP-Algorithm">The GSP algorithm</label><br>
+                
+                        <input type="checkbox" id="SPADE" name="SPADE" value="0">
+                        <label for="SPADE">SPADE</label><br>
+                
+                        <input type="checkbox" id="SPIRIT" name="SPIRIT" value="0">
+                        <label for="SPIRIT">SPIRIT</label><br>
+                
+                        <input type="checkbox" id="WUM" name="WUM" value="0">
+                        <label for="WUM">WUM</label><br>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script>
+        // Save the state of checkboxes in localStorage
+        function saveChecklistState() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checklistState = {};
+    
+            checkboxes.forEach(checkbox => {
+                checklistState[checkbox.id] = checkbox.checked;
+            });
+    
+            localStorage.setItem('ai-checklist-state', JSON.stringify(checklistState));
+        }
+    
+        // Load the saved state of checkboxes from localStorage
+        function loadChecklistState() {
+            const savedState = JSON.parse(localStorage.getItem('ai-checklist-state'));
+    
+            if (savedState) {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    if (savedState[checkbox.id] !== undefined) {
+                        checkbox.checked = savedState[checkbox.id];
+                    }
+                });
+            }
+        }
+    
+        // Add event listeners to save the state when a checkbox is changed
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', saveChecklistState);
+        });
+    
+        // Load the checklist state when the page is loaded
+        window.onload = loadChecklistState;
+
+
+//  Starts JavaScript for Smooth Scroll 
+
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        // Smooth scrolling for anchor links
+        gsap.utils.toArray('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                gsap.to(window, {
+                    scrollTo: {
+                        y: anchor.getAttribute('href'),
+                        offsetY: 10, // Adjust for fixed navigation
+                    },
+                    duration: 0.1,
+                    ease: "power2.inOut",
+                });
+            });
+        });
+
+
+
+//  Ends JavaScript for Smooth Scroll 
+
+        // GSAP ScrollTrigger for animations when modules are in the viewport
+        gsap.utils.toArray('.module').forEach((module) => {
+                    gsap.fromTo(module.querySelector('.module-name'), {
+                        opacity: 0,
+                        y: 50
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: module,
+                            start: "top 90%", // Trigger when the top of the module is 80% from the top of the viewport
+                            toggleActions: "play none none reverse", // Play animation when the module is in view, reverse when out
+                        }
+                    });
+
+                    gsap.fromTo(module.querySelector('.module-content'), {
+                        opacity: 0,
+                        y: 50
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: module,
+                            start: "top 90%",
+                            toggleActions: "play none none reverse",
+                        }
+                    });
+                });
+
+
+
+    </script>
+
+
+    <!-- full screen  -->
+    <script>
+
+        const toggleDiv = document.getElementById('fullscreenToggle');
+
+        // Function to toggle fullscreen mode
+        function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            // Enter fullscreen
+            document.documentElement.requestFullscreen().then(() => {
+            toggleDiv.textContent = '⤬'; // Change symbol to "exit" icon
+            }).catch((err) => {
+            console.error(`Error attempting to enter fullscreen: ${err}`);
+            });
+        } else {
+            // Exit fullscreen
+            document.exitFullscreen().then(() => {
+            toggleDiv.textContent = '⤢'; // Change symbol to "expand" icon
+            }).catch((err) => {
+            console.error(`Error attempting to exit fullscreen: ${err}`);
+            });
+        }
+        }
+
+        // Add click event listener to the div
+        toggleDiv.addEventListener('click', toggleFullscreen);
+        </script>
+
+<!-- <elevenlabs-convai agent-id="sV2rVXuD54iHn87dyKkL"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script> -->
+    
+</body>
+</html>
