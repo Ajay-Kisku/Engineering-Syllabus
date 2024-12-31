@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSE Syllabus 7th Semester</title>
 
+
     <meta property="og:site_name" content="engineering-syllabus">
     <meta property="og:title" content="CSE Syllabus 7th Semester" />
     <meta property="og:description" content="Keep track of your syllabus completion" />
@@ -459,6 +460,47 @@
     </style>
 
     <style>
+
+        #extra-info{
+            /* background-color: rgba(255, 0, 0, 0.349); */
+
+            display: flex;
+            gap: 100px;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+
+            z-index: 99999999;
+            
+
+            width:   fit-content;
+            height:   fit-content;
+
+            
+            position: fixed;
+            /* top: 160px; */
+            /* right: -130px; */
+            top: 240px;
+            /* left: 0px; */
+            /* bottom: 0px; */
+            right: -220px;
+
+            rotate: 270deg;
+            color: rgb(41, 41, 41);
+            /* color: black; */
+            font-size: 12px;
+            /* font-weight: bold; */
+
+            font-family: monospace;
+
+
+            #toggleNavBar{
+                user-select: none;
+                cursor: pointer;
+
+                font-weight: bolder;
+            }
+        }
         
     </style>
 
@@ -468,13 +510,22 @@
 <body>
     
 
-    <div id="dev">
-       ///////// let Developer = {"Ajay Kisku"}; ||||||||||
+    <div id="extra-info">
+
+        <div id="devZ">
+           ///////// let Developer = {"Ajay Kisku"}; ||||||||||
+        </div>
+    
+
+    
+        <div id="toggleNavBar"> NAV </div>
+
     </div>
 
     <div class="full-screen" title="Go Fullscreen" id="fullscreenToggle">
         ⤢
     </div>
+
 
 
     <main>
