@@ -464,7 +464,7 @@
         #extra-info{
             /* background-color: rgba(255, 0, 0, 0.349); */
 
-            color: rgb(161, 161, 161);
+            color: rgb(194, 194, 194);
 
             display: flex;
             gap: 100px;
@@ -480,12 +480,9 @@
 
             
             position: fixed;
-            /* top: 160px; */
-            /* right: -130px; */
             top: 200px;
-            /* left: 0px; */
-            /* bottom: 0px; */
-            right: -210px;
+            right: -205px;
+            /* right: -130px; */
 
             rotate: 270deg;
             color: rgb(41, 41, 41);
@@ -498,13 +495,13 @@
 
             #toggleNavBar{
 
-                background-color: red;
+                /* background-color: red; */
 
                 width:  50px;
 
                 text-align: center;
 
-                color: rgb(58, 58, 58);
+                color: rgb(121, 121, 121);
 
 
                 font-size: 12px;
@@ -542,7 +539,7 @@
 
 
 
-    <main>
+    <main id="main">
 
         <!-- Side navigation  -->
         <nav>
@@ -1622,6 +1619,37 @@
         // Add click event listener to the div
         toggleDiv.addEventListener('click', toggleFullscreen);
         </script>
+
+
+<script>
+
+    
+    content = document.querySelector(".content")
+    extraInfo = document.querySelector("#extra-info")
+
+    toggleNavBar.addEventListener('click', () => {
+
+        if (main.style.flexDirection === 'row-reverse') {
+            main.style.flexDirection = 'row';  // Change to row
+
+            extraInfo.style.left = "unset";
+            extraInfo.style.right = "-205px";
+
+            content.style.paddingLeft = "35px"
+
+
+        } else {
+            main.style.flexDirection = 'row-reverse';  // Change to row-reverse
+            extraInfo.style.right = "0px";
+            extraInfo.style.left = "-200px";
+
+            content.style.paddingLeft = "10px"
+            content.style.paddingRight = "35px"
+        }
+    });
+
+
+</script>
 
 <!-- <elevenlabs-convai agent-id="sV2rVXuD54iHn87dyKkL"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script> -->
     
