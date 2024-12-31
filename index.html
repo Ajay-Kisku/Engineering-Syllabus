@@ -246,6 +246,34 @@
             
         }
 
+
+        .links-with-left-border{
+
+            display: flex;
+            flex-direction: row;
+            gap : 15px;
+
+            position: static;
+
+            a{
+                /* border: 1px dashed black; */
+                border-left: 1px dashed rgb(56, 56, 56);
+                text-decoration: none;
+                padding-inline: 10px;
+                padding-block: 5px;
+                border-inline: 1px solid transparent;
+                border-right: 1px solid transparent;
+
+            }
+
+            a:hover{
+                background-color: rgb(255, 255, 255);
+                border-radius: 4px;
+                border: 1px dashed rgb(56, 56, 56);
+                
+            }
+        }
+
         .links{
 
             display: flex;
@@ -253,18 +281,15 @@
             gap : 15px;
 
             position: static;
-            
 
             a{
                 /* border: 1px dashed black; */
                 border-right: 1px dashed rgb(56, 56, 56);
                 text-decoration: none;
-
                 padding-inline: 10px;
                 padding-block: 5px;
                 border-inline: 1px solid transparent;
                 border-left: 1px solid transparent;
-
 
             }
 
@@ -1626,6 +1651,7 @@
     
     content = document.querySelector(".content")
     extraInfo = document.querySelector("#extra-info")
+    links = document.querySelector(".links")
 
     toggleNavBar.addEventListener('click', () => {
 
@@ -1637,8 +1663,20 @@
 
             content.style.paddingLeft = "35px"
 
+            links.classList.remove('links-with-left-border');
+            links.classList.add('links');
+
+            
+
+
 
         } else {
+
+
+            links.classList.remove('links');
+            links.classList.add('links-with-left-border');
+
+
             main.style.flexDirection = 'row-reverse';  // Change to row-reverse
             extraInfo.style.right = "0px";
             extraInfo.style.left = "-205px";
