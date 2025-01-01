@@ -102,6 +102,11 @@
 
 
 
+        /* remove the title of definitions */
+        .definition-title{
+            display: none;
+        }
+
         /* applying colors to .subject-name and .module-name */
 
         .page-title{
@@ -401,14 +406,23 @@
 
 
 
-                /* this is for desktop only */
-
+        /* this is for desktop only */
         @media only screen and (min-width: 600px) {
+
+            /* tried to change the position of nav : task failed */
+            #extra-info{
+                display: flex;
+                background-color: red;
+                top: 200px;
+                right: -190px;
+            }
 
 
             .full-screen{
                 right: 25px;
             }
+
+
             #dev{
                 font-size: 10px;
                 right: -130px;
@@ -449,19 +463,37 @@
             }
 
 
+            .definition-title{
+                display: block;
+            }
+
+
             .page{
                 display : flex;
                 gap : 20px;
 
-                flex-wrap: wrap;
-                /* justify-content: space-between; */
+                flex-wrap: wrap; 
                 justify-content: flex-start;
+
+                /* ======================================== */
+
+                /* column like pintreset */
+                /* column-width: 300px; */
+
+                /* child */
+                /* width: 100%; */
+
+                /* ======================================== */
+
+                /* padding-top: 50px; */
+                /* height: 100vh; */
+
 
                 padding-inline: 50px;
                 padding-bottom: 60px;
 
                 .subject-name{
-                    /* display: none; */
+                    display: block;
                     height: fit-content;
                     width: 100%;
                     text-align: left;
@@ -473,13 +505,18 @@
                 
 
                 .module{
+
                     max-width: 300px;
                     /* height: 100vh; */
                 }
             }
 
+
+            
             
         }
+            
+
 
 
     </style>
@@ -641,7 +678,7 @@
             </div>
 
 
-            <div class="settings" 
+            <div class="settings"  id="settings"
             style="
             border-right: 1px solid rgb(56, 56, 56);
             cursor: pointer;
@@ -667,6 +704,16 @@
                 <div class="subject-name">Artificial Intelligence 
 
                     <a hidden class="youtube-video" title="YouTube Video of almost 6 hours" href="https://www.youtube.com/watch?v=yiXAmkimZRQ">↗</a>
+                </div>
+
+                <div class="module">
+                    <div class="module-name definition-title">What is Artificial Intelligence?</div>
+
+                    <div class="module-content">
+
+                        Artificial Intelligence (AI) is the field of computer science focused on creating systems or machines that can perform tasks that typically require human intelligence. These tasks include reasoning, learning, problem-solving, perception, language understanding, and decision-making. The goal of AI is to develop algorithms and systems that enable machines to simulate or replicate intelligent behavior.
+
+                    </div>
                 </div>
 
                 <div class="module">
@@ -876,10 +923,22 @@
             </div>
 
 
+
+            
             <!-- Machine Leaning  -->
             <div class="page page-ml" id="ml">
 
                 <div class="subject-name" >Machine Learning</div>
+
+                <div class="module">
+                    <div class="module-name">What is Machine Learning?</div>
+
+                    <div class="module-content">
+
+                        Machine Learning (ML) is a subset of Artificial Intelligence (AI) that focuses on the development of algorithms and statistical models that allow computers to learn from and make predictions or decisions based on data. Unlike traditional programming, where a developer explicitly defines the rules, machine learning enables systems to learn from experience (data) and improve their performance without being explicitly programmed to do so.
+                        
+                    </div>
+                </div>
                 
                 <div class="module">
                     <div class="module-name">Module 1: Introduction</div>
@@ -908,7 +967,7 @@
                 </div>
                 
                 <div class="module">
-                    <div class="module-name">Module 2</div>
+                    <div class="module-name">Module 2 : Core Concepts in Machine Learning</div>
                     <div class="module-content">
                         <input type="checkbox" id="Linear-Regression" name="Linear-Regression" value="0">
                         <label for="Linear-Regression">Linear Regression (with one variable and multiple variables)</label><br>
@@ -952,7 +1011,7 @@
                 </div>
                 
                 <div class="module">
-                    <div class="module-name">Module 3</div>
+                    <div class="module-name">Module 3 : Advanced Machine Learning Techniques</div>
                     <div class="module-content">
                         <input type="checkbox" id="Clustering" name="Clustering" value="0">
                         <label for="Clustering">Clustering (K-means, Hierarchical, etc.)</label><br>
@@ -975,7 +1034,7 @@
                 </div>
                 
                 <div class="module">
-                    <div class="module-name">Module 4</div>
+                    <div class="module-name">Module 4 : Neural Networks and Learning Algorithms</div>
                     <div class="module-content">
                         <input type="checkbox" id="Artificial-Neural-Network" name="Artificial-Neural-Network" value="0">
                         <label for="Artificial-Neural-Network">Artificial Neural Network</label><br>
@@ -998,7 +1057,7 @@
                 </div>
                 
                 <div class="module">
-                    <div class="module-name">Module 5</div>
+                    <div class="module-name">Module 5 : Evolutionary Algorithms and Optimization</div>
                     <div class="module-content">
                         <input type="checkbox" id="Evolutionary-Algorithm" name="Evolutionary-Algorithm" value="0">
                         <label for="Evolutionary-Algorithm">Evolutionary Algorithm</label><br>
@@ -1025,6 +1084,15 @@
             <div class="page page-se" id="se">
 
                 <div class="subject-name" id="se">Software Engineering</div>
+
+                <div class="module">
+                    <div class="module-name">What is Software Engineering?</div>
+
+                    <div class="module-content">
+
+                        Software Engineering is a discipline within computer science that focuses on the systematic design, development, maintenance, and management of software applications. It involves applying engineering principles to the entire software development life cycle (SDLC) to ensure that software is reliable, efficient, scalable, maintainable, and meets the specified requirements of users or stakeholders.
+                    </div>
+                </div>
                 
                 <div class="module">
                     <div class="module-name">Module 1: Introduction to Software Engineering</div>
@@ -1170,6 +1238,16 @@
             <div class="page page-cry" id="cry">
 
                 <div class="subject-name" id="se">Cryptography</div>
+
+
+                <div class="module">
+                    <div class="module-name">What is Cryptography?</div>
+
+                    <div class="module-content">
+
+                        Cryptography is the practice and study of techniques for securing communication and information by transforming it into a format that is unreadable to unauthorized individuals. It involves creating and analyzing algorithms, ciphers, and protocols that ensure data privacy, integrity, authenticity, and non-repudiation.
+                    </div>
+                </div>
                 
                 <div class="module">
                     <div class="module-name">Module 1: Conventional Encryption and Message Confidentiality</div>
@@ -1311,6 +1389,15 @@
 
                 <div class="subject-name">Data  Mining and Data Warehousing</div>
                 
+                <div class="module">
+                    <div class="module-name">What is Data Mining and Data Warehousing?</div>
+
+                    <div class="module-content">
+
+                        Data mining is the process of discovering patterns, correlations, trends, and useful information from large datasets using statistical, mathematical, and computational techniques. It involves extracting hidden knowledge from data that can be used to make informed decisions. Data mining is often referred to as "knowledge discovery in databases" (KDD).
+                    </div>
+                </div>
+
                 <div class="module">
                     <div class="module-name">Module 1: Introduction</div>
                     <div class="module-content">
@@ -1666,6 +1753,10 @@
             links.classList.remove('links-with-left-border');
             links.classList.add('links');
 
+            settings.style.borderLeft = "1px solid transparent";
+            settings.style.borderRight = "1px solid black";
+
+
             
 
 
@@ -1683,6 +1774,10 @@
 
             content.style.paddingLeft = "10px"
             content.style.paddingRight = "35px"
+
+            settings.style.borderRight = "1px solid transparent";
+            settings.style.borderLeft = "1px solid black";
+
         }
     });
 
