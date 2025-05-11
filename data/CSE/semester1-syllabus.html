@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Syllabus</title>
+    <link rel="stylesheet" href="styles.css">
+     <script src="../../../components/dialogue.js" defer ></script>
+
+
+    <meta property="og:site_name" content="engineering-syllabus">
+    <meta property="og:title" content="CSE Syllabus 7th Semester" />
+    <meta property="og:description" content="Keep track of your syllabus completion" />
+    <meta property="og:image" itemprop="image" content="https://i.imgur.com/4XuGYMZ.png">
+    <meta property="og:type" content="website" />
+
+        <!-- GSAP CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <!-- ScrollTrigger CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <!-- ScrollToPlugin CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
+
+    <style>
+
+        *{
+            --light-background : rgb(248, 248, 248);
+            /* --light-background : rgb(37, 37, 37); */
+
+            /* dark font color */
+            /* color: rgb(172, 172, 172); */
+        }
+
+
+        html,body{
+
+            background-color: var(--light-background);
+            margin: 0px;
+            padding: 0px;
+            scroll-behavior: smooth;
+
+        }
+
+        body{
+            padding: 4px;
+        }
+
+
+        .page{
+
+            /* border: 1px dashed rgba(0, 0, 0, 0.39); */
+            border-radius: 8px;
+            padding: 10px;
+            margin-block: 20px;
+            margin-top: 0px;
+
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+
+        .subject-name{
+
+            z-index: 99;
+            font-size: 30px;
+            font-weight: bolder;
+            padding-block: 10px;
+            padding-top: 20px;
+
+            position: sticky;
+            top: 0;
+
+            background-color: var(--light-background);
+
+
+            /* background-color: transparent; */
+            /* backdrop-filter: blur(10px); */
+
+        }
+        
+        .module{
+            margin-block: 20px;
+            margin-top: 0px;
+            color: rgb(53, 53, 53);
+
+        }
+        .module-name{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-block: 10px;
+
+        }
+
+
+        header{
+            padding-inline: 15px;
+            padding-left: 45px;
+
+            /* padding-block: 10px; */
+
+        }
+
+
+
+        /* remove the title of definitions */
+        .definition-title{
+            display: none;
+        }
+
+        /* applying colors to .subject-name and .module-name */
+
+        .page-title{
+            font-size: 50px;
+            font-weight: bold; 
+            color: rgb(32, 32, 32);
+            font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+            padding-block: 10px;
+        }
+
+
+        input[type="checkbox"]{
+            background-color: red;
+            color: red;
+            font-size: 30px;
+        }
+
+        .page-ai{
+
+            --checked-color : rgb(52, 114, 250);
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color: #2f2ff8;
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        .page-ml{
+
+
+            --checked-color : rgb(172, 3, 172);
+
+            accent-color: var(--checked-color);
+
+
+            .subject-name{
+                color: purple;
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+                        /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+            }
+        }
+
+
+
+        /* footer */
+
+        footer{
+            position: sticky;
+            bottom: 0px;
+
+            padding-block: 5px;
+
+            background-color: white;
+
+            overflow: scroll;
+            /* overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap; */
+
+            
+        }
+
+
+        .links-with-left-border{
+
+            display: flex;
+            flex-direction: row;
+            gap : 15px;
+
+            position: static;
+
+            a{
+                /* border: 1px dashed black; */
+                border-left: 1px dashed rgb(56, 56, 56);
+                text-decoration: none;
+                padding-inline: 10px;
+                padding-block: 5px;
+                border-inline: 1px solid transparent;
+                border-right: 1px solid transparent;
+
+            }
+
+            a:hover{
+                background-color: rgb(255, 255, 255);
+                border-radius: 4px;
+                border: 1px dashed rgb(56, 56, 56);
+                
+            }
+        }
+
+        .links{
+
+            display: flex;
+            flex-direction: row;
+            gap : 15px;
+
+            position: static;
+
+            a{
+                /* border: 1px dashed black; */
+                border-right: 1px dashed rgb(56, 56, 56);
+                text-decoration: none;
+                padding-inline: 10px;
+                padding-block: 5px;
+                border-inline: 1px solid transparent;
+                border-left: 1px solid transparent;
+
+            }
+
+            a:hover{
+                background-color: rgb(255, 255, 255);
+                border-radius: 4px;
+                border: 1px dashed rgb(56, 56, 56);
+                
+            }
+        }
+
+
+        main{
+            display: flex;
+            gap: 10px;
+            
+            /* flex-direction: row-reverse; */
+
+            .content{
+                padding-left: 35px;
+
+            }
+
+            nav{
+
+                height: 90vh;
+                padding-top: 20px;
+                position: fixed;
+                z-index: 200;
+                /* top: 20px; */
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+
+                gap: 10px;
+
+                /* font-family: monospace;
+                font-size: 16px; */
+
+                /* padding-block: 5px; */
+                /* margin-inline: 50px; */
+
+                writing-mode: vertical-lr;
+                /* overflow: scroll; */
+
+                /* transform: rotate(90deg); */
+
+                .links{
+
+                    max-height: 500px;
+                    overflow: auto;
+
+                    margin-inline: 40px;
+
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+        }
+
+        .youtube-video{
+
+            font-size: 30px;
+            color: rgba(209, 61, 61, 0.377);
+            text-decoration: none;
+            
+            /* border: 1px solid rgb(209, 61, 61);
+            border-radius: 8px; */
+            padding-inline: 6px;
+        }
+
+        /* Labels for checked inputs */
+        input:checked + label {
+            text-decoration: line-through;
+            color: grey;
+        }
+
+        #dev{
+
+            z-index: 99999999;
+            
+            position: fixed;
+            top: 160px;
+            right: -130px;
+
+            rotate: 270deg;
+            color: rgb(41, 41, 41);
+            /* color: black; */
+            font-size: 9px;
+
+            font-family: monospace;
+        }
+
+
+        .full-screen{
+            z-index: 999999;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+
+            font-size: 25px;
+            cursor: pointer;
+            user-select: none;
+
+            color: rgb(26, 26, 26);
+        }
+
+
+
+        /* this is for desktop only */
+        @media only screen and (min-width: 600px) {
+        
+          dialog {
+            border: none;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+            /* tried to change the position of nav : task failed */
+            #extra-info{
+                display: flex;
+                /* background-color: red; */
+                top: 200px;
+                right: -190px;
+            }
+
+
+            .full-screen{
+                right: 25px;
+            }
+
+
+            #dev{
+                font-size: 10px;
+                right: -130px;
+                color: black;
+            }
+
+
+            .content{
+                .page-title{
+                    font-size: 120px;
+                    font-weight: 900;
+                    padding-left: 20px;
+
+                    /* background-color: brown; */
+                    color: rgb(31, 31, 31);
+                    padding-block: 100px;
+
+                    text-align: center;
+                    /* text-shadow: 2px 2px rgb(116, 116, 116); */
+                    /* color: red; */
+                }
+            }
+
+
+            label{
+                padding-inline: 2px;
+                border: 1px solid transparent;
+                
+            }
+
+            input + label:hover{
+                /* font-weight: bold; */
+                background-color: rgb(255, 253, 152);
+                /* color: rgb(223, 223, 223); */
+                border: 1px solid rgb(255, 60, 60);
+                border-radius: 4px;
+                
+            }
+
+
+            .definition-title{
+                display: block;
+            }
+
+
+            .page{
+                display : flex;
+                gap : 20px;
+
+                flex-wrap: wrap; 
+                justify-content: flex-start;
+
+                /* ======================================== */
+
+                /* column like pintreset */
+                /* column-width: 300px; */
+
+                /* child */
+                /* width: 100%; */
+
+                /* ======================================== */
+
+                /* padding-top: 50px; */
+                /* height: 100vh; */
+
+
+                padding-inline: 50px;
+                padding-bottom: 60px;
+
+                .subject-name{
+                    display: block;
+                    height: fit-content;
+                    width: 100%;
+                    text-align: left;
+
+                    font-size: 50px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                }
+
+                
+
+                .module{
+
+                    max-width: 300px;
+                    /* height: 100vh; */
+                }
+            }
+
+
+            
+            
+        }
+            
+
+
+
+    </style>
+
+    <style>
+
+        #extra-info{
+            /* background-color: rgba(255, 0, 0, 0.349); */
+
+            color: rgb(194, 194, 194);
+
+            display: flex;
+            gap: 100px;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+
+            z-index: 99999999;
+            
+
+            width:   fit-content;
+            height:   fit-content;
+
+            
+            position: fixed;
+            top: 200px;
+            right: -205px;
+            /* right: -130px; */
+
+            rotate: 270deg;
+            color: rgb(41, 41, 41);
+            /* color: black; */
+            font-size: 9px;
+            /* font-weight: bold; */
+
+            font-family: monospace;
+
+
+            #toggleNavBar{
+
+                /* background-color: red; */
+
+                width:  50px;
+
+                text-align: center;
+
+                color: rgb(167, 167, 167);
+
+
+                font-size: 12px;
+                font-weight: bolder;
+
+                user-select: none;
+                cursor: pointer;
+
+            }
+        }
+        
+    </style>
+
+</head>
+
+
+<body>
+    
+
+    <div id="extra-info">
+
+        <div id="devZ">
+           ///////// let Developer = {"Ajay Kisku"}; ||||||||||
+        </div>
+    
+
+    
+        <div id="toggleNavBar"> NAV </div>
+
+    </div>
+
+    <div class="full-screen" title="Go Fullscreen" id="fullscreenToggle">
+        ⤢
+    </div>
+    
+    
+    <dialog id="branchSemesterDialog" resizable="True">
+        <form method="dialog" style="display: flex; flex-direction: column; gap: 10px;">
+          <div style="display: flex; flex-direction: row; gap: 25px;">
+             <label for="branch">Select Branch  : </label>
+              <select id="branch" name="branch">
+                  <option value="CSE">CSE</option>
+                  <option value="ECE">ECE</option>
+                  <option value="ME">Mechanical</option>
+                  <option value="CE">Civil</option>
+              </select>
+          </div>
+           
+          <div style="display: flex; flex-direction: row; gap: 10px;">
+            <label for="semester">Select Semester:</label>
+            <select id="semester" name="semester">
+                <option value="1">1st Semester</option>
+                <option value="5">5th Semester</option>
+                <option value="6">6th Semester</option>
+                <option value="7" >7th Semester</option>
+                <option value="8">8th Semester</option>
+            </select>
+          </div>
+
+            <button id="confirmSelection" value="default">Confirm</button>
+            <button id="cancle" value="default " style="border-color: transparent; background-color: transparent; ">Cancle</button>
+        </form>
+    </dialog>
+
+
+
+
+    <main id="main">
+
+        <!-- Side navigation  -->
+        <nav>
+            <button  class="menu"
+            id="menuButton" 
+            style="border-right: 1px solid rgb(56, 56, 56);
+            user-select:none;
+            cursor:pointer;
+            color: white;
+            background-color: rgb(31, 31, 31);
+            border:none;
+            
+            padding-inline: 10px;
+            padding-block: 2px;
+            "
+
+            > <b>//Menu::</b>
+            
+            </button>
+
+
+
+            <div class="links">
+                <a href="#ai">AI</a>
+                <a href="#ml">ML</a>
+            </div>
+
+
+            <div  class="settings"  id="settings"
+            style="
+            border-right: 1px solid rgb(56, 56, 56);
+            cursor: pointer;
+            user-select: none;
+            "
+            onclick="alert('कोडिंग के फील्ड में आ के सेटिंग खोजना....ये तो अच्छी बात नहीं है!!!')"
+            > Settings
+            </div>
+
+          
+        </nav>
+
+        <!-- Main Content Area  -->
+        <div class="content">
+
+            <div class="page-title">
+                01<sup>st</sup> Semester CSE Syllabus 
+            </div>
+
+            <!-- Artificial Intelligence -->
+            <div class="page page-ai" id="ai">
+
+                <div class="subject-name">New Title and Something
+
+                    <a hidden class="youtube-video" title="YouTube Video of almost 6 hours" href="https://www.youtube.com/watch?v=yiXAmkimZRQ">↗</a>
+                </div>
+
+                <div class="module">
+                    <div class="module-name definition-title">What is Artificial Intelligence?</div>
+
+                    <div class="module-content">
+
+                        Artificial Intelligence (AI) is the field of computer science focused on creating systems or machines that can perform tasks that typically require human intelligence. These tasks include reasoning, learning, problem-solving, perception, language understanding, and decision-making. The goal of AI is to develop algorithms and systems that enable machines to simulate or replicate intelligent behavior.
+
+                    </div>
+                </div>
+
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Overview-of-AI" name="Overview-of-AI" value="0">
+                        <label for="Overview-of-AI">Overview of AI</label><br>
+                
+                        <input type="checkbox" id="Problems-of-AI" name="Problems-of-AI" value="0">
+                        <label for="Problems-of-AI">Problems of AI</label><br>
+                
+                        <input type="checkbox" id="AI-techniques" name="AI-techniques" value="0">
+                        <label for="AI-techniques">AI techniques</label><br>
+                
+                        <input type="checkbox" id="Problem-Solving" name="Problem-Solving" value="0">
+                        <label for="Problem-Solving">Problem Solving</label><br>
+                
+                        <input type="checkbox" id="Problem-Space-and-Search" name="Problem-Space-and-Search" value="0">
+                        <label for="Problem-Space-and-Search">Problem Space and Search</label><br>
+                
+                        <input type="checkbox" id="State-Space-Search" name="State-Space-Search" value="0">
+                        <label for="State-Space-Search">Defining the problem as state space search</label><br>
+                
+                        <input type="checkbox" id="Problem-Characteristics" name="Problem-Characteristics" value="0">
+                        <label for="Problem-Characteristics">Problem characteristics</label><br>
+                
+                        <input type="checkbox" id="Tic-Tac-Toe-Problem" name="Tic-Tac-Toe-Problem" value="0">
+                        <label for="Tic-Tac-Toe-Problem">Tic-Tac-Toe Problem</label><br>
+                
+                        <input type="checkbox" id="AI-Programming-Languages" name="AI-Programming-Languages" value="0">
+                        <label for="AI-Programming-Languages">AI languages: Basic knowledge of AI programming languages like Prolog and Lisp</label><br>
+                    </div>
+                </div>
+                
+
+                <!-- Module 2 Checklist -->
+                <div class="module">
+                    <div class="module-name">Module 2 : Basic Search Techniques</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Solving-problems-by-searching" name="Solving-problems-by-searching" value="0">
+                        <label for="Solving-problems-by-searching">Solving problems by searching</label><br>
+
+                        <input type="checkbox" id="Uniform-search-strategies" name="Uniform-search-strategies" value="0">
+                        <label for="Uniform-search-strategies">Uniform search strategies</label><br>
+
+                        <input type="checkbox" id="Breadth-First-Search" name="Breadth-First-Search" value="0">
+                        <label for="Breadth-First-Search">Breadth First Search (BFS)</label><br>
+
+                        <input type="checkbox" id="Depth-First-Search" name="Depth-First-Search" value="0">
+                        <label for="Depth-First-Search">Depth First Search (DFS)</label><br>
+
+                        <input type="checkbox" id="Depth-Limited-Search" name="Depth-Limited-Search" value="0">
+                        <label for="Depth-Limited-Search">Depth Limited Search</label><br>
+
+                        <input type="checkbox" id="Bidirectional-Search" name="Bidirectional-Search" value="0">
+                        <label for="Bidirectional-Search">Bidirectional Search</label><br>
+
+                        <input type="checkbox" id="Best-First-Search" name="Best-First-Search" value="0">
+                        <label for="Best-First-Search">Best First Search</label><br>
+
+                        <input type="checkbox" id="Comparing-search-strategies" name="Comparing-search-strategies" value="0">
+                        <label for="Comparing-search-strategies">Comparing search strategies in terms of complexity</label><br>
+                    </div>
+                </div>
+            
+                
+
+            </div>
+
+
+
+            
+            <!-- Machine Leaning  -->
+            <div class="page page-ml" id="ml">
+
+                <div class="subject-name" >Machine Learning</div>
+
+                <div class="module">
+                    <div class="module-name definition-title">What is Machine Learning?</div>
+
+                    <div class="module-content">
+
+                        Machine Learning (ML) is a subset of Artificial Intelligence (AI) that focuses on the development of algorithms and statistical models that allow computers to learn from and make predictions or decisions based on data. Unlike traditional programming, where a developer explicitly defines the rules, machine learning enables systems to learn from experience (data) and improve their performance without being explicitly programmed to do so.
+                        
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="What-is-Machine-Learning" name="What-is-Machine-Learning" value="0">
+                        <label for="What-is-Machine-Learning">What is Machine Learning</label><br>
+                
+                        <input type="checkbox" id="Basic-Principals" name="Basic-Principals" value="0">
+                        <label for="Basic-Principals">Basic Principals</label><br>
+                
+                        <input type="checkbox" id="Utility-of-ML" name="Utility-of-ML" value="0">
+                        <label for="Utility-of-ML">Utility of ML</label><br>
+                
+                        <input type="checkbox" id="Well-Defined-Learning-System" name="Well-Defined-Learning-System" value="0">
+                        <label for="Well-Defined-Learning-System">Well Defined Learning System</label><br>
+                
+                        <input type="checkbox" id="Designing-Learning-System" name="Designing-Learning-System" value="0">
+                        <label for="Designing-Learning-System">Designing Learning System</label><br>
+                
+                        <input type="checkbox" id="Challenges-in-ML" name="Challenges-in-ML" value="0">
+                        <label for="Challenges-in-ML">Challenges in ML</label><br>
+                
+                        <input type="checkbox" id="Applications-of-ML" name="Applications-of-ML" value="0">
+                        <label for="Applications-of-ML">Applications of ML</label><br>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-name">Module 2 : Core Concepts in Machine Learning</div>
+                    <div class="module-content">
+                        <input type="checkbox" id="Linear-Regression" name="Linear-Regression" value="0">
+                        <label for="Linear-Regression">Linear Regression (with one variable and multiple variables)</label><br>
+                
+                        <input type="checkbox" id="Gradient-Descents" name="Gradient-Descents" value="0">
+                        <label for="Gradient-Descents">Gradient Descents</label><br>
+                
+                        <input type="checkbox" id="Logistic-Regression" name="Logistic-Regression" value="0">
+                        <label for="Logistic-Regression">Classification (Logistic Regression)</label><br>
+                
+                        <input type="checkbox" id="Overfitting" name="Overfitting" value="0">
+                        <label for="Overfitting">Overfitting</label><br>
+                
+                        <input type="checkbox" id="Regularization" name="Regularization" value="0">
+                        <label for="Regularization">Regularization</label><br>
+                
+                        <input type="checkbox" id="Support-Vector-Machines" name="Support-Vector-Machines" value="0">
+                        <label for="Support-Vector-Machines">Support Vector Machines</label><br>
+                
+                        <input type="checkbox" id="Decision-Trees" name="Decision-Trees" value="0">
+                        <label for="Decision-Trees">Decision Trees and Issues in Decision Trees</label><br>
+                
+                        <input type="checkbox" id="Bayesian-Learning" name="Bayesian-Learning" value="0">
+                        <label for="Bayesian-Learning">Bayesian Learning - Bayes Theorem</label><br>
+                
+                        <input type="checkbox" id="Concept-Learning" name="Concept-Learning" value="0">
+                        <label for="Concept-Learning">Concept Learning</label><br>
+                
+                        <input type="checkbox" id="Bayes-Optimal-Classifier" name="Bayes-Optimal-Classifier" value="0">
+                        <label for="Bayes-Optimal-Classifier">Bayes Optimal Classifier</label><br>
+                
+                        <input type="checkbox" id="Naive-Bayes-Classifier" name="Naive-Bayes-Classifier" value="0">
+                        <label for="Naive-Bayes-Classifier">Naive Bayes Classifier</label><br>
+                
+                        <input type="checkbox" id="Belief-Networks" name="Belief-Networks" value="0">
+                        <label for="Belief-Networks">Belief Networks</label><br>
+                
+                        <input type="checkbox" id="EM-Algorithm" name="EM-Algorithm" value="0">
+                        <label for="EM-Algorithm">EM Algorithm</label><br>
+                    </div>
+                </div>
+                
+
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script>
+        // Save the state of checkboxes in localStorage
+        function saveChecklistState() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checklistState = {};
+    
+            checkboxes.forEach(checkbox => {
+                checklistState[checkbox.id] = checkbox.checked;
+            });
+    
+            localStorage.setItem('ai-checklist-state', JSON.stringify(checklistState));
+        }
+    
+        // Load the saved state of checkboxes from localStorage
+        function loadChecklistState() {
+            const savedState = JSON.parse(localStorage.getItem('ai-checklist-state'));
+    
+            if (savedState) {
+                const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+                checkboxes.forEach(checkbox => {
+                    if (savedState[checkbox.id] !== undefined) {
+                        checkbox.checked = savedState[checkbox.id];
+                    }
+                });
+            }
+        }
+    
+        // Add event listeners to save the state when a checkbox is changed
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', saveChecklistState);
+        });
+    
+        // Load the checklist state when the page is loaded
+        window.onload = loadChecklistState;
+
+
+//  Starts JavaScript for Smooth Scroll 
+
+        // Register ScrollTrigger plugin
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        // Smooth scrolling for anchor links
+        gsap.utils.toArray('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                gsap.to(window, {
+                    scrollTo: {
+                        y: anchor.getAttribute('href'),
+                        offsetY: 10, // Adjust for fixed navigation
+                    },
+                    duration: 0.1,
+                    ease: "power2.inOut",
+                });
+            });
+        });
+
+
+
+//  Ends JavaScript for Smooth Scroll 
+
+        // GSAP ScrollTrigger for animations when modules are in the viewport
+        gsap.utils.toArray('.module').forEach((module) => {
+                    gsap.fromTo(module.querySelector('.module-name'), {
+                        opacity: 0,
+                        y: 50
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: module,
+                            start: "top 90%", // Trigger when the top of the module is 80% from the top of the viewport
+                            toggleActions: "play none none reverse", // Play animation when the module is in view, reverse when out
+                        }
+                    });
+
+                    gsap.fromTo(module.querySelector('.module-content'), {
+                        opacity: 0,
+                        y: 50
+                    }, {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                            trigger: module,
+                            start: "top 90%",
+                            toggleActions: "play none none reverse",
+                        }
+                    });
+                });
+
+
+
+    </script>
+
+
+    <!-- full screen  -->
+    <script>
+
+        const toggleDiv = document.getElementById('fullscreenToggle');
+
+        // Function to toggle fullscreen mode
+        function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            // Enter fullscreen
+            document.documentElement.requestFullscreen().then(() => {
+            toggleDiv.textContent = '⤬'; // Change symbol to "exit" icon
+            }).catch((err) => {
+            console.error(`Error attempting to enter fullscreen: ${err}`);
+            });
+        } else {
+            // Exit fullscreen
+            document.exitFullscreen().then(() => {
+            toggleDiv.textContent = '⤢'; // Change symbol to "expand" icon
+            }).catch((err) => {
+            console.error(`Error attempting to exit fullscreen: ${err}`);
+            });
+        }
+        }
+
+        // Add click event listener to the div
+        toggleDiv.addEventListener('click', toggleFullscreen);
+        </script>
+
+
+<script>
+
+    
+    content = document.querySelector(".content")
+    extraInfo = document.querySelector("#extra-info")
+    links = document.querySelector(".links")
+
+    toggleNavBar.addEventListener('click', () => {
+
+        if (main.style.flexDirection === 'row-reverse') {
+            main.style.flexDirection = 'row';  // Change to row
+
+            extraInfo.style.left = "unset";
+            extraInfo.style.right = "-205px";
+
+            content.style.paddingLeft = "35px"
+
+            links.classList.remove('links-with-left-border');
+            links.classList.add('links');
+
+            settings.style.borderLeft = "1px solid transparent";
+            settings.style.borderRight = "1px solid black";
+
+
+            
+
+
+
+        } else {
+
+
+            links.classList.remove('links');
+            links.classList.add('links-with-left-border');
+
+
+            main.style.flexDirection = 'row-reverse';  // Change to row-reverse
+            extraInfo.style.right = "0px";
+            extraInfo.style.left = "-205px";
+
+            content.style.paddingLeft = "10px"
+            content.style.paddingRight = "35px"
+
+            settings.style.borderRight = "1px solid transparent";
+            settings.style.borderLeft = "1px solid black";
+
+        }
+    });
+    
+    //============================================================================
+    
+
+
+
+
+</script>
+
+<!-- <elevenlabs-convai agent-id="sV2rVXuD54iHn87dyKkL"></elevenlabs-convai><script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script> -->
+    
+</body>
+</html>
+

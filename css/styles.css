@@ -1,0 +1,595 @@
+*{
+    --light-background : rgb(248, 248, 248);
+    /* --light-background : rgb(37, 37, 37); */
+
+    /* dark font color */
+    /* color: rgb(172, 172, 172); */
+}
+
+
+html,body{
+
+  background-color: var(--light-background);
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+
+}
+
+body{
+    padding: 4px;
+}
+
+
+.page{
+
+    /* border: 1px dashed rgba(0, 0, 0, 0.39); */
+    border-radius: 8px;
+    padding: 10px;
+    margin-block: 20px;
+    margin-top: 0px;
+
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.subject-name{
+
+    z-index: 99;
+    font-size: 30px;
+    font-weight: bolder;
+    padding-block: 10px;
+    padding-top: 20px;
+
+    position: sticky;
+    top: 0;
+
+    background-color: var(--light-background);
+
+
+    /* background-color: transparent; */
+    /* backdrop-filter: blur(10px); */
+
+}
+        
+        .module{
+            margin-block: 20px;
+            margin-top: 0px;
+            color: rgb(53, 53, 53);
+
+        }
+        .module-name{
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            padding-block: 10px;
+
+        }
+
+
+        header{
+            padding-inline: 15px;
+            padding-left: 45px;
+
+            /* padding-block: 10px; */
+
+        }
+
+
+
+        /* remove the title of definitions */
+        .definition-title{
+            display: none;
+        }
+
+        /* applying colors to .subject-name and .module-name */
+
+        .page-title{
+            font-size: 50px;
+            font-weight: bold; 
+            /* color: rgb(19, 29, 87); */
+            color: black;
+
+            font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+            padding: 10px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            /* color: red; */
+
+            text-shadow: 2px 2px 5px grey;
+
+            .title-branch{
+                font-size: 9rem;
+            }
+        }
+
+
+        input[type="checkbox"]{
+            background-color: red;
+            color: red;
+            font-size: 30px;
+
+            display: inline-block;
+            vertical-align: middle; 
+        }
+        
+        .check-row{
+          display : flex;
+          align-items: baseline;
+        }
+
+
+
+      #extra-info{
+            /* background-color: rgba(255, 0, 0, 0.349); */
+
+            color: rgb(194, 194, 194);
+
+            display: flex;
+            gap: 100px;
+            flex-direction: row;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+
+            z-index: 99999999;
+            
+
+            width:   fit-content;
+            height:   fit-content;
+
+            
+            position: fixed;
+            top: 200px;
+            right: -205px;
+            /* right: -130px; */
+
+            rotate: 270deg;
+            color: rgb(41, 41, 41);
+            /* color: black; */
+            font-size: 9px;
+            /* font-weight: bold; */
+
+            font-family: monospace;
+
+
+            #toggleNavBar{
+
+                /* background-color: red; */
+
+                width:  50px;
+
+                text-align: center;
+
+                color: rgb(167, 167, 167);
+
+
+                font-size: 12px;
+                font-weight: bolder;
+
+                user-select: none;
+                cursor: pointer;
+
+            }
+        }
+        
+        
+        
+        
+        
+                /* footer */
+
+        footer{
+            position: sticky;
+            bottom: 0px;
+
+            padding-block: 5px;
+
+            background-color: white;
+
+            overflow: scroll;
+            /* overflow-x: scroll;
+            overflow-y: hidden;
+            white-space: nowrap; */
+
+            
+        }
+
+
+    .links-with-left-border{
+
+        display: flex;
+        flex-direction: row;
+        gap : 15px;
+
+        position: static;
+
+        a{
+            /* border: 1px dashed black; */
+            border-left: 1px dashed rgb(56, 56, 56);
+            text-decoration: none;
+            padding-inline: 10px;
+            padding-block: 5px;
+            border-inline: 1px solid transparent;
+            border-right: 1px solid transparent;
+
+        }
+
+        a:hover{
+            background-color: rgb(255, 255, 255);
+            border-radius: 4px;
+            border: 1px dashed rgb(56, 56, 56);
+            
+        }
+    }
+
+    .links{
+
+        display: flex;
+        flex-direction: row;
+        gap : 15px;
+
+        position: static;
+
+        a{
+            /* border: 1px dashed black; */
+            border-right: 1px dashed rgb(56, 56, 56);
+            text-decoration: none;
+            padding-inline: 10px;
+            padding-block: 5px;
+            border-inline: 1px solid transparent;
+            border-left: 1px solid transparent;
+
+        }
+
+        a:hover{
+            background-color: rgb(255, 255, 255);
+            border-radius: 4px;
+            border: 1px dashed rgb(56, 56, 56);
+            
+        }
+    }
+
+
+    main{
+        display: flex;
+        gap: 10px;
+        
+        /* flex-direction: row-reverse; */
+
+        .content{
+            padding-left: 35px;
+
+        }
+
+        nav{
+
+            height: 90vh;
+            padding-top: 20px;
+            position: fixed;
+            z-index: 200;
+            /* top: 20px; */
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            gap: 10px;
+
+            /* font-family: monospace;
+            font-size: 16px; */
+
+            /* padding-block: 5px; */
+            /* margin-inline: 50px; */
+
+            writing-mode: vertical-lr;
+            /* overflow: scroll; */
+
+            /* transform: rotate(90deg); */
+
+            .links{
+
+                max-height: 500px;
+                overflow: auto;
+
+                margin-inline: 40px;
+
+                cursor: pointer;
+                user-select: none;
+            }
+        }
+    }
+
+    .youtube-video{
+
+        display: none;
+
+        font-size: 30px;
+        color: rgba(209, 61, 61, 0.377);
+        text-decoration: none;
+
+        width: 100px;
+        
+        border: 1px solid rgb(209, 61, 61);
+        border-radius: 8px;
+        padding-inline: 6px;
+    }
+
+    .youtube-video:hover{
+        width: 500px;
+        background-color: red;
+    }
+
+    /* Labels for checked inputs */
+    input:checked + label {
+        text-decoration: line-through;
+        color: grey;
+    }
+
+    #dev{
+
+        z-index: 99999999;
+        
+        position: fixed;
+        top: 160px;
+        right: -130px;
+
+        rotate: 270deg;
+        color: rgb(41, 41, 41);
+        /* color: black; */
+        font-size: 9px;
+
+        font-family: monospace;
+    }
+
+
+    .full-screen{
+        z-index: 999999;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+
+        font-size: 25px;
+        cursor: pointer;
+        user-select: none;
+
+        color: rgb(26, 26, 26);
+    }
+    
+    
+        dialog {
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      
+      button, select{
+              color: black;
+              height: 30px;
+              
+          }
+          }
+    
+
+          #menuButton{  
+
+            font-weight: bold;
+
+            border-right: 1px solid rgb(56, 56, 56);
+            user-select:none;
+            cursor:pointer;
+            color: white;
+            background-color: rgb(31, 31, 31);
+            border:none;
+            
+            padding-inline: 10px;
+            padding-block: 2px;
+          }
+
+
+          #settings{
+            border-right: 1px solid rgb(56, 56, 56);
+            cursor: pointer;
+            user-select: none;
+          }
+        
+ /* this is for desktop only ================================================================================*/
+@media only screen and (min-width: 600px) {
+
+    dialog {
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      
+      button, select{
+              color: black;
+              height: 30px;
+              
+          }
+    }
+
+    /* tried to change the position of nav : task failed */
+    #extra-info{
+        display: flex;
+        /* background-color: red; */
+        top: 200px;
+        right: -190px;
+    }
+
+
+    .full-screen{
+        right: 25px;
+    }
+
+
+    #dev{
+        font-size: 10px;
+        right: -130px;
+        color: black;
+    }
+
+
+    .content{
+        .page-title{
+            font-size: 80px;
+            /* font-weight: normal; */
+            padding-left: 20px;
+
+            /* background-color: brown; */
+            color: rgb(31, 31, 31);
+            /* padding-block: 100px; */
+
+            text-align: center;
+            /* text-shadow: 2px 2px rgb(116, 116, 116); */
+            /* color: red; */
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: baseline;
+            gap: 40px;
+
+            color: rgb(29, 29, 29);
+
+            .title-branch{
+                /* background-color: rgb(104, 174, 255); */
+                
+                padding: 30px;
+                font-size: 8rem;
+                height: 220px;
+                border-radius: 50%;
+            }
+        }
+
+        .page-title:hover{
+            /* text-decoration: underline; */
+        }
+    }
+
+
+    label{
+        padding-inline: 2px;
+        border: 1px solid transparent;
+        
+    }
+
+    input + label:hover{
+        /* font-weight: bold; */
+        background-color: rgb(255, 253, 152);
+        /* color: rgb(223, 223, 223); */
+        border: 1px solid rgb(255, 60, 60);
+        border-radius: 4px;
+        
+    }
+
+
+    .definition-title{
+        display: block;
+    }
+
+
+    .page{
+        display : flex;
+        gap : 20px;
+
+        flex-wrap: wrap; 
+        justify-content: flex-start;
+
+        /* ======================================== */
+
+        /* column like pintreset */
+        /* column-width: 300px; */
+
+        /* child */
+        /* width: 100%; */
+
+        /* ======================================== */
+
+        /* padding-top: 50px; */
+        /* height: 100vh; */
+
+
+        padding-inline: 50px;
+        padding-bottom: 60px;
+
+        .subject-name{
+            display: block;
+            height: fit-content;
+            width: 100%;
+            text-align: left;
+
+            font-size: 50px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        
+
+        .module{
+
+            max-width: 300px;
+            /* height: 100vh; */
+        }
+    }
+    
+    
+    #extra-info{
+    /* background-color: rgba(255, 0, 0, 0.349); */
+
+    color: rgb(194, 194, 194);
+
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+
+    z-index: 99999999;
+    
+
+    width:   fit-content;
+    height:   fit-content;
+
+    
+    position: fixed;
+    top: 200px;
+    right: -195px;
+    /* right: -130px; */
+
+    rotate: 270deg;
+    color: rgb(41, 41, 41);
+    /* color: black; */
+    font-size: 9px;
+    /* font-weight: bold; */
+
+    font-family: monospace;
+
+
+    #toggleNavBar{
+
+        /* background-color: red; */
+
+        width:  50px;
+
+        text-align: center;
+
+        color: rgb(167, 167, 167);
+
+
+        font-size: 12px;
+        font-weight: bolder;
+
+        user-select: none;
+        cursor: pointer;
+
+    }
+}
+
+
+    
+    
+}  
+/* Dekstop ends here */

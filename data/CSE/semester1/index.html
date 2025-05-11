@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Syllabus</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+     <script src="../../../components/extra.js" defer></script>
+     <script src="../../../components/dialogue.js" defer ></script>
+     <script src="../../../js/script.js" defer ></script>
+
+
+    <meta property="og:site_name" content="engineering-syllabus">
+    <meta property="og:title" content="CSE Syllabus 7th Semester" />
+    <meta property="og:description" content="Keep track of your syllabus completion" />
+    <meta property="og:image" itemprop="image" content="https://i.imgur.com/4XuGYMZ.png">
+    <meta property="og:type" content="website" />
+
+        <!-- GSAP CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <!-- ScrollTrigger CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <!-- ScrollToPlugin CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
+
+    <style>
+
+
+        #page-mp{
+
+            --checked-color : #770404;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-em{
+
+            --checked-color : #696969;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-em{
+
+            --checked-color : #696969;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-bee{
+
+            --checked-color : #084285;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+
+    
+        
+    </style>
+
+</head>
+
+
+<body>
+    
+    <main id="main">
+
+        <!-- Side navigation  -->
+        <nav>
+            <button  class="menu" id="menuButton" > 
+                //Menu::
+            </button>
+
+
+            <!-- Here is how to link the internal links to the pages of different syllabus -->
+            <div class="links">
+                <a href="#page-mp">MP</a>
+                <a href="#page-em">EM</a>
+                <a href="#page-bee">BEE</a>
+                <a href="#page-physics">Phy</a>
+                <a href="#page-math-II">Maths</a>
+            </div>
+
+
+            <div  class="settings"  id="settings"
+            onclick="alert('कोडिंग के फील्ड में आ के सेटिंग खोजना....ये तो अच्छी बात नहीं है!!!')"> 
+                Settings
+            </div>
+
+        </nav>
+
+        <!-- Main Content Area  -->
+        <div class="content">
+
+            <div class="page-title" id="page-title">
+                <div class="title-branch"> CSE  </div>
+                 <div>1<sup>st</sup> Semester  </div>
+            </div>
+
+
+            <div class="page" id="page-mp">
+
+                <!-- Put the name of the Subject Here -->
+                <div class="subject-name">
+                    Manufacturing Process
+                </div>
+            
+                <!-- Put the definition here of the subject -->
+                <div class="module">
+                    <div class="module-name definition-title">What is manufacturing process?</div>
+                    <div class="module-content">
+                        A manufacturing process is a series of steps or operations used to transform raw materials into finished products. It involves various physical, chemical, or mechanical procedures to alter the form, properties, or appearance of a material to meet specific design and quality standards.
+                    </div>
+                </div>
+            
+                <!-- Fitting Trade Module -->
+                <div class="module">
+                    <div class="module-name">Module 1: Fitting Trade</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Fitting-Tools" name="Fitting-Tools" value="0">
+                            <label for="Fitting-Tools">Study of fitting tools</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Fitting-Equipment" name="Fitting-Equipment" value="0">
+                            <label for="Fitting-Equipment">Study of fitting equipment</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Fitting-Operations" name="Fitting-Operations" value="0">
+                            <label for="Fitting-Operations">Study of different fitting operations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Fitting-Workpiece-Preparation" name="Fitting-Workpiece-Preparation" value="0">
+                            <label for="Fitting-Workpiece-Preparation">Preparation of work piece as per given specification</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Carpentry Module -->
+                <div class="module">
+                    <div class="module-name">Module 2: Carpentry</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Carpentry-Tools" name="Carpentry-Tools" value="0">
+                            <label for="Carpentry-Tools">Study of carpentry tools</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Carpentry-Equipment" name="Carpentry-Equipment" value="0">
+                            <label for="Carpentry-Equipment">Study of carpentry equipment</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Carpentry-Joints" name="Carpentry-Joints" value="0">
+                            <label for="Carpentry-Joints">Study of different joints</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Carpentry-Job-Preparation" name="Carpentry-Job-Preparation" value="0">
+                            <label for="Carpentry-Job-Preparation">Preparation of a job on one of the joints</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Foundry Module -->
+                <div class="module">
+                    <div class="module-name">Module 3: Foundry</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Foundry-Intro" name="Foundry-Intro" value="0">
+                            <label for="Foundry-Intro">Introduction to foundry</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Foundry-Pattern" name="Foundry-Pattern" value="0">
+                            <label for="Foundry-Pattern">Study of pattern and pattern allowances</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Foundry-Sand" name="Foundry-Sand" value="0">
+                            <label for="Foundry-Sand">Ingredients of moulding sand</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Foundry-Furnace" name="Foundry-Furnace" value="0">
+                            <label for="Foundry-Furnace">Study of melting furnace</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Foundry-Tools" name="Foundry-Tools" value="0">
+                            <label for="Foundry-Tools">Study of foundry tools and their purposes</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Foundry-Demo" name="Foundry-Demo" value="0">
+                            <label for="Foundry-Demo">Demo of mould preparation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Foundry-Job-Preparation" name="Foundry-Job-Preparation" value="0">
+                            <label for="Foundry-Job-Preparation">Preparation of mould as a job</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Smithy Module -->
+                <div class="module">
+                    <div class="module-name">Module 4: Smithy</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Smithy-Forging" name="Smithy-Forging" value="0">
+                            <label for="Smithy-Forging">Study of forging</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Smithy-Hot-Working" name="Smithy-Hot-Working" value="0">
+                            <label for="Smithy-Hot-Working">Study of hot working</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Smithy-Cold-Working" name="Smithy-Cold-Working" value="0">
+                            <label for="Smithy-Cold-Working">Study of cold working</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Smithy-Tools" name="Smithy-Tools" value="0">
+                            <label for="Smithy-Tools">Study of smithy tools</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Smithy-Job-Preparation" name="Smithy-Job-Preparation" value="0">
+                            <label for="Smithy-Job-Preparation">Preparation of a job</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+            </div>
+            
+
+
+            <div class="page" id="page-em">
+
+                <!-- Put the name of the Subject Here -->
+                <div class="subject-name">
+                    Engineering Mechanics
+                </div>
+            
+                <!-- Put the definition here of the subject -->
+                <div class="module">
+                    <div class="module-name definition-title">What is Engineering Mechanics?</div>
+                    <div class="module-content">
+                        Engineering Mechanics is the branch of mechanics that deals with the study of forces and their effects on solid bodies. It is a fundamental subject for all branches of engineering that focuses on the behavior of objects under the action of forces, using principles of physics, and mathematical modeling.
+                    </div>
+                </div>
+            
+                <!-- Various System of Forces Module -->
+                <div class="module">
+                    <div class="module-name">Module 1: Various System of Forces</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Statically-Equivalent-Force" name="Statically-Equivalent-Force" value="0">
+                            <label for="Statically-Equivalent-Force">Statically Equivalent Force systems</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Simplest-Equivalent" name="Simplest-Equivalent" value="0">
+                            <label for="Simplest-Equivalent">Simplest equivalent of a system of forces using vector methods</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Equilibrium Module -->
+                <div class="module">
+                    <div class="module-name">Module 2: Equilibrium</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Free-Body-Diagram" name="Free-Body-Diagram" value="0">
+                            <label for="Free-Body-Diagram">Free body diagram</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Equations-of-Equilibrium" name="Equations-of-Equilibrium" value="0">
+                            <label for="Equations-of-Equilibrium">Equations of equilibrium and their applications to various systems of forces</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Plane-Trusses" name="Plane-Trusses" value="0">
+                            <label for="Plane-Trusses">Plane Trusses and frames</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Friction Module -->
+                <div class="module">
+                    <div class="module-name">Module 3: Friction</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Friction-Dry-Surfaces" name="Friction-Dry-Surfaces" value="0">
+                            <label for="Friction-Dry-Surfaces">Friction on dry surfaces</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Static-Kinetic-Rolling-Friction" name="Static-Kinetic-Rolling-Friction" value="0">
+                            <label for="Static-Kinetic-Rolling-Friction">Static, kinetic and rolling friction</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Applications-Inclined-Planes" name="Applications-Inclined-Planes" value="0">
+                            <label for="Applications-Inclined-Planes">Applications to inclined planes</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Wedge-and-Blocks" name="Wedge-and-Blocks" value="0">
+                            <label for="Wedge-and-Blocks">Wedge and blocks</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Kinematics and Kinetics of a Particle Module -->
+                <div class="module">
+                    <div class="module-name">Module 4: Kinematics and Kinetics of a Particle</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Rectilinear-Curvilinear-Translations" name="Rectilinear-Curvilinear-Translations" value="0">
+                            <label for="Rectilinear-Curvilinear-Translations">Rectilinear and curvilinear translations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Normal-Tangential-Acceleration" name="Normal-Tangential-Acceleration" value="0">
+                            <label for="Normal-Tangential-Acceleration">Normal and tangential components of acceleration</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Radial-Transverse-Acceleration" name="Radial-Transverse-Acceleration" value="0">
+                            <label for="Radial-Transverse-Acceleration">Radial and transverse components of acceleration</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Kinematics and Kinetics of Rigid Bodies in Plane Motion Module -->
+                <div class="module">
+                    <div class="module-name">Module 5: Kinematics and Kinetics of Rigid Bodies in Plane Motion</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Angular-Velocity-Acceleration" name="Angular-Velocity-Acceleration" value="0">
+                            <label for="Angular-Velocity-Acceleration">Angular velocity and angular acceleration</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Effective-Forces-Rigid-Body" name="Effective-Forces-Rigid-Body" value="0">
+                            <label for="Effective-Forces-Rigid-Body">Effective forces on a rigid body</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="D-Alemberts-Principle" name="D-Alemberts-Principle" value="0">
+                            <label for="D-Alemberts-Principle">D’Alembert’s Principle</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Rotation-Rigid-Bodies" name="Rotation-Rigid-Bodies" value="0">
+                            <label for="Rotation-Rigid-Bodies">Rotation of rigid bodies, rolling motion & plane motion of rigid bodies</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Impulse and Momentum Module -->
+                <div class="module">
+                    <div class="module-name">Module 6: Impulse and Momentum</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Principle-Impulse-Momentum" name="Principle-Impulse-Momentum" value="0">
+                            <label for="Principle-Impulse-Momentum">Principle of impulse and momentum</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Linear-Impulse-Momentum" name="Linear-Impulse-Momentum" value="0">
+                            <label for="Linear-Impulse-Momentum">Linear impulse and linear momentum</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Angular-Impulse-Momentum" name="Angular-Impulse-Momentum" value="0">
+                            <label for="Angular-Impulse-Momentum">Angular impulse and angular momentum</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Impact-of-Elastic-Bodies" name="Impact-of-Elastic-Bodies" value="0">
+                            <label for="Impact-of-Elastic-Bodies">Impact of elastic bodies</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Work, Energy and Power Module -->
+                <div class="module">
+                    <div class="module-name">Module 7: Work, Energy and Power</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Work-Done-Forces-Couples" name="Work-Done-Forces-Couples" value="0">
+                            <label for="Work-Done-Forces-Couples">Work done by forces and couples</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Potential-Elastic-Kinetic-Energy" name="Potential-Elastic-Kinetic-Energy" value="0">
+                            <label for="Potential-Elastic-Kinetic-Energy">Potential, Elastic and Kinetic energy</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Work-Energy-Theorem" name="Work-Energy-Theorem" value="0">
+                            <label for="Work-Energy-Theorem">Work-Energy theorem</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Work-Energy-Analysis" name="Work-Energy-Analysis" value="0">
+                            <label for="Work-Energy-Analysis">Work-Energy analysis</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Conservation-of-Energy" name="Conservation-of-Energy" value="0">
+                            <label for="Conservation-of-Energy">Conservation of energy</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Power-Efficiency" name="Power-Efficiency" value="0">
+                            <label for="Power-Efficiency">Concept of power and efficiency</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="page" id="page-bee">
+
+                <!-- Put the name of the Subject Here -->
+                <div class="subject-name">
+                    Basic Electrical Engineering
+                </div>
+            
+                <!-- Put the definition here of the subject -->
+                <div class="module">
+                    <div class="module-name definition-title">What is Basic Electrical Engineering?</div>
+                    <div class="module-content">
+                        Basic Electrical Engineering is the study of electrical circuits, electrical machines, and their associated concepts. It covers fundamental principles like Kirchhoff’s laws, AC/DC circuits, transformers, motors, and generators, which form the backbone of electrical engineering.
+                    </div>
+                </div>
+            
+                <!-- DC Networks Module -->
+                <div class="module">
+                    <div class="module-name">Module 1 : DC Networks</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Kirchhoffs-Law" name="Kirchhoffs-Law" value="0">
+                            <label for="Kirchhoffs-Law">Kirchhoff’s law</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Node-Voltage-Mesh-Current" name="Node-Voltage-Mesh-Current" value="0">
+                            <label for="Node-Voltage-Mesh-Current">Node Voltage and Mesh Current method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Delta-Star-Transformation" name="Delta-Star-Transformation" value="0">
+                            <label for="Delta-Star-Transformation">Delta-Star and Star-Delta transformation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Superposition-Theorem" name="Superposition-Theorem" value="0">
+                            <label for="Superposition-Theorem">Superposition theorem</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Thevenins-Nortons-Theorem" name="Thevenins-Nortons-Theorem" value="0">
+                            <label for="Thevenins-Nortons-Theorem">Thevenin’s and Norton’s theorem</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Max-Power-Transfer" name="Max-Power-Transfer" value="0">
+                            <label for="Max-Power-Transfer">Maximum power transfer theorem</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Single Phase AC Circuits Module -->
+                <div class="module">
+                    <div class="module-name">Module 2 : Single Phase AC Circuits</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Single-Phase-EMF" name="Single-Phase-EMF" value="0">
+                            <label for="Single-Phase-EMF">Single phase EMF generation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Average-RMS-Values" name="Average-RMS-Values" value="0">
+                            <label for="Average-RMS-Values">Average and RMS value of Sinusoidal and Rectangular waveforms</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Form-Peak-Factor" name="Form-Peak-Factor" value="0">
+                            <label for="Form-Peak-Factor">Form factor and peak factor</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="RLC-Circuits" name="RLC-Circuits" value="0">
+                            <label for="RLC-Circuits">Solution of R, L, C series and parallel circuits</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Impedances" name="Impedances" value="0">
+                            <label for="Impedances">Complex representation of impedances</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Phasor-Diagram" name="Phasor-Diagram" value="0">
+                            <label for="Phasor-Diagram">Phasor diagram</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Power-Factor" name="Power-Factor" value="0">
+                            <label for="Power-Factor">Power factor</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Three Phase Balanced AC Circuits Module -->
+                <div class="module">
+                    <div class="module-name">Module 3 : Three Phase Balanced AC Circuits</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Three-Phase-EMF" name="Three-Phase-EMF" value="0">
+                            <label for="Three-Phase-EMF">Three phase EMF generation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Delta-Star-Connection" name="Delta-Star-Connection" value="0">
+                            <label for="Delta-Star-Connection">Delta and Star connection</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Line-Phase-Quantities" name="Line-Phase-Quantities" value="0">
+                            <label for="Line-Phase-Quantities">Line and phase quantities</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Balanced-Supply-Load" name="Balanced-Supply-Load" value="0">
+                            <label for="Balanced-Supply-Load">Balanced supply voltage and balanced load</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Three-Phase-Power" name="Three-Phase-Power" value="0">
+                            <label for="Three-Phase-Power">Measurement of power in three-phase circuits by two wattmeter method</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Magnetic Circuits Module -->
+                <div class="module">
+                    <div class="module-name">Module 4 : Magnetic Circuits</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Self-Mutual-Inductance" name="Self-Mutual-Inductance" value="0">
+                            <label for="Self-Mutual-Inductance">Concepts of self and mutual inductances</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Co-Efficient-Coupling" name="Co-Efficient-Coupling" value="0">
+                            <label for="Co-Efficient-Coupling">Co-efficient of coupling</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="B-H-Curve" name="B-H-Curve" value="0">
+                            <label for="B-H-Curve">B-H Curve</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Hysteresis-Loop" name="Hysteresis-Loop" value="0">
+                            <label for="Hysteresis-Loop">Hysteresis loop</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Basics of Single Phase Transformer Module -->
+                <div class="module">
+                    <div class="module-name">Module 5 : Basics of Single Phase Transformer</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Transformer-Construction" name="Transformer-Construction" value="0">
+                            <label for="Transformer-Construction">Construction and working principle</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="EMF-Equation" name="EMF-Equation" value="0">
+                            <label for="EMF-Equation">EMF equation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Phasor-Diagram-Load" name="Phasor-Diagram-Load" value="0">
+                            <label for="Phasor-Diagram-Load">Phasor diagram on No load and full load</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Equivalent-Circuit" name="Equivalent-Circuit" value="0">
+                            <label for="Equivalent-Circuit">Equivalent circuit</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Regulation-Efficiency" name="Regulation-Efficiency" value="0">
+                            <label for="Regulation-Efficiency">Regulation, efficiency</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Open-Circuit-Test" name="Open-Circuit-Test" value="0">
+                            <label for="Open-Circuit-Test">Short circuit and open circuit test</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Auto-Transformer" name="Auto-Transformer" value="0">
+                            <label for="Auto-Transformer">Introduction to single phase auto transformer</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Basics of DC Machines Module -->
+                <div class="module">
+                    <div class="module-name">Module 6 : Basics of DC Machines</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="DC-Machines-Operation" name="DC-Machines-Operation" value="0">
+                            <label for="DC-Machines-Operation">Principle of operation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="DC-Machines-Classification" name="DC-Machines-Classification" value="0">
+                            <label for="DC-Machines-Classification">Classification</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="DC-Machines-EMF-Torque" name="DC-Machines-EMF-Torque" value="0">
+                            <label for="DC-Machines-EMF-Torque">EMF and torque equations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="DC-Machines-Characteristics" name="DC-Machines-Characteristics" value="0">
+                            <label for="DC-Machines-Characteristics">Characteristics of generators and motors</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="DC-Machines-Speed-Control" name="DC-Machines-Speed-Control" value="0">
+                            <label for="DC-Machines-Speed-Control">Speed control methods and starting techniques</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Basics of Three Phase Induction Motor Module -->
+                <div class="module">
+                    <div class="module-name">Module 7 : Basics of Three Phase Induction Motor</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Rotating-Magnetic-Field" name="Rotating-Magnetic-Field" value="0">
+                            <label for="Rotating-Magnetic-Field">Principle of rotating magnetic field</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Three-Phase-Induction-Motor" name="Three-Phase-Induction-Motor" value="0">
+                            <label for="Three-Phase-Induction-Motor">Construction and principle of three phase IM</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Torque-Speed-Characteristic" name="Torque-Speed-Characteristic" value="0">
+                            <label for="Torque-Speed-Characteristic">Torque-speed characteristic of three phase IM</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="IM-Starting-Speed-Control" name="IM-Starting-Speed-Control" value="0">
+                            <label for="IM-Starting-Speed-Control">Starting methods and speed control of three phase IM</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+            </div>
+            
+
+            <div class="page" id="page-physics">
+
+                <!-- Put the name of the Subject Here -->
+                <div class="subject-name">
+                    Department of Physics
+                </div>
+            
+                <!-- Put the definition here of the subject -->
+                <div class="module">
+                    <div class="module-name definition-title">What is Department of Physics?</div>
+                    <div class="module-content">
+                        The Department of Physics covers fundamental and advanced topics related to the physical principles governing the universe. It includes areas such as mechanics, electromagnetism, optics, quantum mechanics, relativity, and more.
+                    </div>
+                </div>
+            
+                <!-- VECTOR Analysis Module -->
+                <div class="module">
+                    <div class="module-name">Module 1 : VECTOR Analysis</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Scalar-Vector-Field" name="Scalar-Vector-Field" value="0">
+                            <label for="Scalar-Vector-Field">Scalar and vector field</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Gradient-Divergence-Curl" name="Gradient-Divergence-Curl" value="0">
+                            <label for="Gradient-Divergence-Curl">Gradient of scalar field, divergence and curl of a vector field and their physical meaning</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Integrals" name="Integrals" value="0">
+                            <label for="Integrals">Line, surface and volume integrals</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Gauss-Stokes-Theorem" name="Gauss-Stokes-Theorem" value="0">
+                            <label for="Gauss-Stokes-Theorem">Gauss’ divergence and Stoke’s theorem</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Polarization of Light Module -->
+                <div class="module">
+                    <div class="module-name">Module 2 : Polarization of Light</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Introduction-to-Polarization" name="Introduction-to-Polarization" value="0">
+                            <label for="Introduction-to-Polarization">Introduction to polarization of light</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Malus-Law" name="Malus-Law" value="0">
+                            <label for="Malus-Law">Malus law</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Brewsters-Law" name="Brewsters-Law" value="0">
+                            <label for="Brewsters-Law">Brewster’s law</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Double-Refraction" name="Double-Refraction" value="0">
+                            <label for="Double-Refraction">Double refraction</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Nicol-Prism" name="Nicol-Prism" value="0">
+                            <label for="Nicol-Prism">Nicol prism</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Retardation-Plates" name="Retardation-Plates" value="0">
+                            <label for="Retardation-Plates">Retardation plates</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Polarized-Light-Analysis" name="Polarized-Light-Analysis" value="0">
+                            <label for="Polarized-Light-Analysis">Production and analysis of plane, circularly and elliptically polarized light</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Polaroids" name="Polaroids" value="0">
+                            <label for="Polaroids">Introduction to Polaroids</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Electromagnetic Theory Module -->
+                <div class="module">
+                    <div class="module-name">Module 3 : Electromagnetic Theory</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Gauss-Faraday-Amperes-Law" name="Gauss-Faraday-Amperes-Law" value="0">
+                            <label for="Gauss-Faraday-Amperes-Law">Gauss, Faraday and Amere’s law</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Maxwells-Field-Equations" name="Maxwells-Field-Equations" value="0">
+                            <label for="Maxwells-Field-Equations">Maxwell’s field equations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Poynting-Theorem" name="Poynting-Theorem" value="0">
+                            <label for="Poynting-Theorem">Poynting theorem</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Electromagnetic-Wave-Propagation" name="Electromagnetic-Wave-Propagation" value="0">
+                            <label for="Electromagnetic-Wave-Propagation">Propagation of electromagnetic wave in free space</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Modern Physics Module -->
+                <div class="module">
+                    <div class="module-name">Module 4 : Modern Physics</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="X-Rays" name="X-Rays" value="0">
+                            <label for="X-Rays">Introduction and characterization of X-rays</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Braggs-Law" name="Braggs-Law" value="0">
+                            <label for="Braggs-Law">Bragg’s law</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Photoelectric-Effect" name="Photoelectric-Effect" value="0">
+                            <label for="Photoelectric-Effect">Photoelectric effect and its explanation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Einsteins-Photoelectric-Equation" name="Einsteins-Photoelectric-Equation" value="0">
+                            <label for="Einsteins-Photoelectric-Equation">Einstein’s photoelectric equation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Compton-Effect" name="Compton-Effect" value="0">
+                            <label for="Compton-Effect">Compton effect</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="DeBroglie-Waves" name="DeBroglie-Waves" value="0">
+                            <label for="DeBroglie-Waves">Concept of deBroglie wave</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Wave-Group-Velocity" name="Wave-Group-Velocity" value="0">
+                            <label for="Wave-Group-Velocity">Wave and group velocity</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Uncertainty-Principle" name="Uncertainty-Principle" value="0">
+                            <label for="Uncertainty-Principle">Uncertainty principle</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Quantum Physics Module -->
+                <div class="module">
+                    <div class="module-name">Module 5 : Quantum Physics</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Wave-Function" name="Wave-Function" value="0">
+                            <label for="Wave-Function">Wave function and its physical meaning</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Schrodingers-Wave-Equation" name="Schrodingers-Wave-Equation" value="0">
+                            <label for="Schrodingers-Wave-Equation">Schrodinger’s wave equation and time independent and time dependent form</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Eigen-Function-Values" name="Eigen-Function-Values" value="0">
+                            <label for="Eigen-Function-Values">Eigen function and Eigen values</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Particle-in-Box" name="Particle-in-Box" value="0">
+                            <label for="Particle-in-Box">Particle in box</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Tunneling-Effect" name="Tunneling-Effect" value="0">
+                            <label for="Tunneling-Effect">Tunneling effect</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Relativistic Mechanics Module -->
+                <div class="module">
+                    <div class="module-name">Module 6 : Relativistic Mechanics</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Michelson-Morley-Experiment" name="Michelson-Morley-Experiment" value="0">
+                            <label for="Michelson-Morley-Experiment">Michelson Morley experiment</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Postulates-of-Special-Relativity" name="Postulates-of-Special-Relativity" value="0">
+                            <label for="Postulates-of-Special-Relativity">Postulates of Special theory of relativity</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Galilean-Transformation" name="Galilean-Transformation" value="0">
+                            <label for="Galilean-Transformation">Galilean transformation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Lorentz-Transformation" name="Lorentz-Transformation" value="0">
+                            <label for="Lorentz-Transformation">Lorentz transformation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Length-Contract-Time-Dilation" name="Length-Contract-Time-Dilation" value="0">
+                            <label for="Length-Contract-Time-Dilation">Length contraction, time dilation and velocity addition</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Mass-Energy-Relation" name="Mass-Energy-Relation" value="0">
+                            <label for="Mass-Energy-Relation">Mass-energy relation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Variation-of-Mass-with-Energy" name="Variation-of-Mass-with-Energy" value="0">
+                            <label for="Variation-of-Mass-with-Energy">Variation of mass with energy</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Laser Physics Module -->
+                <div class="module">
+                    <div class="module-name">Module 7 : Laser Physics</div>
+                    <div class="module-content">
+
+                        <div class="check-row">
+                            <input type="checkbox" id="Spontaneous-Stimulated-Emission" name="Spontaneous-Stimulated-Emission" value="0">
+                            <label for="Spontaneous-Stimulated-Emission">Spontaneous and stimulated emission</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Population-Inversion" name="Population-Inversion" value="0">
+                            <label for="Population-Inversion">Population inversion</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Einsteins-A-B-Coefficients" name="Einsteins-A-B-Coefficients" value="0">
+                            <label for="Einsteins-A-B-Coefficients">Einstein’s A & B coefficients</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Coherence" name="Coherence" value="0">
+                            <label for="Coherence">Coherence - spatial and temporal</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Temporal-Coherence-Length" name="Temporal-Coherence-Length" value="0">
+                            <label for="Temporal-Coherence-Length">Measurement of temporal coherence length using Michelson interferometer</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Laser-Types" name="Laser-Types" value="0">
+                            <label for="Laser-Types">Ruby, He-Ne and other types of lasers and their applications</label>
+                        </div>
+
+                    </div>
+                </div>
+                
+
+                    
+
+
+
+            
+
+            </div>
+
+            <div class="page" id="page-math-II">
+
+                <!-- Put the name of the Subject Here -->
+                <div class="subject-name">
+                    Mathematics – II
+                </div>
+            
+                <!-- Put the definition here of the subject -->
+                <div class="module">
+                    <div class="module-name definition-title">What is Mathematics – II?</div>
+                    <div class="module-content">
+                        Mathematics – II includes topics related to integral calculus, multiple integration, differential equations, and matrices. It provides mathematical tools for solving physical, engineering, and applied problems.
+                    </div>
+                </div>
+            
+                <!-- Integral Calculus Module -->
+                <div class="module">
+                    <div class="module-name">Module 1 : Integral Calculus</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Reduction-Formula" name="Reduction-Formula" value="0">
+                            <label for="Reduction-Formula">Reduction formula for integrals</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Convergence-Integrals" name="Convergence-Integrals" value="0">
+                            <label for="Convergence-Integrals">Convergence of proper integrals</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Beta-Gama-Function" name="Beta-Gama-Function" value="0">
+                            <label for="Beta-Gama-Function">Beta and Gamma function</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Differentiation-Under-Sign" name="Differentiation-Under-Sign" value="0">
+                            <label for="Differentiation-Under-Sign">Differentiation under the sign of integrals</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Applications-of-Integrals" name="Applications-of-Integrals" value="0">
+                            <label for="Applications-of-Integrals">Application of integrals as length, area, volume and surface area of revolution</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Multiple Integration Module -->
+                <div class="module">
+                    <div class="module-name">Module 2 : Multiple Integration</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Double-Triple-Integration" name="Double-Triple-Integration" value="0">
+                            <label for="Double-Triple-Integration">Double and Triple integration</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Evaluation-Double-Integrals" name="Evaluation-Double-Integrals" value="0">
+                            <label for="Evaluation-Double-Integrals">Evaluation of double integrals</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Change-of-Order" name="Change-of-Order" value="0">
+                            <label for="Change-of-Order">Change of order of integration</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Change-of-Variables" name="Change-of-Variables" value="0">
+                            <label for="Change-of-Variables">Change of variables</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Evaluation-Triple-Integrals" name="Evaluation-Triple-Integrals" value="0">
+                            <label for="Evaluation-Triple-Integrals">Evaluation of triple integrals</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Volume-Center-Gravity" name="Volume-Center-Gravity" value="0">
+                            <label for="Volume-Center-Gravity">Determination of volume and center of gravity using double and triple integrals</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Dirichlets-Integrals" name="Dirichlets-Integrals" value="0">
+                            <label for="Dirichlets-Integrals">Dirichlet's Integrals</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Differential Equation Module -->
+                <div class="module">
+                    <div class="module-name">Module 3 : Differential Equation</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="First-Order-Differential-Equation" name="First-Order-Differential-Equation" value="0">
+                            <label for="First-Order-Differential-Equation">Differential equation of 1st order and 1st degree</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Second-Order-Linear-Differential-Equation" name="Second-Order-Linear-Differential-Equation" value="0">
+                            <label for="Second-Order-Linear-Differential-Equation">Linear differential equation of second order with constant and variable coefficients</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Complementary-Function" name="Complementary-Function" value="0">
+                            <label for="Complementary-Function">Complementary function and particular integrals method of variation of parameters</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Cauchys-Legendres-Equations" name="Cauchys-Legendres-Equations" value="0">
+                            <label for="Cauchys-Legendres-Equations">Cauchy’s and Legendre’s equations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Simultaneous-Linear-Equations" name="Simultaneous-Linear-Equations" value="0">
+                            <label for="Simultaneous-Linear-Equations">Simultaneous linear equation with constant coefficient</label>
+                        </div>
+            
+                    </div>
+                </div>
+            
+                <!-- Matrices Module -->
+                <div class="module">
+                    <div class="module-name">Module 4 : Matrices</div>
+                    <div class="module-content">
+            
+                        <div class="check-row">
+                            <input type="checkbox" id="Rank-of-Matrix" name="Rank-of-Matrix" value="0">
+                            <label for="Rank-of-Matrix">Rank of matrix</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Linear-Independence" name="Linear-Independence" value="0">
+                            <label for="Linear-Independence">Linear independence, dependence of vectors</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Consistency-Solution" name="Consistency-Solution" value="0">
+                            <label for="Consistency-Solution">Consistency and solution of system of linear equations by rank method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Eigen-Values-Vectors" name="Eigen-Values-Vectors" value="0">
+                            <label for="Eigen-Values-Vectors">Eigen value and Eigen vectors</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Cayley-Hamilton-Theorem" name="Cayley-Hamilton-Theorem" value="0">
+                            <label for="Cayley-Hamilton-Theorem">Cayley – Hamilton’s theorem</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Diagonalization" name="Diagonalization" value="0">
+                            <label for="Diagonalization">Diagonalization of a square matrix</label>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+            
+
+    </main>
+
+
+</body>
+</html>
+

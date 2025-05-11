@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Syllabus</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+     <script src="../../../components/extra.js" defer></script>
+     <script src="../../../components/dialogue.js" defer ></script>
+     <script src="../../../js/script.js" defer ></script>
+
+
+    <meta property="og:site_name" content="engineering-syllabus">
+    <meta property="og:title" content="CSE Syllabus 7th Semester" />
+    <meta property="og:description" content="Keep track of your syllabus completion" />
+    <meta property="og:image" itemprop="image" content="https://i.imgur.com/4XuGYMZ.png">
+    <meta property="og:type" content="website" />
+
+        <!-- GSAP CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <!-- ScrollTrigger CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <!-- ScrollToPlugin CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
+
+    <style>
+
+
+        #page-mp{
+
+            --checked-color : #770404;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-em{
+
+            --checked-color : #696969;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-em{
+
+            --checked-color : #696969;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-bee{
+
+            --checked-color : #084285;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+
+    
+        
+    </style>
+
+</head>
+
+
+<body>
+    
+    <main id="main">
+
+        <!-- Side navigation  -->
+        <nav>
+            <button  class="menu" id="menuButton" > 
+                //Menu::
+            </button>
+
+
+            <!-- Here is how to link the internal links to the pages of different syllabus -->
+            <div class="links">
+                <a href="#page-oop">OOPS</a>
+                <a href="#page-coa">COA</a>
+                <a href="#page-dm">DM</a>
+                <a href="#page-daa">DAA</a>
+                <a href="#page-nsm">Maths</a>
+            </div>
+
+
+            <div  class="settings"  id="settings"
+            onclick="alert('कोडिंग के फील्ड में आ के सेटिंग खोजना....ये तो अच्छी बात नहीं है!!!')"> 
+                Settings
+            </div>
+
+        </nav>
+
+        <!-- Main Content Area  -->
+        <div class="content">
+
+            <div class="page-title" id="page-title">
+                <div class="title-branch"> CSE  </div>
+                 <div>4<sup>th</sup> Semester  </div>
+            </div>
+
+
+
+            <div class="page" id="page-oop">
+
+                <!-- Subject Name -->
+                <div class="subject-name">
+                    Object Oriented Programming
+                </div>
+            
+                <!-- Module 1 -->
+                <div class="module" style="max-width: 100%;">
+                    <div class="module-name">Module 1 : Java Basics & OOP Concepts</div>
+                    <div class="module-content" style="display: flex; gap: 20px; justify-content: space-between;    flex-wrap: wrap;">
+                        
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>OOPS Fundamentals</strong></label>
+                            </div>
+    
+                            <div class="check-row">
+                                <input type="checkbox" id="Java-Environment" name="Java-Environment" value="0">
+                                <label for="Java-Environment">Introduction to Java and Java programming Environment</label>
+                            </div>
+    
+                            <div class="check-row">
+                                <input type="checkbox" id="Data-Types" name="Data-Types" value="0">
+                                <label for="Data-Types">Data Types</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Variable" name="Variable" value="0">
+                                <label for="Variable">Variable</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Typecasting" name="Typecasting" value="0">
+                                <label for="Typecasting">Typecasting</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Arrays" name="Arrays" value="0">
+                                <label for="Arrays">Arrays</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Operators" name="Operators" value="0">
+                                <label for="Operators">Operators and their precedence</label>
+                            </div>
+                        </div>
+
+                        <div class="sub-module" style="max-width: 300px; min-width: 150px;">
+
+                        <div class="check-row">
+                            <label><strong>Control Flow</strong></label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="If" name="If" value="0">
+                            <label for="If">if</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Switch" name="Switch" value="0">
+                            <label for="Switch">switch</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="While" name="While" value="0">
+                            <label for="While">while</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Do-While" name="Do-While" value="0">
+                            <label for="Do-While">do while</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="For" name="For" value="0">
+                            <label for="For">for</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Nested-Loop" name="Nested-Loop" value="0">
+                            <label for="Nested-Loop">Nested loop</label>
+                        </div>
+
+                        </div>
+
+                        <div class="sub-module" style="max-width: 300px; min-width: 150px;">
+                        <div class="check-row">
+                            <label><strong>Concept of Objects and Classes</strong></label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Using-Existing-Classes" name="Using-Existing-Classes" value="0">
+                            <label for="Using-Existing-Classes">Using Existing Classes</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Building-Your-Own-Classes" name="Building-Your-Own-Classes" value="0">
+                            <label for="Building-Your-Own-Classes">Building Your Own Classes</label>
+                        </div>
+                        
+                        <div class="check-row">
+                            <input type="checkbox" id="Constructors" name="Constructors" value="0">
+                            <label for="Constructors">Constructors</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Method-Overriding" name="Method-Overriding" value="0">
+                            <label for="Method-Overriding">Method Overriding</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Dynamic-Method-Dispatch" name="Dynamic-Method-Dispatch" value="0">
+                            <label for="Dynamic-Method-Dispatch">Dynamic Method Dispatch</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Abstract-Classes" name="Abstract-Classes" value="0">
+                            <label for="Abstract-Classes">Abstract Classes</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Final-with-Inheritance" name="Final-with-Inheritance" value="0">
+                            <label for="Final-with-Inheritance">final with Inheritance</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Object-Class" name="Object-Class" value="0">
+                            <label for="Object-Class">The Object Class</label>
+                        </div>
+                        </div>
+
+                        <div class="sub-module" style="max-width: 300px; min-width: 150px;">
+                            <div class="check-row">
+                                <label><strong>Packages & Interfaces</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Access-Protection" name="Access-Protection" value="0">
+                                <label for="Access-Protection">Access Protection</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Importing-Package" name="Importing-Package" value="0">
+                                <label for="Importing-Package">Importing Package</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Interface-Implementation" name="Interface-Implementation" value="0">
+                                <label for="Interface-Implementation">Interface Implementation</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Interface-Extension" name="Interface-Extension" value="0">
+                                <label for="Interface-Extension">Interface Extension</label>
+                            </div>
+                            
+                        </div>
+
+                        <div class="sub-module" style="max-width: 300px; min-width: 150px;">
+                            <div class="check-row">
+                                <label><strong>Exception Handling</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Try-Catch" name="Try-Catch" value="0">
+                                <label for="Try-Catch">try & catch</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Multiple-Catch" name="Multiple-Catch" value="0">
+                                <label for="Multiple-Catch">Multiple catch</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Throws" name="Throws" value="0">
+                                <label for="Throws">throws</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Finally" name="Finally" value="0">
+                                <label for="Finally">finally</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Built-in-Exceptions" name="Built-in-Exceptions" value="0">
+                                <label for="Built-in-Exceptions">Built-in Exceptions</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="User-defined-Exceptions" name="User-defined-Exceptions" value="0">
+                                <label for="User-defined-Exceptions">User-defined Exceptions</label>
+                            </div>
+                        </div>
+                        
+                        
+            
+                    </div>
+                </div>
+            
+                <!-- Module 2 -->
+                <div class="module" style="max-width: 100%;">
+                    <div class="module-name">Module 2 : Multi-threading, I/O & Networking</div>
+                    <div class="module-content" style="display: flex; gap: 20px; justify-content: space-between;    flex-wrap: wrap;">
+
+                        <!-- Multithreading Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>Multithreading</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Java-Thread-Model" name="Java-Thread-Model" value="0">
+                                <label for="Java-Thread-Model">Java Thread Model</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Thread-Priorities" name="Thread-Priorities" value="0">
+                                <label for="Thread-Priorities">Thread Priorities</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Synchronization" name="Synchronization" value="0">
+                                <label for="Synchronization">Synchronization</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Creating-Threads" name="Creating-Threads" value="0">
+                                <label for="Creating-Threads">Creating Threads</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="isAlive" name="isAlive" value="0">
+                                <label for="isAlive">isAlive()</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="join" name="join" value="0">
+                                <label for="join">join()</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="wait-notify" name="wait-notify" value="0">
+                                <label for="wait-notify">wait() & notify()</label>
+                            </div>
+                        </div>
+
+                        <!-- String Handling Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>String Handling</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="String-Constructors" name="String-Constructors" value="0">
+                                <label for="String-Constructors">Constructors</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="String-Length" name="String-Length" value="0">
+                                <label for="String-Length">Length</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Character-Extraction" name="Character-Extraction" value="0">
+                                <label for="Character-Extraction">Character Extraction</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="String-Comparison" name="String-Comparison" value="0">
+                                <label for="String-Comparison">Comparison</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="String-Modification" name="String-Modification" value="0">
+                                <label for="String-Modification">Modification</label>
+                            </div>
+                        </div>
+
+                        <!-- Java I/O Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>Java I/O</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Stream-Classes" name="Stream-Classes" value="0">
+                                <label for="Stream-Classes">Stream Classes</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Byte-Character-Streams" name="Byte-Character-Streams" value="0">
+                                <label for="Byte-Character-Streams">Byte & Character Streams</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Serialization" name="Serialization" value="0">
+                                <label for="Serialization">Serialization</label>
+                            </div>
+                        </div>
+
+                        <!-- JDBC Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>JDBC</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="JDBC-Fundamentals" name="JDBC-Fundamentals" value="0">
+                                <label for="JDBC-Fundamentals">Fundamentals</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Type-I-Drivers" name="Type-I-Drivers" value="0">
+                                <label for="Type-I-Drivers">Type I Drivers</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Type-II-Drivers" name="Type-II-Drivers" value="0">
+                                <label for="Type-II-Drivers">Type II Drivers</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Type-III-Drivers" name="Type-III-Drivers" value="0">
+                                <label for="Type-III-Drivers">Type III Drivers</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Type-IV-Drivers" name="Type-IV-Drivers" value="0">
+                                <label for="Type-IV-Drivers">Type IV Drivers</label>
+                            </div>
+                        </div>
+
+                        <!-- Networking Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>Networking</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Socket-Overview" name="Socket-Overview" value="0">
+                                <label for="Socket-Overview">Socket Overview</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Networking-Classes-Interfaces" name="Networking-Classes-Interfaces" value="0">
+                                <label for="Networking-Classes-Interfaces">Classes & Interfaces</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="TCP-IP-Client-Sockets" name="TCP-IP-Client-Sockets" value="0">
+                                <label for="TCP-IP-Client-Sockets">TCP/IP Client Sockets</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="TCP-IP-Server-Sockets" name="TCP-IP-Server-Sockets" value="0">
+                                <label for="TCP-IP-Server-Sockets">TCP/IP Server Sockets</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="URL-Handling" name="URL-Handling" value="0">
+                                <label for="URL-Handling">URL Handling</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+                <!-- Module 3 -->
+                <div class="module" style="max-width: 100%;">
+                    <div class="module-name">Module 3 : GUI Programming & Java API</div>
+                    <div class="module-content" style="display: flex; gap: 20px; justify-content: space-between;    flex-wrap: wrap;">
+
+                        <!-- Applets Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>Applets</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Applet-Architecture" name="Applet-Architecture" value="0">
+                                <label for="Applet-Architecture">Architecture</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Applet-Skeleton" name="Applet-Skeleton" value="0">
+                                <label for="Applet-Skeleton">Skeleton</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Applet-Tag" name="Applet-Tag" value="0">
+                                <label for="Applet-Tag">APPLET Tag</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Applet-Parameters" name="Applet-Parameters" value="0">
+                                <label for="Applet-Parameters">Passing Parameters</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Applet-Context" name="Applet-Context" value="0">
+                                <label for="Applet-Context">Applet Context</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Applet-showDocument" name="Applet-showDocument" value="0">
+                                <label for="Applet-showDocument">showDocument()</label>
+                            </div>
+                        </div>
+
+                        <!-- Event Handling Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>Event Handling</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Delegation-Event-Model" name="Delegation-Event-Model" value="0">
+                                <label for="Delegation-Event-Model">Delegation Event Model</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Event-Classes" name="Event-Classes" value="0">
+                                <label for="Event-Classes">Event Classes</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Listener-Interfaces" name="Listener-Interfaces" value="0">
+                                <label for="Listener-Interfaces">Listener Interfaces</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Adapter-Classes" name="Adapter-Classes" value="0">
+                                <label for="Adapter-Classes">Adapter Classes</label>
+                            </div>
+                        </div>
+
+                        <!-- AWT Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>AWT</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="AWT-Components" name="AWT-Components" value="0">
+                                <label for="AWT-Components">Components</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="AWT-Containers" name="AWT-Containers" value="0">
+                                <label for="AWT-Containers">Containers</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="AWT-Panels" name="AWT-Panels" value="0">
+                                <label for="AWT-Panels">Panels</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="AWT-Windows" name="AWT-Windows" value="0">
+                                <label for="AWT-Windows">Windows</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="AWT-Frames" name="AWT-Frames" value="0">
+                                <label for="AWT-Frames">Frames</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="AWT-Canvases" name="AWT-Canvases" value="0">
+                                <label for="AWT-Canvases">Canvases</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="AWT-Graphics" name="AWT-Graphics" value="0">
+                                <label for="AWT-Graphics">Graphics</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="AWT-Layout-Managers" name="AWT-Layout-Managers" value="0">
+                                <label for="AWT-Layout-Managers">Layout Managers</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="AWT-Event-Handling" name="AWT-Event-Handling" value="0">
+                                <label for="AWT-Event-Handling">Event Handling</label>
+                            </div>
+                        </div>
+
+                        <!-- Swing Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>Swing</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Japplet" name="Swing-Japplet" value="0">
+                                <label for="Swing-Japplet">Japplet</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Icons" name="Swing-Icons" value="0">
+                                <label for="Swing-Icons">Icons</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Labels" name="Swing-Labels" value="0">
+                                <label for="Swing-Labels">Labels</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Text-Fields" name="Swing-Text-Fields" value="0">
+                                <label for="Swing-Text-Fields">Text Fields</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Buttons" name="Swing-Buttons" value="0">
+                                <label for="Swing-Buttons">Buttons</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Combo-Boxes" name="Swing-Combo-Boxes" value="0">
+                                <label for="Swing-Combo-Boxes">Combo Boxes</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Tabbed-Panes" name="Swing-Tabbed-Panes" value="0">
+                                <label for="Swing-Tabbed-Panes">Tabbed Panes</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Scroll-Panes" name="Swing-Scroll-Panes" value="0">
+                                <label for="Swing-Scroll-Panes">Scroll Panes</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Trees" name="Swing-Trees" value="0">
+                                <label for="Swing-Trees">Trees</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Swing-Tables" name="Swing-Tables" value="0">
+                                <label for="Swing-Tables">Tables</label>
+                            </div>
+                        </div>
+
+                        <!-- Java.lang Section -->
+                        <div class="sub-module" style="max-width: 250px;">
+                            <div class="check-row">
+                                <label><strong>Java.lang Package</strong></label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Java-lang-Type-Wrappers" name="Java-lang-Type-Wrappers" value="0">
+                                <label for="Java-lang-Type-Wrappers">Type Wrappers</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Java-lang-Memory-Management" name="Java-lang-Memory-Management" value="0">
+                                <label for="Java-lang-Memory-Management">Memory Management</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Java-lang-Object-Cloning" name="Java-lang-Object-Cloning" value="0">
+                                <label for="Java-lang-Object-Cloning">Object Cloning</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Java-lang-Thread-Group" name="Java-lang-Thread-Group" value="0">
+                                <label for="Java-lang-Thread-Group">Thread Group</label>
+                            </div>
+                            <div class="check-row">
+                                <input type="checkbox" id="Java-lang-Runnable-Interface" name="Java-lang-Runnable-Interface" value="0">
+                                <label for="Java-lang-Runnable-Interface">Runnable Interface</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            
+            </div>
+
+
+            <div class="page" id="page-coa">
+
+                <div class="subject-name">
+                    Computer Organization and Architecture
+                </div>
+            
+                <!-- Unit 1 -->
+                <div class="module">
+                    <div class="module-name">Unit 1: Basic Concepts</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Digital-Instruction" name="Digital-Instruction" value="0">
+                            <label for="Digital-Instruction">Instruction</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Block-Diagrams" name="Block-Diagrams" value="0">
+                            <label for="Block-Diagrams">Block diagrams of Digital computer</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Definitions" name="Definitions" value="0">
+                            <label for="Definitions">Definition of Computer Organization, Design, and Architecture</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Instruction-Codes" name="Instruction-Codes" value="0">
+                            <label for="Instruction-Codes">Instruction codes</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Computer-Registers" name="Computer-Registers" value="0">
+                            <label for="Computer-Registers">Computer Registers</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Computer-Interrupt" name="Computer-Interrupt" value="0">
+                            <label for="Computer-Interrupt">Computer and Interrupt</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Computer-Description" name="Computer-Description" value="0">
+                            <label for="Computer-Description">Complete Computer Description</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Control-Memory" name="Control-Memory" value="0">
+                            <label for="Control-Memory">Control memory</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Address-Sequencing" name="Address-Sequencing" value="0">
+                            <label for="Address-Sequencing">Address sequencing</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Micro-Program" name="Micro-Program" value="0">
+                            <label for="Micro-Program">Micro program example</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Control-Unit-Design" name="Control-Unit-Design" value="0">
+                            <label for="Control-Unit-Design">Design of control unit</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Unit 2 -->
+                <div class="module">
+                    <div class="module-name">Unit 2: 8086 Architecture</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Processor-Architecture" name="Processor-Architecture" value="0">
+                            <label for="Processor-Architecture">The 8086 Processor Architecture</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Register-Organization" name="Register-Organization" value="0">
+                            <label for="Register-Organization">Register Organization</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Memory-Organization" name="Memory-Organization" value="0">
+                            <label for="Memory-Organization">Physical memory organization</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Bus-Operation" name="Bus-Operation" value="0">
+                            <label for="Bus-Operation">General Bus Operation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="IO-Addressing" name="IO-Addressing" value="0">
+                            <label for="IO-Addressing">I/O Addressing Capability</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Processor-Activities" name="Processor-Activities" value="0">
+                            <label for="Processor-Activities">Special Processor Activities</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Mode-System" name="Mode-System" value="0">
+                            <label for="Mode-System">Minimum and Maximum mode system and timings</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Instruction-Formats" name="Instruction-Formats" value="0">
+                            <label for="Instruction-Formats">Machine Language instruction formats</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Addressing-Modes" name="Addressing-Modes" value="0">
+                            <label for="Addressing-Modes">Addressing modes</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Instruction-Set" name="Instruction-Set" value="0">
+                            <label for="Instruction-Set">Instruction set of 8086</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Assembler-Directives" name="Assembler-Directives" value="0">
+                            <label for="Assembler-Directives">Assembler directives and operators</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Unit 3 -->
+                <div class="module">
+                    <div class="module-name">Unit 3: Instruction Cycle & Pipelining</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Instruction-Cycle" name="Instruction-Cycle" value="0">
+                            <label for="Instruction-Cycle">Instruction Cycle</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Micro-Instructions" name="Micro-Instructions" value="0">
+                            <label for="Micro-Instructions">Micro Instructions</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Instruction-Pipelining" name="Instruction-Pipelining" value="0">
+                            <label for="Instruction-Pipelining">Instruction pipelining</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Pipeline-Hazards" name="Pipeline-Hazards" value="0">
+                            <label for="Pipeline-Hazards">Pipeline hazards</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Instruction-Cycle-Examples" name="Instruction-Cycle-Examples" value="0">
+                            <label for="Instruction-Cycle-Examples">Examples of instruction cycle</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Unit 4 -->
+                <div class="module">
+                    <div class="module-name">Unit 4: Arithmetic & I/O Organization</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Add-Sub" name="Add-Sub" value="0">
+                            <label for="Add-Sub">Addition and Subtraction</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Mul-Div" name="Mul-Div" value="0">
+                            <label for="Mul-Div">Multiplication and Division Algorithms</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Floating-Arithmetic" name="Floating-Arithmetic" value="0">
+                            <label for="Floating-Arithmetic">Floating point Arithmetic operations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Peripheral-Devices" name="Peripheral-Devices" value="0">
+                            <label for="Peripheral-Devices">Peripheral Devices</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="IO-Interface" name="IO-Interface" value="0">
+                            <label for="IO-Interface">Input-Output Interface</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Async-Transfer" name="Async-Transfer" value="0">
+                            <label for="Async-Transfer">Asynchronous data transfer</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Transfer-Modes" name="Transfer-Modes" value="0">
+                            <label for="Transfer-Modes">Modes of Transfer</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Priority-Interrupt" name="Priority-Interrupt" value="0">
+                            <label for="Priority-Interrupt">Priority Interrupt</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="DMA" name="DMA" value="0">
+                            <label for="DMA">Direct Memory Access (DMA)</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="IOP" name="IOP" value="0">
+                            <label for="IOP">Input-Output Processor (IOP)</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Intel-8089" name="Intel-8089" value="0">
+                            <label for="Intel-8089">Intel 8089 IOP</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Unit 5 -->
+                <div class="module">
+                    <div class="module-name">Unit 5: Memory & Multiprocessors</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Memory-Hierarchy" name="Memory-Hierarchy" value="0">
+                            <label for="Memory-Hierarchy">Memory Hierarchy</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Main-Memory" name="Main-Memory" value="0">
+                            <label for="Main-Memory">Main Memory</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Auxiliary-Memory" name="Auxiliary-Memory" value="0">
+                            <label for="Auxiliary-Memory">Auxiliary Memory</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Associative-Memory" name="Associative-Memory" value="0">
+                            <label for="Associative-Memory">Associative Memory</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Cache-Memory" name="Cache-Memory" value="0">
+                            <label for="Cache-Memory">Cache Memory</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Parallel-Processing" name="Parallel-Processing" value="0">
+                            <label for="Parallel-Processing">Parallel Processing</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Pipelining" name="Pipelining" value="0">
+                            <label for="Pipelining">Pipelining</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Arithmetic-Pipeline" name="Arithmetic-Pipeline" value="0">
+                            <label for="Arithmetic-Pipeline">Arithmetic Pipeline</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Instruction-Pipeline" name="Instruction-Pipeline" value="0">
+                            <label for="Instruction-Pipeline">Instruction Pipeline</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="RISC-Pipeline" name="RISC-Pipeline" value="0">
+                            <label for="RISC-Pipeline">RISC Pipeline</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Vector-Processing" name="Vector-Processing" value="0">
+                            <label for="Vector-Processing">Vector Processing</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Array-Processors" name="Array-Processors" value="0">
+                            <label for="Array-Processors">Array Processors</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Multiprocessor-Characteristics" name="Multiprocessor-Characteristics" value="0">
+                            <label for="Multiprocessor-Characteristics">Characteristics of Multiprocessors</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Interconnection-Structures" name="Interconnection-Structures" value="0">
+                            <label for="Interconnection-Structures">Interconnection Structures</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Interprocessor-Arbitration" name="Interprocessor-Arbitration" value="0">
+                            <label for="Interprocessor-Arbitration">InterProcessor arbitration</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Interprocessor-Communication" name="Interprocessor-Communication" value="0">
+                            <label for="Interprocessor-Communication">Interprocessor communication and synchronization</label>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="page" id="page-dm">
+
+                <div class="subject-name">
+                    Discrete Mathematics
+                </div>
+            
+                <!-- Module 1 -->
+                <div class="module">
+                    <div class="module-name">Module 1: Mathematical Logic</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Introduction-Logic" name="Introduction-Logic" value="0">
+                            <label for="Introduction-Logic">Introduction</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Statements-Notation" name="Statements-Notation" value="0">
+                            <label for="Statements-Notation">Statements and Notation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Connectives" name="Connectives" value="0">
+                            <label for="Connectives">Connectives</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Normal-Forms" name="Normal-Forms" value="0">
+                            <label for="Normal-Forms">Normal Forms</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Inference-Statement-Calculus" name="Inference-Statement-Calculus" value="0">
+                            <label for="Inference-Statement-Calculus">Theory of Inference for the Statement Calculus</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Predicate-Calculus" name="Predicate-Calculus" value="0">
+                            <label for="Predicate-Calculus">The Predicate Calculus</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Inference-Predicate-Calculus" name="Inference-Predicate-Calculus" value="0">
+                            <label for="Inference-Predicate-Calculus">Inference Theory of the Predicate Calculus</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Module 2 -->
+                <div class="module">
+                    <div class="module-name">Module 2: Set Theory & Algebraic Structures</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Introduction-Set-Theory" name="Introduction-Set-Theory" value="0">
+                            <label for="Introduction-Set-Theory">Introduction to Set Theory</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Basic-Set-Concepts" name="Basic-Set-Concepts" value="0">
+                            <label for="Basic-Set-Concepts">Basic Concepts of Set Theory</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Representation-Discrete-Structures" name="Representation-Discrete-Structures" value="0">
+                            <label for="Representation-Discrete-Structures">Representation of Discrete Structures</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Relations-Ordering" name="Relations-Ordering" value="0">
+                            <label for="Relations-Ordering">Relations and Ordering</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Functions" name="Functions" value="0">
+                            <label for="Functions">Functions</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Introduction-Algebraic-Structures" name="Introduction-Algebraic-Structures" value="0">
+                            <label for="Introduction-Algebraic-Structures">Introduction to Algebraic Structures</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Algebraic-System" name="Algebraic-System" value="0">
+                            <label for="Algebraic-System">Algebraic System: Semi-groups and Monoids, Groups</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Lattices-Posets" name="Lattices-Posets" value="0">
+                            <label for="Lattices-Posets">Lattices and Partially Ordered Sets</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Boolean-Algebra" name="Boolean-Algebra" value="0">
+                            <label for="Boolean-Algebra">Boolean Algebra</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Module 3 -->
+                <div class="module">
+                    <div class="module-name">Module 3: Elementary Combinatorics</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Basics-Counting" name="Basics-Counting" value="0">
+                            <label for="Basics-Counting">Basics of Counting</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Combinations-Permutations" name="Combinations-Permutations" value="0">
+                            <label for="Combinations-Permutations">Combinations and Permutations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Enumerating-Combinations-Permutations" name="Enumerating-Combinations-Permutations" value="0">
+                            <label for="Enumerating-Combinations-Permutations">Enumeration of Combinations and Permutations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Combinations-Permutations-Repetitions" name="Combinations-Permutations-Repetitions" value="0">
+                            <label for="Combinations-Permutations-Repetitions">Enumerating Combinations and Permutations with Repetitions</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Permutations-Constrained-Repetitions" name="Permutations-Constrained-Repetitions" value="0">
+                            <label for="Permutations-Constrained-Repetitions">Enumerating Permutations with Constrained Repetitions</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Binomial-Coefficients" name="Binomial-Coefficients" value="0">
+                            <label for="Binomial-Coefficients">Binomial Coefficients</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Binomial-Multinomial-Theorems" name="Binomial-Multinomial-Theorems" value="0">
+                            <label for="Binomial-Multinomial-Theorems">The Binomial and Multinomial Theorems</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Inclusion-Exclusion" name="Inclusion-Exclusion" value="0">
+                            <label for="Inclusion-Exclusion">The Principle of Inclusion-Exclusion</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Module 4 -->
+                <div class="module">
+                    <div class="module-name">Module 4: Recurrence Relations</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Generating-Functions-Sequences" name="Generating-Functions-Sequences" value="0">
+                            <label for="Generating-Functions-Sequences">Generating Functions of Sequences</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Calculating-Coefficients" name="Calculating-Coefficients" value="0">
+                            <label for="Calculating-Coefficients">Calculating Coefficients of Generating Functions</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Recurrence-Relations" name="Recurrence-Relations" value="0">
+                            <label for="Recurrence-Relations">Recurrence Relations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Solving-Recurrence-Relations" name="Solving-Recurrence-Relations" value="0">
+                            <label for="Solving-Recurrence-Relations">Solving Recurrence Relations by Substitution and Generating Functions</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Characteristic-Roots" name="Characteristic-Roots" value="0">
+                            <label for="Characteristic-Roots">The Method of Characteristic Roots</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Inhomogeneous-Recurrence" name="Inhomogeneous-Recurrence" value="0">
+                            <label for="Inhomogeneous-Recurrence">Solutions of Inhomogeneous Recurrence Relations</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Module 5 -->
+                <div class="module">
+                    <div class="module-name">Module 5: Graphs and Trees</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Basic-Concepts-Graphs" name="Basic-Concepts-Graphs" value="0">
+                            <label for="Basic-Concepts-Graphs">Basic Concepts</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Isomorphisms-Subgraphs" name="Isomorphisms-Subgraphs" value="0">
+                            <label for="Isomorphisms-Subgraphs">Isomorphisms and Subgraphs</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Trees-Properties" name="Trees-Properties" value="0">
+                            <label for="Trees-Properties">Trees and Their Properties</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Spanning-Trees" name="Spanning-Trees" value="0">
+                            <label for="Spanning-Trees">Spanning Trees</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Directed-Trees" name="Directed-Trees" value="0">
+                            <label for="Directed-Trees">Directed Trees</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Binary-Trees" name="Binary-Trees" value="0">
+                            <label for="Binary-Trees">Binary Trees</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Planar-Graphs" name="Planar-Graphs" value="0">
+                            <label for="Planar-Graphs">Planar Graphs</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Eulers-Formula" name="Eulers-Formula" value="0">
+                            <label for="Eulers-Formula">Euler's Formula</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Multigraphs-Euler-Circuits" name="Multigraphs-Euler-Circuits" value="0">
+                            <label for="Multigraphs-Euler-Circuits">Multigraphs and Euler Circuits</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Hamiltonian-Graphs" name="Hamiltonian-Graphs" value="0">
+                            <label for="Hamiltonian-Graphs">Hamiltonian Graphs</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Chromatic-Numbers" name="Chromatic-Numbers" value="0">
+                            <label for="Chromatic-Numbers">Chromatic Numbers</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Four-Color-Problem" name="Four-Color-Problem" value="0">
+                            <label for="Four-Color-Problem">The Four-Color Problem</label>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="page" id="page-daa">
+
+                <div class="subject-name">
+                    Design & Analysis of Algorithm
+                </div>
+            
+                <!-- Module 1 -->
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction & Analysis</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Analyzing-Algorithms" name="Analyzing-Algorithms" value="0">
+                            <label for="Analyzing-Algorithms">Analyzing Algorithms</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Recurrence-Equations" name="Recurrence-Equations" value="0">
+                            <label for="Recurrence-Equations">Recurrence Equations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Growth-Function" name="Growth-Function" value="0">
+                            <label for="Growth-Function">Growth Function</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Asymptotic-Notation" name="Asymptotic-Notation" value="0">
+                            <label for="Asymptotic-Notation">Asymptotic Notation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Standard-Notation" name="Standard-Notation" value="0">
+                            <label for="Standard-Notation">Standard Notation & Common Functions</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Recurrence-Relation" name="Recurrence-Relation" value="0">
+                            <label for="Recurrence-Relation">Recurrence Relation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Solution-Methods-Recurrence" name="Solution-Methods-Recurrence" value="0">
+                            <label for="Solution-Methods-Recurrence">Different Methods of Solution of Recurrence Equations with Examples</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Module 2 -->
+                <div class="module">
+                    <div class="module-name">Module 2: Divide and Conquer & Backtracking Paradigm</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Divide-Conquer-Introduction" name="Divide-Conquer-Introduction" value="0">
+                            <label for="Divide-Conquer-Introduction">Introduction to Divide and Conquer Paradigm</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Quick-Merge-Sorting" name="Quick-Merge-Sorting" value="0">
+                            <label for="Quick-Merge-Sorting">Quick and Merge Sorting Techniques</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Linear-Time-Selection" name="Linear-Time-Selection" value="0">
+                            <label for="Linear-Time-Selection">Linear Time Selection Algorithm</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Matrix-Multiplication-Divide" name="Matrix-Multiplication-Divide" value="0">
+                            <label for="Matrix-Multiplication-Divide">Basic Divide and Conquer Algorithm for Matrix Multiplication</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Backtracking" name="Backtracking" value="0">
+                            <label for="Backtracking">Backtracking & Recursive Backtracking</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Applications-Backtracking" name="Applications-Backtracking" value="0">
+                            <label for="Applications-Backtracking">Applications of Backtracking Paradigm</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Heaps" name="Heaps" value="0">
+                            <label for="Heaps">Heaps</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Module 3 -->
+                <div class="module">
+                    <div class="module-name">Module 3: Greedy Paradigm</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Greedy-Strategy" name="Greedy-Strategy" value="0">
+                            <label for="Greedy-Strategy">The Basic Greedy Strategy & Computing Minimum Spanning Trees</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Kruskal-Prim-Algorithms" name="Kruskal-Prim-Algorithms" value="0">
+                            <label for="Kruskal-Prim-Algorithms">Algorithms of Kruskal and Prim</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Union-Find-Algorithm" name="Union-Find-Algorithm" value="0">
+                            <label for="Union-Find-Algorithm">Union to Find Algorithm & Their Applications</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Disjoint-Set" name="Disjoint-Set" value="0">
+                            <label for="Disjoint-Set">Disjoint Set</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Dijkstra-Prim-Relationship" name="Dijkstra-Prim-Relationship" value="0">
+                            <label for="Dijkstra-Prim-Relationship">The Relationship in Dijkstra's and Prim's Algorithm</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Knapsack-Huffman" name="Knapsack-Huffman" value="0">
+                            <label for="Knapsack-Huffman">Use of Greedy Strategy in Knapsack Problem & Huffman Trees</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Dynamic-Programming-Introduction" name="Dynamic-Programming-Introduction" value="0">
+                            <label for="Dynamic-Programming-Introduction">The Basic Dynamic Programming Paradigm</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Matrix-Chain-Longest-Common" name="Matrix-Chain-Longest-Common" value="0">
+                            <label for="Matrix-Chain-Longest-Common">Dynamic Programming Solution to Optimal Matrix Chain Multiplication & Longest Common Subsequence Problems</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Module 4 -->
+                <div class="module">
+                    <div class="module-name">Module 4: Graph Algorithms & String Matching Algorithms</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Graph-Representational-Issues" name="Graph-Representational-Issues" value="0">
+                            <label for="Graph-Representational-Issues">Representational Issues in Graphs</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="DFS-BFS" name="DFS-BFS" value="0">
+                            <label for="DFS-BFS">Depth First Search & Breadth First Search on Graphs</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Bi-Connected-Components" name="Bi-Connected-Components" value="0">
+                            <label for="Bi-Connected-Components">Computation of Bi-Connected Components & Strongly Connected Components Using DFS</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Topological-Sorting" name="Topological-Sorting" value="0">
+                            <label for="Topological-Sorting">Topological Sorting & Application</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Shortest-Path-Algorithms" name="Shortest-Path-Algorithms" value="0">
+                            <label for="Shortest-Path-Algorithms">Shortest Path Algorithms on Graphs</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Bellman-Ford" name="Bellman-Ford" value="0">
+                            <label for="Bellman-Ford">Bellman-Ford Algorithm</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Dijkstra-Heap" name="Dijkstra-Heap" value="0">
+                            <label for="Dijkstra-Heap">Dijkstra's Algorithm & Analysis Using Heaps</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Floyd-Warshall-Algorithm" name="Floyd-Warshall-Algorithm" value="0">
+                            <label for="Floyd-Warshall-Algorithm">Floyd-Warshall's All Pairs Shortest Path Algorithm & Its Refinement for Transitive Closure</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="String-Problem-Automata" name="String-Problem-Automata" value="0">
+                            <label for="String-Problem-Automata">General String Problem as a Finite Automata</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Knuth-Morris-Pratt" name="Knuth-Morris-Pratt" value="0">
+                            <label for="Knuth-Morris-Pratt">Knuth-Morris and Pratt Algorithms</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Module 5 -->
+                <div class="module">
+                    <div class="module-name">Module 5: NP-Complete Problems</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Solvable-Problems" name="Solvable-Problems" value="0">
+                            <label for="Solvable-Problems">Solvable Problems</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Types-of-Problems" name="Types-of-Problems" value="0">
+                            <label for="Types-of-Problems">Types of Problems</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Non-Deterministic-Algorithm" name="Non-Deterministic-Algorithm" value="0">
+                            <label for="Non-Deterministic-Algorithm">The Notion of a Non-Deterministic Algorithm</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Polynomial-Time-Algorithm" name="Polynomial-Time-Algorithm" value="0">
+                            <label for="Polynomial-Time-Algorithm">Polynomial Time Non-Deterministic Algorithm</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="NP-Hardness-Completeness" name="NP-Hardness-Completeness" value="0">
+                            <label for="NP-Hardness-Completeness">The Definition of NP-Hardness and NP-Completeness</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Cooks-Theorem" name="Cooks-Theorem" value="0">
+                            <label for="Cooks-Theorem">Cook's Theorem and Its Implications</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Polynomial-Transformation" name="Polynomial-Transformation" value="0">
+                            <label for="Polynomial-Transformation">The Notion of Polynomial Transformation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="NP-Complete-Examples" name="NP-Complete-Examples" value="0">
+                            <label for="NP-Complete-Examples">Examples of NP-Complete Problems: Vertex Cover, Subset Sum, Hamiltonian Cycle</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Other-Models-Computations" name="Other-Models-Computations" value="0">
+                            <label for="Other-Models-Computations">Other Models for Computations</label>
+                        </div>
+                    </div>
+                </div>
+                        
+            </div> 
+
+
+            <div class="page" id="page-nsm">
+
+                <div class="subject-name">
+                    Numerical and Statistical Methods
+                </div>
+            
+                <!-- Numerical Methods -->
+                <div class="module">
+                    <div class="module-name">Numerical Methods</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Algebraic-Equations" name="Algebraic-Equations" value="0">
+                            <label for="Algebraic-Equations">Solution of Algebraic and Transcendental Equations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Bisection-Method" name="Bisection-Method" value="0">
+                            <label for="Bisection-Method">Bisection Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Iteration-Method" name="Iteration-Method" value="0">
+                            <label for="Iteration-Method">Iteration Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="False-Position-Method" name="False-Position-Method" value="0">
+                            <label for="False-Position-Method">False Position Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Newton-Raphson" name="Newton-Raphson" value="0">
+                            <label for="Newton-Raphson">Newton-Raphson Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Linear-Simultaneous-Equations" name="Linear-Simultaneous-Equations" value="0">
+                            <label for="Linear-Simultaneous-Equations">Solution of Linear Simultaneous Equations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Gauss-Jordan" name="Gauss-Jordan" value="0">
+                            <label for="Gauss-Jordan">Gauss-Jordan Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Crouts-Triangularization" name="Crouts-Triangularization" value="0">
+                            <label for="Crouts-Triangularization">Crout's Triangularization Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Jacobi-Method" name="Jacobi-Method" value="0">
+                            <label for="Jacobi-Method">Jacobi Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Gauss-Seidel" name="Gauss-Seidel" value="0">
+                            <label for="Gauss-Seidel">Gauss-Seidel Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Finite-Difference" name="Finite-Difference" value="0">
+                            <label for="Finite-Difference">Finite Difference</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Symbolic-Relations" name="Symbolic-Relations" value="0">
+                            <label for="Symbolic-Relations">Symbolic Relations</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Interpolation" name="Interpolation" value="0">
+                            <label for="Interpolation">Interpolation and Extrapolation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Newton-Gregory" name="Newton-Gregory" value="0">
+                            <label for="Newton-Gregory">Newton-Gregory Forward and Backward</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Gauss-Forward-Backward" name="Gauss-Forward-Backward" value="0">
+                            <label for="Gauss-Forward-Backward">Gauss Forward and Backward</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Lagranges-Formulae" name="Lagranges-Formulae" value="0">
+                            <label for="Lagranges-Formulae">Lagrange's Formulae</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Inverse-Interpolation" name="Inverse-Interpolation" value="0">
+                            <label for="Inverse-Interpolation">Inverse Interpolation by Lagrange Methods</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Numerical-Differentiation" name="Numerical-Differentiation" value="0">
+                            <label for="Numerical-Differentiation">Numerical Differentiation</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Numerical-Integration" name="Numerical-Integration" value="0">
+                            <label for="Numerical-Integration">Numerical Integration</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Trapezoidal-Formula" name="Trapezoidal-Formula" value="0">
+                            <label for="Trapezoidal-Formula">Trapezoidal Formula</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Simpsons-1-3" name="Simpsons-1-3" value="0">
+                            <label for="Simpsons-1-3">Simpson's 1/3rd Rule</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Simpsons-3-8" name="Simpsons-3-8" value="0">
+                            <label for="Simpsons-3-8">Simpson's 3/8th Rule</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Weddles-Quadrature" name="Weddles-Quadrature" value="0">
+                            <label for="Weddles-Quadrature">Weddle Quadrature Formula</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="ODE-Solution" name="ODE-Solution" value="0">
+                            <label for="ODE-Solution">Numerical Solution of First Order ODEs</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Taylors-Series" name="Taylors-Series" value="0">
+                            <label for="Taylors-Series">Taylor's Series Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Picards-Method" name="Picards-Method" value="0">
+                            <label for="Picards-Method">Picard's Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Eulers-Method" name="Eulers-Method" value="0">
+                            <label for="Eulers-Method">Euler's Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Modified-Eulers" name="Modified-Eulers" value="0">
+                            <label for="Modified-Eulers">Modified Euler's Method</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Runge-Kutta" name="Runge-Kutta" value="0">
+                            <label for="Runge-Kutta">Runge-Kutta Methods</label>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- Statistical Methods -->
+                <div class="module">
+                    <div class="module-name">Statistical Methods</div>
+                    <div class="module-content">
+                        <div class="check-row">
+                            <input type="checkbox" id="Moments" name="Moments" value="0">
+                            <label for="Moments">Moments</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Skewness-Kurtosis" name="Skewness-Kurtosis" value="0">
+                            <label for="Skewness-Kurtosis">Skewness and Kurtosis</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Probability-Approaches" name="Probability-Approaches" value="0">
+                            <label for="Probability-Approaches">Various Approaches of Probability</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Theorems" name="Theorems" value="0">
+                            <label for="Theorems">Two Theorems (Without Proof)</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Conditional-Probability" name="Conditional-Probability" value="0">
+                            <label for="Conditional-Probability">Conditional Probability</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Bayes-Theorem" name="Bayes-Theorem" value="0">
+                            <label for="Bayes-Theorem">Bayes Theorem</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Random-Variable" name="Random-Variable" value="0">
+                            <label for="Random-Variable">Random Variable</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Mass-Density-Functions" name="Mass-Density-Functions" value="0">
+                            <label for="Mass-Density-Functions">Probability Mass & Density Functions</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Distributions" name="Distributions" value="0">
+                            <label for="Distributions">Distributions: Bernoulli, Binomial, Poisson, Normal</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Least-Squares" name="Least-Squares" value="0">
+                            <label for="Least-Squares">Theory of Least Squares and Curve Fitting</label>
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="Correlation-Regression" name="Correlation-Regression" value="0">
+                            <label for="Correlation-Regression">Correlation and Regression</label>
+                        </div>
+
+                        <div class="check-row">
+                            <input type="checkbox" id="Simple-Correlation" name="Simple-Correlation" value="0">
+                            <label for="Simple-Correlation">Simple, Multiple & Partial Correlation Coefficients</label>
+                            </div>
+                            <div class="check-row">
+                            <input type="checkbox" id="Regression-Lines" name="Regression-Lines" value="0">
+                            <label for="Regression-Lines">Regression Lines and Coefficients</label>
+                            </div>
+                            <div class="check-row">
+                            <input type="checkbox" id="Test-of-Significance" name="Test-of-Significance" value="0">
+                            <label for="Test-of-Significance">Test of Significance</label>
+                            </div>
+                            <div class="check-row">
+                            <input type="checkbox" id="Normal-Test" name="Normal-Test" value="0">
+                            <label for="Normal-Test">Normal Test</label>
+                            </div>
+                            <div class="check-row">
+                            <input type="checkbox" id="T-Test" name="T-Test" value="0">
+                            <label for="T-Test">T-test</label>
+                            </div>
+                            <div class="check-row">
+                            <input type="checkbox" id="Chi-Square-Test" name="Chi-Square-Test" value="0">
+                            <label for="Chi-Square-Test">Chi-Square Test</label>
+                            </div>
+                            <div class="check-row">
+                            <input type="checkbox" id="F-Test" name="F-Test" value="0">
+                            <label for="F-Test">F-test</label>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            
+            
+            
+            
+        </div>
+    </main>
+
+
+</body>
+</html>
+
