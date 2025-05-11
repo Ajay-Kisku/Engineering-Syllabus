@@ -178,7 +178,7 @@
     checkbox.addEventListener('change', function () {
       if (this.checked) {
         if (navigator.vibrate) {
-          navigator.vibrate(200); // Vibrate for 200ms
+          navigator.vibrate(100); // Vibrate for 100ms
         } else {
           console.log('Vibration API not supported.');
         }
