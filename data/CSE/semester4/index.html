@@ -11,7 +11,7 @@
 
 
     <meta property="og:site_name" content="engineering-syllabus">
-    <meta property="og:title" content="CSE Syllabus 7th Semester" />
+    <meta property="og:title" content="CSE Syllabus 4th Semester" />
     <meta property="og:description" content="Keep track of your syllabus completion" />
     <meta property="og:image" itemprop="image" content="https://i.imgur.com/4XuGYMZ.png">
     <meta property="og:type" content="website" />
@@ -26,9 +26,35 @@
     <style>
 
 
-        #page-mp{
+        #page-oop{
 
-            --checked-color : #770404;
+            --checked-color : #dd0037;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            strong{
+                color: #e2194b;
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-coa{
+
+            --checked-color : #af0101;
 
             accent-color: var(--checked-color);
 
@@ -48,31 +74,9 @@
             }
         }
 
-        #page-em{
+        #page-dm{
 
-            --checked-color : #696969;
-
-            accent-color: var(--checked-color);
-
-            .subject-name{
-                color : var(--checked-color);
-            }
-
-            .module-name{
-                color: var(--checked-color);
-            }
-
-            /* Labels for checked inputs */
-            input:checked + label {
-                text-decoration: line-through;
-                color: var(--checked-color);
-                
-            }
-        }
-
-        #page-em{
-
-            --checked-color : #696969;
+            --checked-color : #0d8f08;
 
             accent-color: var(--checked-color);
 
@@ -92,9 +96,31 @@
             }
         }
 
-        #page-bee{
+        #page-daa{
 
-            --checked-color : #084285;
+            --checked-color : #087b8f;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+        
+        #page-maths{
+
+            --checked-color : #995700;
 
             accent-color: var(--checked-color);
 
@@ -139,7 +165,7 @@
                 <a href="#page-coa">COA</a>
                 <a href="#page-dm">DM</a>
                 <a href="#page-daa">DAA</a>
-                <a href="#page-nsm">Maths</a>
+                <a href="#page-maths">Maths</a>
             </div>
 
 
@@ -1337,7 +1363,7 @@
             </div> 
 
 
-            <div class="page" id="page-nsm">
+            <div class="page" id="page-maths">
 
                 <div class="subject-name">
                     Numerical and Statistical Methods

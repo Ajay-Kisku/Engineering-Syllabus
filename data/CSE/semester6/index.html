@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Syllabus</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+     <script src="../../../components/extra.js" defer></script>
+     <script src="../../../components/dialogue.js" defer ></script>
+     <script src="../../../js/script.js" defer ></script>
+
+
+    <meta property="og:site_name" content="engineering-syllabus">
+    <meta property="og:title" content="CSE Syllabus 6th Semester" />
+    <meta property="og:description" content="Keep track of your syllabus completion" />
+    <meta property="og:image" itemprop="image" content="https://i.imgur.com/4XuGYMZ.png">
+    <meta property="og:type" content="website" />
+
+        <!-- GSAP CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <!-- ScrollTrigger CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <!-- ScrollToPlugin CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
+
+    <style>
+
+
+        #page-cn{
+
+            --checked-color : #770464;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-nlp{
+
+            --checked-color : #056e72;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-ss{
+
+            --checked-color : #a02d2d;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+        #page-ip{
+
+            --checked-color : #084285;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+        #page-cc{
+
+            --checked-color : #0b8a11;
+
+            accent-color: var(--checked-color);
+
+            .subject-name{
+                color : var(--checked-color);
+            }
+
+            .module-name{
+                color: var(--checked-color);
+            }
+
+            /* Labels for checked inputs */
+            input:checked + label {
+                text-decoration: line-through;
+                color: var(--checked-color);
+                
+            }
+        }
+
+
+    
+        
+    </style>
+
+</head>
+
+
+<body>
+    
+    <main id="main">
+
+        <!-- Side navigation  -->
+        <nav>
+            <button  class="menu" id="menuButton" > 
+                //Menu::
+            </button>
+
+
+            <!-- Here is how to link the internal links to the pages of different syllabus -->
+            <div class="links">
+                <a href="#page-cn">CN</a>
+                <a href="#page-nlp">NLP</a>
+                <a href="#page-ss">SS</a>
+                <a href="#page-ip">IP</a>
+                <a href="#page-cc">CC</a>
+            </div>
+
+
+            <div  class="settings"  id="settings"
+            onclick="alert('कोडिंग के फील्ड में आ के सेटिंग खोजना....ये तो अच्छी बात नहीं है!!!')"> 
+                Settings
+            </div>
+
+        </nav>
+
+        <!-- Main Content Area  -->
+        <div class="content">
+
+            <div class="page-title" id="page-title">
+                <div class="title-branch"> CSE  </div>
+                 <div>6<sup>th</sup> Semester  </div>
+            </div>
+
+
+            <div class="page" id="page-cn">
+
+                <div class="subject-name">
+                    Computer Networks
+                </div>
+            
+                <!-- Module 1 -->
+                <div class="module">
+                    <div class="module-name">Module 1: Data Communication Components</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Data-Flow" value="0"><label for="Data-Flow">Representation of Data and its Flow</label></div>
+                        <div class="check-row"><input type="checkbox" id="Networks" value="0"><label for="Networks">Networks</label></div>
+                        <div class="check-row"><input type="checkbox" id="Topology" value="0"><label for="Topology">Various Connection Topology</label></div>
+                        <div class="check-row"><input type="checkbox" id="Protocols-Standards" value="0"><label for="Protocols-Standards">Protocols and Standards</label></div>
+                        <div class="check-row"><input type="checkbox" id="OSI-Model" value="0"><label for="OSI-Model">OSI Model</label></div>
+                        <div class="check-row"><input type="checkbox" id="Transmission-Media" value="0"><label for="Transmission-Media">Transmission Media</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 2 -->
+                <div class="module">
+                    <div class="module-name">Module 2: LAN</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Wired-LAN" value="0"><label for="Wired-LAN">Wired LAN</label></div>
+                        <div class="check-row"><input type="checkbox" id="Wireless-LAN" value="0"><label for="Wireless-LAN">Wireless LANs</label></div>
+                        <div class="check-row"><input type="checkbox" id="Connecting-VLAN" value="0"><label for="Connecting-VLAN">Connecting LAN and Virtual LAN</label></div>
+                        <div class="check-row"><input type="checkbox" id="Multiplexing" value="0"><label for="Multiplexing">Multiplexing Techniques</label></div>
+                        <div class="check-row"><input type="checkbox" id="FDM" value="0"><label for="FDM">Frequency Division Multiplexing (FDM)</label></div>
+                        <div class="check-row"><input type="checkbox" id="TDM" value="0"><label for="TDM">Time Division Multiplexing (TDM)</label></div>
+                        <div class="check-row"><input type="checkbox" id="WDM" value="0"><label for="WDM">Wave Division Multiplexing (WDM)</label></div>
+                        <div class="check-row"><input type="checkbox" id="Spread-Spectrum" value="0"><label for="Spread-Spectrum">Concepts on Spread Spectrum</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 3 -->
+                <div class="module">
+                    <div class="module-name">Module 3: Data Link Layer and Medium Access Sub Layer</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Error-Detection" value="0"><label for="Error-Detection">Error Detection and Correction - Fundamentals</label></div>
+                        <div class="check-row"><input type="checkbox" id="Block-Coding" value="0"><label for="Block-Coding">Block Coding</label></div>
+                        <div class="check-row"><input type="checkbox" id="Hamming-Distance" value="0"><label for="Hamming-Distance">Hamming Distance</label></div>
+                        <div class="check-row"><input type="checkbox" id="CRC" value="0"><label for="CRC">Cyclic Redundancy Check (CRC)</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 4 -->
+                <div class="module">
+                    <div class="module-name">Module 4: Protocols - Flow, Error Control, and Multiple Access</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Stop-Wait" value="0"><label for="Stop-Wait">Stop and Wait Protocol</label></div>
+                        <div class="check-row"><input type="checkbox" id="Go-Back-N" value="0"><label for="Go-Back-N">Go Back – N ARQ</label></div>
+                        <div class="check-row"><input type="checkbox" id="Selective-Repeat" value="0"><label for="Selective-Repeat">Selective Repeat ARQ</label></div>
+                        <div class="check-row"><input type="checkbox" id="Sliding-Window" value="0"><label for="Sliding-Window">Sliding Window Protocol</label></div>
+                        <div class="check-row"><input type="checkbox" id="Piggybacking" value="0"><label for="Piggybacking">Piggybacking</label></div>
+                        <div class="check-row"><input type="checkbox" id="Random-Access" value="0"><label for="Random-Access">Random Access Protocols</label></div>
+                        <div class="check-row"><input type="checkbox" id="Pure-ALOHA" value="0"><label for="Pure-ALOHA">Pure ALOHA</label></div>
+                        <div class="check-row"><input type="checkbox" id="Slotted-ALOHA" value="0"><label for="Slotted-ALOHA">Slotted ALOHA</label></div>
+                        <div class="check-row"><input type="checkbox" id="CSMA-CD" value="0"><label for="CSMA-CD">CSMA/CD</label></div>
+                        <div class="check-row"><input type="checkbox" id="CDMA-CA" value="0"><label for="CDMA-CA">CDMA/CA</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 5 -->
+                <div class="module">
+                    <div class="module-name">Module 5: Network Layer</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Switching" value="0"><label for="Switching">Switching</label></div>
+                        <div class="check-row"><input type="checkbox" id="IPv4" value="0"><label for="IPv4">Logical Addressing – IPv4</label></div>
+                        <div class="check-row"><input type="checkbox" id="IPv6" value="0"><label for="IPv6">Logical Addressing – IPv6</label></div>
+                        <div class="check-row"><input type="checkbox" id="ARP" value="0"><label for="ARP">Address Mapping – ARP</label></div>
+                        <div class="check-row"><input type="checkbox" id="RARP" value="0"><label for="RARP">Address Mapping – RARP</label></div>
+                        <div class="check-row"><input type="checkbox" id="BOOTP" value="0"><label for="BOOTP">Address Mapping – BOOTP</label></div>
+                        <div class="check-row"><input type="checkbox" id="DHCP" value="0"><label for="DHCP">Address Mapping – DHCP</label></div>
+                        <div class="check-row"><input type="checkbox" id="Delivery" value="0"><label for="Delivery">Delivery</label></div>
+                        <div class="check-row"><input type="checkbox" id="Forwarding" value="0"><label for="Forwarding">Forwarding</label></div>
+                        <div class="check-row"><input type="checkbox" id="Unicast-Routing" value="0"><label for="Unicast-Routing">Unicast Routing Protocols</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 6 -->
+                <div class="module">
+                    <div class="module-name">Module 6: Transport Layer</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Process-Communication" value="0"><label for="Process-Communication">Process to Process Communication</label></div>
+                        <div class="check-row"><input type="checkbox" id="UDP" value="0"><label for="UDP">User Datagram Protocol (UDP)</label></div>
+                        <div class="check-row"><input type="checkbox" id="TCP" value="0"><label for="TCP">Transmission Control Protocol (TCP)</label></div>
+                        <div class="check-row"><input type="checkbox" id="SCTP" value="0"><label for="SCTP">Stream Control Transmission Protocol (SCTP)</label></div>
+                        <div class="check-row"><input type="checkbox" id="Congestion-Control" value="0"><label for="Congestion-Control">Congestion Control</label></div>
+                        <div class="check-row"><input type="checkbox" id="QoS" value="0"><label for="QoS">Quality of Service (QoS)</label></div>
+                        <div class="check-row"><input type="checkbox" id="Leaky-Bucket" value="0"><label for="Leaky-Bucket">Leaky Bucket Algorithm</label></div>
+                        <div class="check-row"><input type="checkbox" id="Token-Bucket" value="0"><label for="Token-Bucket">Token Bucket Algorithm</label></div>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="page" id="page-nlp">
+
+                <div class="subject-name">
+                    Natural Language Processing
+                </div>
+            
+                <!-- Module 1 -->
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Intro-NLP" value="0"><label for="Intro-NLP">Introduction to NLP</label></div>
+                        <div class="check-row"><input type="checkbox" id="Biology-Speech" value="0"><label for="Biology-Speech">Biology of Speech Processing</label></div>
+                        <div class="check-row"><input type="checkbox" id="Articulation" value="0"><label for="Articulation">Place and Manner of Articulation</label></div>
+                        <div class="check-row"><input type="checkbox" id="Word-Boundary" value="0"><label for="Word-Boundary">Word Boundary Detection</label></div>
+                        <div class="check-row"><input type="checkbox" id="Argmax" value="0"><label for="Argmax">Argmax Based Computations</label></div>
+                        <div class="check-row"><input type="checkbox" id="HMM-Speech" value="0"><label for="HMM-Speech">HMM and Speech Recognition</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 2 -->
+                <div class="module">
+                    <div class="module-name">Module 2: Words and Word Forms</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Morphology" value="0"><label for="Morphology">Morphology Fundamentals</label></div>
+                        <div class="check-row"><input type="checkbox" id="Indian-Morph" value="0"><label for="Indian-Morph">Morphological Diversity of Indian Languages</label></div>
+                        <div class="check-row"><input type="checkbox" id="Morph-Paradigms" value="0"><label for="Morph-Paradigms">Morphology Paradigms</label></div>
+                        <div class="check-row"><input type="checkbox" id="FSM-Morph" value="0"><label for="FSM-Morph">Finite State Machine Based Morphology</label></div>
+                        <div class="check-row"><input type="checkbox" id="Auto-Morph" value="0"><label for="Auto-Morph">Automatic Morphology Learning</label></div>
+                        <div class="check-row"><input type="checkbox" id="Shallow-Parsing" value="0"><label for="Shallow-Parsing">Shallow Parsing</label></div>
+                        <div class="check-row"><input type="checkbox" id="Named-Entities" value="0"><label for="Named-Entities">Named Entities</label></div>
+                        <div class="check-row"><input type="checkbox" id="MaxEnt" value="0"><label for="MaxEnt">Maximum Entropy Models</label></div>
+                        <div class="check-row"><input type="checkbox" id="Random-Fields" value="0"><label for="Random-Fields">Random Fields</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 3 -->
+                <div class="module">
+                    <div class="module-name">Module 3: Structures</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Parsing-Theories" value="0"><label for="Parsing-Theories">Theories of Parsing</label></div>
+                        <div class="check-row"><input type="checkbox" id="Parsing-Algos" value="0"><label for="Parsing-Algos">Parsing Algorithms</label></div>
+                        <div class="check-row"><input type="checkbox" id="Robust-Parsing" value="0"><label for="Robust-Parsing">Robust & Scalable Parsing on Noisy Text</label></div>
+                        <div class="check-row"><input type="checkbox" id="Hybrid-Parsing" value="0"><label for="Hybrid-Parsing">Hybrid of Rule Based & Probabilistic Parsing</label></div>
+                        <div class="check-row"><input type="checkbox" id="Scope-Ambiguity" value="0"><label for="Scope-Ambiguity">Scope Ambiguity Resolution</label></div>
+                        <div class="check-row"><input type="checkbox" id="Attachment-Ambiguity" value="0"><label for="Attachment-Ambiguity">Attachment Ambiguity Resolution</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 4 -->
+                <div class="module">
+                    <div class="module-name">Module 4: Meaning</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Wordnet" value="0"><label for="Wordnet">Lexical Knowledge Networks & Wordnet Theory</label></div>
+                        <div class="check-row"><input type="checkbox" id="IL-Wordnet" value="0"><label for="IL-Wordnet">Indian Language Wordnets & Multilingual Dictionaries</label></div>
+                        <div class="check-row"><input type="checkbox" id="Semantic-Roles" value="0"><label for="Semantic-Roles">Semantic Roles</label></div>
+                        <div class="check-row"><input type="checkbox" id="WSD" value="0"><label for="WSD">Word Sense Disambiguation (WSD)</label></div>
+                        <div class="check-row"><input type="checkbox" id="WSD-Multilinguality" value="0"><label for="WSD-Multilinguality">WSD and Multilinguality</label></div>
+                        <div class="check-row"><input type="checkbox" id="Metaphors" value="0"><label for="Metaphors">Metaphors</label></div>
+                        <div class="check-row"><input type="checkbox" id="Coreference" value="0"><label for="Coreference">Co-references</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 5 -->
+                <div class="module">
+                    <div class="module-name">Module 5: Web 2.0 Applications</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Sentiment-Analysis" value="0"><label for="Sentiment-Analysis">Sentiment Analysis</label></div>
+                        <div class="check-row"><input type="checkbox" id="NER" value="0"><label for="NER">Named Entity Recognition (NER)</label></div>
+                        <div class="check-row"><input type="checkbox" id="Text-Entailment" value="0"><label for="Text-Entailment">Text Entailment</label></div>
+                        <div class="check-row"><input type="checkbox" id="Machine-Translation" value="0"><label for="Machine-Translation">Robust & Scalable Machine Translation</label></div>
+                        <div class="check-row"><input type="checkbox" id="QA-Multilingual" value="0"><label for="QA-Multilingual">Question Answering in Multilingual Setting</label></div>
+                        <div class="check-row"><input type="checkbox" id="CLIR" value="0"><label for="CLIR">Cross Lingual Information Retrieval (CLIR)</label></div>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="page" id="page-ss">
+
+                <div class="subject-name">
+                    System Software
+                </div>
+            
+                <!-- Module 1 -->
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="System-vs-App-Software" value="0"><label for="System-vs-App-Software">System Software vs Application Software</label></div>
+                        <div class="check-row"><input type="checkbox" id="Programming-System-Components" value="0"><label for="Programming-System-Components">Components of Programming System</label></div>
+                        <div class="check-row"><input type="checkbox" id="OS-Evolution-Functions" value="0"><label for="OS-Evolution-Functions">Evolution and Functions of Operating System</label></div>
+                        <div class="check-row"><input type="checkbox" id="Machine-Structure" value="0"><label for="Machine-Structure">General Machine Structure</label></div>
+                        <div class="check-row"><input type="checkbox" id="Memory-Registers" value="0"><label for="Memory-Registers">Memory, Registers, Data & Instructions</label></div>
+                        <div class="check-row"><input type="checkbox" id="Evolution-Machine-Lang" value="0"><label for="Evolution-Machine-Lang">Evolution of Machine Language</label></div>
+                        <div class="check-row"><input type="checkbox" id="Intro-Assembly" value="0"><label for="Intro-Assembly">Introduction to Assembly Language Programming</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 2 -->
+                <div class="module">
+                    <div class="module-name">Module 2: Assemblers, Loaders and Linkers</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Assembler-Review" value="0"><label for="Assembler-Review">Review of Computer Architecture and Machine Instructions</label></div>
+                        <div class="check-row"><input type="checkbox" id="Basic-Assembler" value="0"><label for="Basic-Assembler">Basic Assembler Functions and Features</label></div>
+                        <div class="check-row"><input type="checkbox" id="Assembler-Design" value="0"><label for="Assembler-Design">Assembler Design Options</label></div>
+                        <div class="check-row"><input type="checkbox" id="Loaders-Linkers" value="0"><label for="Loaders-Linkers">Loaders and Linkers – Functions and Features</label></div>
+                        <div class="check-row"><input type="checkbox" id="Loader-Design" value="0"><label for="Loader-Design">Loader Design Options – Dynamic Linking & Loading</label></div>
+                        <div class="check-row"><input type="checkbox" id="Object-Files" value="0"><label for="Object-Files">Object File Format and Structure</label></div>
+                        <div class="check-row"><input type="checkbox" id="Relocation-Symbols" value="0"><label for="Relocation-Symbols">Relocation and Symbols</label></div>
+                        <div class="check-row"><input type="checkbox" id="Relocatable-ELF" value="0"><label for="Relocatable-ELF">Relocatable a.out and ELF</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 3 -->
+                <div class="module">
+                    <div class="module-name">Module 3: Microprocessors and Emulators</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="Microprocessors" value="0"><label for="Microprocessors">Basics of Microprocessors</label></div>
+                        <div class="check-row"><input type="checkbox" id="Macro-Processor" value="0"><label for="Macro-Processor">Macro Processor Functions and Features</label></div>
+                        <div class="check-row"><input type="checkbox" id="Macro-Design" value="0"><label for="Macro-Design">Macro Processor Design Options</label></div>
+                        <div class="check-row"><input type="checkbox" id="Intro-VM" value="0"><label for="Intro-VM">Introduction to Virtual Machines (VM)</label></div>
+                        <div class="check-row"><input type="checkbox" id="Emulation" value="0"><label for="Emulation">Emulation and Interpretation Techniques</label></div>
+                        <div class="check-row"><input type="checkbox" id="Binary-Translation" value="0"><label for="Binary-Translation">Binary Translation Techniques</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 4 -->
+                <div class="module">
+                    <div class="module-name">Module 4: Virtual Machines and Advanced Features</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="P-Code" value="0"><label for="P-Code">Pascal P-Code VM</label></div>
+                        <div class="check-row"><input type="checkbox" id="OOP-VM" value="0"><label for="OOP-VM">Object-Oriented Virtual Machines</label></div>
+                        <div class="check-row"><input type="checkbox" id="Java-VM" value="0"><label for="Java-VM">Java VM Architecture</label></div>
+                        <div class="check-row"><input type="checkbox" id="CLI" value="0"><label for="CLI">Common Language Infrastructure (CLI)</label></div>
+                        <div class="check-row"><input type="checkbox" id="Dynamic-Class" value="0"><label for="Dynamic-Class">Dynamic Class Loading</label></div>
+                        <div class="check-row"><input type="checkbox" id="Instruction-Issues" value="0"><label for="Instruction-Issues">Instruction Set Issues & Profiling</label></div>
+                        <div class="check-row"><input type="checkbox" id="Migration-Grids" value="0"><label for="Migration-Grids">Migration and Grids</label></div>
+                        <div class="check-row"><input type="checkbox" id="Code-Optimization" value="0"><label for="Code-Optimization">Code Optimization Techniques</label></div>
+                        <div class="check-row"><input type="checkbox" id="Garbage-Collection" value="0"><label for="Garbage-Collection">Garbage Collection</label></div>
+                        <div class="check-row"><input type="checkbox" id="Real-World-SS" value="0"><label for="Real-World-SS">Examples of Real-World System Software</label></div>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="page" id="page-ip">
+
+                <div class="subject-name">
+                    Image Processing
+                </div>
+            
+                <!-- Module 1 -->
+                <div class="module">
+                    <div class="module-name">Module 1: Digital Image Fundamentals</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="IP-Introduction" value="0"><label for="IP-Introduction">Introduction & Origin of Digital Image Processing</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-Steps" value="0"><label for="IP-Steps">Steps in Digital Image Processing</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-Components" value="0"><label for="IP-Components">Components of Image Processing System</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-VisualPerception" value="0"><label for="IP-VisualPerception">Elements of Visual Perception</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-Sensing-Acquisition" value="0"><label for="IP-Sensing-Acquisition">Image Sensing and Acquisition</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-Sampling-Quantization" value="0"><label for="IP-Sampling-Quantization">Image Sampling and Quantization</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-PixelRelations" value="0"><label for="IP-PixelRelations">Relationships between Pixels</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-ColorModels" value="0"><label for="IP-ColorModels">Color Models</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 2 -->
+                <div class="module">
+                    <div class="module-name">Module 2: Image and Geometric Modeling Basics</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="IP-SimpleImageModel" value="0"><label for="IP-SimpleImageModel">A Simple Image Model</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-BasicTransform" value="0"><label for="IP-BasicTransform">Geometric Transformations: Translation, Scaling, Rotation</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-PerspectiveProjection" value="0"><label for="IP-PerspectiveProjection">Perspective Projection</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-UniformSampling" value="0"><label for="IP-UniformSampling">Sampling & Quantization – Uniform</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-NonUniformSampling" value="0"><label for="IP-NonUniformSampling">Sampling & Quantization – Non-uniform</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 3 -->
+                <div class="module">
+                    <div class="module-name">Module 3: Pixel Relationships, Transformations & Fourier Analysis</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="IP-NeighborsConnectivity" value="0"><label for="IP-NeighborsConnectivity">Neighbors, Connectivity, Equivalence</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-DistanceMeasures" value="0"><label for="IP-DistanceMeasures">Distance Measures</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-LogicOps" value="0"><label for="IP-LogicOps">Arithmetic & Logic Operations</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-FourierTransform" value="0"><label for="IP-FourierTransform">Fourier Transformation & Properties</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-DFT" value="0"><label for="IP-DFT">Discrete Fourier Transform (DFT)</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-DCT-DST" value="0"><label for="IP-DCT-DST">Discrete Cosine & Sine Transform</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 4 -->
+                <div class="module">
+                    <div class="module-name">Module 4: Spatial and Frequency Domain Techniques</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="IP-GrayLevelTrans" value="0"><label for="IP-GrayLevelTrans">Gray Level Transformations</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-Histogram" value="0"><label for="IP-Histogram">Histogram Processing</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-SpatialFiltering" value="0"><label for="IP-SpatialFiltering">Spatial Filtering – Basics</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-SmoothSharpSpatial" value="0"><label for="IP-SmoothSharpSpatial">Smoothing and Sharpening – Spatial Domain</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-FourierIntro" value="0"><label for="IP-FourierIntro">Introduction to Fourier Transform</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-SmoothSharpFreq" value="0"><label for="IP-SmoothSharpFreq">Smoothing and Sharpening – Frequency Domain</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-Filters" value="0"><label for="IP-Filters">Ideal, Butterworth & Gaussian Filters</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 5 -->
+                <div class="module">
+                    <div class="module-name">Module 5: Noise Models and Image Segmentation</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="IP-NoiseModels" value="0"><label for="IP-NoiseModels">Noise Models</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-MeanFilters" value="0"><label for="IP-MeanFilters">Mean Filters</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-OrderStats" value="0"><label for="IP-OrderStats">Order Statistics</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-AdaptiveFilters" value="0"><label for="IP-AdaptiveFilters">Adaptive Filters</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-BandFilters" value="0"><label for="IP-BandFilters">Band Reject/Pass/Notch Filters</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-OptimumFiltering" value="0"><label for="IP-OptimumFiltering">Optimum Notch & Wiener Filtering</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-Segmentation" value="0"><label for="IP-Segmentation">Discontinuity Detection and Segmentation</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-EdgeLinking" value="0"><label for="IP-EdgeLinking">Edge Linking and Boundary Detection</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-RegionBased" value="0"><label for="IP-RegionBased">Region-based Segmentation</label></div>
+                        <div class="check-row"><input type="checkbox" id="IP-Morphological" value="0"><label for="IP-Morphological">Morphological Processing: Erosion & Dilation</label></div>
+                    </div>
+                </div>
+            
+            </div>
+            
+            <div class="page" id="page-cc">
+
+                <div class="subject-name">
+                    Cloud Computing
+                </div>
+            
+                <!-- Module 1 -->
+                <div class="module">
+                    <div class="module-name">Module 1: Introduction</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="CC-DistributedComputing" value="0"><label for="CC-DistributedComputing">Emergence of Cloud Computing in Distributed Computing</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-DefinitionArchitecture" value="0"><label for="CC-DefinitionArchitecture">Definition & Architecture of Cloud Computing</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-CloudServices" value="0"><label for="CC-CloudServices">Cloud-Based Services</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-CloudBenefits" value="0"><label for="CC-CloudBenefits">Benefits of Using a Cloud Model</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-KeyCharacteristics" value="0"><label for="CC-KeyCharacteristics">Key Characteristics of Cloud Computing</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-PublicPrivateCloud" value="0"><label for="CC-PublicPrivateCloud">Public & Private Cloud Environments</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-Evolution" value="0"><label for="CC-Evolution">Evolution of Cloud Computing (Hardware & Internet Software)</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-SPIFramework" value="0"><label for="CC-SPIFramework">SPI Framework</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 2 -->
+                <div class="module">
+                    <div class="module-name">Module 2: Cloud Services</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="CC-CAAS" value="0"><label for="CC-CAAS">Communication-as-a-Service (CAAS)</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-IAAS" value="0"><label for="CC-IAAS">Infrastructure-as-a-Service (IAAS)</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-MAAS" value="0"><label for="CC-MAAS">Monitoring-as-a-Service (MAAS)</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-PAAS" value="0"><label for="CC-PAAS">Platform-as-a-Service (PAAS)</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-SAAS" value="0"><label for="CC-SAAS">Software-as-a-Service (SAAS)</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 3 -->
+                <div class="module">
+                    <div class="module-name">Module 3: Cloud Security Challenges</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="CC-SecurityPeople" value="0"><label for="CC-SecurityPeople">Security Management People</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-SecurityGovernance" value="0"><label for="CC-SecurityGovernance">Security Governance</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-SecurityPortfolio" value="0"><label for="CC-SecurityPortfolio">Security Portfolio Management</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-SecurityArchitecture" value="0"><label for="CC-SecurityArchitecture">Security Architecture Design</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-IAM" value="0"><label for="CC-IAM">Identity Access Management (IAM)</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-DataSecurity" value="0"><label for="CC-DataSecurity">Data Security</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-CloudThreats" value="0"><label for="CC-CloudThreats">Cloud Computing Threats</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-CaseStudies" value="0"><label for="CC-CaseStudies">Case Studies: Amazon EC2, Google App Engine, IBM Clouds</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 4 -->
+                <div class="module">
+                    <div class="module-name">Module 4: The MSP Model</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="CC-MSP-Evolution" value="0"><label for="CC-MSP-Evolution">Evolution from MSP Model to Cloud Computing & SAAS</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-CloudDataCenter" value="0"><label for="CC-CloudDataCenter">The Cloud Data Center</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-SOA" value="0"><label for="CC-SOA">SOA Based Data Center Approach</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-OpenSource" value="0"><label for="CC-OpenSource">Open Source Software</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-SOAtoCloud" value="0"><label for="CC-SOAtoCloud">SOA as a Step Toward Cloud Computing</label></div>
+                    </div>
+                </div>
+            
+                <!-- Module 5 -->
+                <div class="module">
+                    <div class="module-name">Module 5: Virtualization Concepts & Smartphone</div>
+                    <div class="module-content">
+                        <div class="check-row"><input type="checkbox" id="CC-VirtualBenefits" value="0"><label for="CC-VirtualBenefits">Virtualization Benefits</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-HW_SW_Virtual" value="0"><label for="CC-HW_SW_Virtual">Hardware & Software Virtualization</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-MemoryVirtual" value="0"><label for="CC-MemoryVirtual">Memory Virtualization</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-StorageVirtual" value="0"><label for="CC-StorageVirtual">Storage Virtualization</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-DataVirtual" value="0"><label for="CC-DataVirtual">Data Virtualization</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-NetworkVirtual" value="0"><label for="CC-NetworkVirtual">Network Virtualization</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-VirtualSecurity" value="0"><label for="CC-VirtualSecurity">Virtualization Security Recommendations</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-VirtualOS" value="0"><label for="CC-VirtualOS">Virtualization OS: VMware, KVM</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-VM-Security" value="0"><label for="CC-VM-Security">Virtual Machine Security</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-SmartphoneIntro" value="0"><label for="CC-SmartphoneIntro">Introduction to Smartphone & Mobile OS</label></div>
+                        <div class="check-row"><input type="checkbox" id="CC-SmartphoneOS" value="0"><label for="CC-SmartphoneOS">Mobile OS: iPhone, Windows Mobile, Android</label></div>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </div>
+    </main>
+
+
+</body>
+</html>
+

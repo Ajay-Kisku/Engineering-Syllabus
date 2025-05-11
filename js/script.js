@@ -171,6 +171,19 @@
     
     //============================================================================
     
+  // Select all checkboxes inside .check-row
+  const checkboxes = document.querySelectorAll('.check-row input[type="checkbox"]');
 
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', function () {
+      if (this.checked) {
+        if (navigator.vibrate) {
+          navigator.vibrate(200); // Vibrate for 200ms
+        } else {
+          console.log('Vibration API not supported.');
+        }
+      }
+    });
+  });
 
 
